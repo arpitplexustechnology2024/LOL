@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vdE-IZ-Zas">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Launch View Controller-->
+        <scene sceneID="JaD-eS-6Pz">
+            <objects>
+                <viewController storyboardIdentifier="LaunchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="W16-pY-DbD" customClass="LaunchViewController" customModule="LOL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gi1-0U-6BK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreenLogo" translatesAutoresizingMaskIntoConstraints="NO" id="KEK-U0-KKs">
+                                <rect key="frame" x="40" y="119" width="328" height="196"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreenBGLight" translatesAutoresizingMaskIntoConstraints="NO" id="mvB-fH-Jya">
+                                <rect key="frame" x="0.0" y="378" width="393" height="479"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTV-iQ-lJT" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="156.66666666666666" y="688" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="3c5-Yv-F7A"/>
+                                    <constraint firstAttribute="width" constant="80" id="8Rc-bT-KG5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="Loading"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yuF-cU-QN1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iTV-iQ-lJT" firstAttribute="centerX" secondItem="gi1-0U-6BK" secondAttribute="centerX" id="45H-sd-m89"/>
+                            <constraint firstItem="KEK-U0-KKs" firstAttribute="top" secondItem="yuF-cU-QN1" secondAttribute="top" constant="60" id="AVG-fR-RdA"/>
+                            <constraint firstItem="yuF-cU-QN1" firstAttribute="trailing" secondItem="KEK-U0-KKs" secondAttribute="trailing" constant="25" id="B3A-5F-jo0"/>
+                            <constraint firstItem="KEK-U0-KKs" firstAttribute="leading" secondItem="yuF-cU-QN1" secondAttribute="leading" constant="40" id="Eg7-5U-ahe"/>
+                            <constraint firstAttribute="bottom" secondItem="mvB-fH-Jya" secondAttribute="bottom" constant="-5" id="FmP-mZ-mht"/>
+                            <constraint firstItem="mvB-fH-Jya" firstAttribute="height" secondItem="gi1-0U-6BK" secondAttribute="height" multiplier="0.562207" id="N2f-9T-xYm"/>
+                            <constraint firstItem="mvB-fH-Jya" firstAttribute="trailing" secondItem="yuF-cU-QN1" secondAttribute="trailing" id="PDi-v8-VUA"/>
+                            <constraint firstItem="yuF-cU-QN1" firstAttribute="bottom" secondItem="iTV-iQ-lJT" secondAttribute="bottom" constant="50" id="Ya0-kP-OuY"/>
+                            <constraint firstItem="mvB-fH-Jya" firstAttribute="leading" secondItem="yuF-cU-QN1" secondAttribute="leading" id="Z6n-vo-tcL"/>
+                            <constraint firstItem="KEK-U0-KKs" firstAttribute="height" secondItem="gi1-0U-6BK" secondAttribute="height" multiplier="0.23" id="tsj-pW-7pi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uZ3-Ga-29g"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="mvB-fH-Jya" id="reY-cS-3pS"/>
+                        <outlet property="loadingView" destination="iTV-iQ-lJT" id="4Fw-VL-KZ1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QSV-77-9b3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1370.2290076335878" y="-93.661971830985919"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xox-AN-QB5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="vdE-IZ-Zas" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K4q-I2-SKl">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="W16-pY-DbD" kind="relationship" relationship="rootViewController" id="iGU-nC-lId"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lmQ-hB-JbL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="443.51145038167937" y="-93.661971830985919"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="iTV-iQ-lJT"/>
+    </designables>
+    <resources>
+        <image name="LaunchScreenBGLight" width="1520" height="1920"/>
+        <image name="LaunchScreenLogo" width="1133" height="1053"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
