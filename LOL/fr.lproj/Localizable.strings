@@ -1,7 +1,182 @@
-/* 
-  Localizable.strings
-  LOL
+/*
+ Localizable.strings
+ LOL
+ 
+ Created by Arpit iOS Dev. on 05/08/24.
+ 
+ */
+// Sign up View Controller
+"SignupTitleKey" = "S'inscrire";
+"SignupInstagramKey" = "Quel est votre identifiant Instagram ?";
+"SignupSnapchatKey" = "Quel est votre identifiant Snapchat ?";
+"SignupExKey" = "(Ex : @kylie_jenner)";
+"SignupUsernameKey" = "@nomdutilisateur";
+"SignupErrorKey" = "* Le nom d'utilisateur est requis";
+"SignupErrorExistKey" = "* Le nom d'utilisateur existe déjà";
+"SignupNoInternetMessage" = "Veuillez activer la connexion Internet.";
+"SignupPrivacyKey" = "En appuyant sur “Continuer”, vous reconnaissez avoir lu la Politique de Confidentialité";
+"SignupPrivacyKeyRange" = "Politique de Confidentialité";
+"SignupNextBtnKey" = "Suivant";
 
-  Created by Arpit iOS Dev. on 18/09/24.
-  
-*/
+// Privacy Policy ViewController
+"PrivacyTitleKey" = "Politique de confidentialité";
+"PrivacyDoneBtnKey" = "Fait";
+
+// Profile View Controller
+"ProfileTitleKey" = "Profil";
+"ProfileSelectAvtarKey" = "Sélectionnez votre avatar";
+"ProfileNameKey" = "Nom";
+"ProfileErrorKey" = "* Le nom est requis";
+"ProfileLetsgoBtnKey" = "C'est parti";
+"AvatarKey" = "Avatar";
+"AvatarNoInternetMessage" = "Veuillez activer la connexion Internet.";
+
+// Tab bar Item
+"TabbarItemKey01" = "Maison";
+"TabbarItemKey02" = "boîte de réception ";
+"TabbarItemKey03" = "Plus d'application";
+"TabbarItemKey04" = "Paramètres";
+
+// Home View Controller
+"TitleKey01" = "";
+"TitleKey02" = "à savoir";
+"TitleKey03" = "Carte drôle";
+"TitleKey04" = "Carte joyeuse";
+"TitleKey05" = "1 carte";
+"TitleKey06" = "JE N'AI JAMAIS";
+"TitleKey07" = "CARTE SECRÈTE";
+"QuestionsKey01" = "S'il vous plaît, créez une carte amusante pour moi.";
+"QuestionsKey02" = "Je veux vérifier à quel point tu tu me connais ?";
+"QuestionsKey03" = "Que penses-tu de moi ?";
+"QuestionsKey04" = "Envoyez ma drôle de carte !";
+"QuestionsKey05" = "Décrivez-moi sur une seule carte, anonymement.";
+"QuestionsKey06" = "Pouvez-vous m'envoyer une carte « Je n'ai jamais » sans révéler mon identité ?";
+"QuestionsKey07" = "Que sais-tu de mon secret ? S'il vous plaît dites-moi.";
+"SnackbarNoFaceDetected" = "Aucun visage détecté. Veuillez essayer une autre image.";
+"SnackbarCameraPermissionAccess" = "Veuillez accorder l'autorisation d'accéder à votre caméra.";
+"SnackbarGalleryPermissionAccess" = "Veuillez accorder l'autorisation d'accéder à votre bibliothèque de photos.";
+"Settings" = "Paramètres";
+"EditProfilePictureKey" = "Modifier la photo de profil";
+"CameraKey" = "Caméra";
+"GalleryKey" = "Galerie";
+"SelectAvatarKey" = "Sélectionner un Avatar";
+"CancelKey" = "Annuler";
+
+// Edit View Controller
+"EditTitleKey" = "Écran de formulaire";
+"EditDescriptionKey" = "Sélectionnez les questions de la carte pour vous connaître lorsqu'une autre personne ouvre votre lien. vous pouvez modifier votre question...";
+"EditNameKey" = "Nom";
+"EditSelectQuesKey" = "Sélectionnez une question sur cinq";
+"EditSaveCardBtnKey" = "Enregistrer la carte";
+"SnackbarPleaseSelect5Questions" = "Veuillez sélectionner au moins 5 questions.";
+"SnackbarSelectUpTo5QuestionsOnly" = "Vous ne pouvez sélectionner que jusqu'à 5 questions.";
+"SnackbarPleaseTurnOnInternet" = "Veuillez activer la connexion Internet.";
+"SnackbarCardTitlesUpdated" = "Titres de la carte mis à jour avec succès!";
+"EditNickNameKey" = "Surnom";
+
+// Card Question
+"CardQuesKey" = "Question de carte";
+"CardDescriptionKey" = "Sélectionnez les questions de la carte pour vous connaître lorsqu'une autre personne ouvre votre lien. vous pouvez modifier votre question...";
+"FiveQuesKey" = "Cinq questions";
+"EditQuesBtnKey" = "Modifier la question";
+"ShareBtnKey" = "Partager!";
+"CardNoInternetMessage" = "Veuillez activer la connexion Internet.";
+
+// Share link View Controller
+"CopyLabelKey" = "Étape 1 : Copiez votre lien";
+"ShareLabelKey" = "Étape 2 : Partagez le lien sur votre story Instagram";
+"CopyBtnKey" = "Copier le lien";
+"CopyLinkKey" = "🔗 Lien copié !";
+"ShareLinkLabelKey" = "Comment ajouter le lien à votre histoire";
+"ClickImagekey" = "Cliquez sur l'image";
+"Buttonkey" = "Bouton";
+"ClickKey" = "Cliquez sur le";
+"PasteLinkKey" = "Collez votre lien !";
+"ClickAttachkey" = "Cliquez sur « Joindre au Snap »";
+"FrameLinkKey" = "Encadrez le lien !";
+"InstagramSnackbarError" = "Veuillez installer l'application Instagram";
+"SnapchatSnackbarError" = "Veuillez installer l'application Snapchat";
+
+// More App View Controller
+"MoreTitleKey" = "À VENIR";
+"MoreDescriptionKey" = "Nous allons lancer notre application très bientôt, restez à l'écoute";
+"MoreNoInternetMessage" = "Veuillez activer la connexion Internet.";
+"DownloadBtnKey" = "Télécharger";
+
+// Setting View Controller
+"SettingPart01Key" = "GÉNÉRAL";
+"NotificationKey" = "Notification";
+"PauseKey" = "Mettre en pause le lien";
+"PremiumKey" = "Prime";
+"LanguageKey" = "Configuration de la langue";
+"LanguageSetKey" = "Français";
+"SettingPart02Key" = "COMMUNAUTÉ";
+"ReviewKey" = "Écrire un avis sur une application";
+"InstagramKey" = "Suivez-nous sur Instagram";
+"ShareAppKey" = "Partager l'application avec un ami";
+"SettingPart03Key" = "SOUTIEN";
+"HelpKey" = "J'ai besoin d'aide";
+"PrivacyPolicyKey" = "politique de confidentialité";
+"DeleteAccountKey" = "Supprimer le compte";
+"SettingNoInternetMessage" = "Veuillez activer la connexion Internet.";
+
+// Delete View
+"DeleteTitleKey" = "Supprimer le compte";
+"DeleteDescriptionKey" = "Une fois que vous avez supprimé ce compte, vous ne pouvez plus le restaurer.";
+"CancelBtnKey" = "Annuler";
+"DeleteBtnKey" = "Supprimer";
+
+// Premium View Controller
+"UnlockBtnKey" = "Ouvrir";
+"PremiumFeaturesKey" = "👉Fonctionnalités pro pour %@ à vie👈";
+"PremiumTitleKey1" = "Révéler le profil de l'expéditeur";
+"PremiumTitleKey2" = "Conseils aux téléspectateurs";
+"PremiumTitleKey3" = "Modifier les questions de la carte";
+"PremiumDescriptionKey1" = "Obtenez des indices tels que leur image, leur emplacement, leur appareil, leur identifiant lol et plus encore...";
+"PremiumDescriptionKey2" = "Obtenez un indice amusant sur qui crée votre carte amusante ?";
+"PremiumDescriptionKey3" = "Vous pouvez modifier les questions de la carte lorsque vous posez des questions pour créer une carte !";
+"PremiumNoInternetMessage" = "Veuillez activer la connexion Internet.";
+"PremiumCongraMessageKey" = "Félicitations...";
+"PremiumSuccessMessageKey" = "Vous êtes prêt.";
+"PremiumFailedMessageKey" = "Échec!";
+"PremiumFailedPaymentKey" = "La demande a échoué. Veuillez réessayer après un certain temps!";
+
+// Inbox viewController
+"InboxSenderBtnKey" = "Qui est l'expéditeur ?";
+"InboxNoInternetMessage" = "Veuillez activer la connexion Internet.";
+
+// Preview View Controller
+"PreviewTitleKey" = "Aperçu";
+"PreviewProfileKey" = "Afficher le profil";
+
+// View
+"NoDataTitleKey" = "Aucune donnée trouvée.";
+"NoDataDescriptionKey" = "Échec de la requête! Veuillez réessayer \n après un certain temps.";
+"NoInternetTitleKey" = "Oups... \n Pas de connexion internet!";
+"NoInternetDescriptionKey" = "Veuillez activer la connexion internet!";
+"InboxTitleKey" = "Votre boîte de réception est vide 🥺";
+"InboxDescriptionKey" = "Partagez votre lien pour recevoir des cartes dans \n votre boîte de réception!";
+"InboxGetMessageBtnKey" = "Obtenir le message!";
+
+// Local Notification
+"NotificationTitleKey01" = "Coup de coeur en attente...";
+"NotificationTitleKey02" = "Chin Tapak Dum Dum...";
+"NotificationTitleKey03" = "Carte d'amour";
+"NotificationTitleKey04" = "Partager le lien LOL";
+"NotificationTitleKey05" = "Votre histoire LOL a expiré sur IG 📸 et Snapchat 👻";
+"NotificationTitleKey06" = "La vie est courte _______";
+"NotificationTitleKey07" = "Ami bâtard🐶";
+"NotificationTitleKey08" = "Vérifiez la boîte de réception MDR !";
+"NotificationTitleKey09" = "Envoyer-Plier-Prêter";
+"NotificationTitleKey10" = "Carte LOL de célébrité";
+"NotificationDescriptonKey01" = "Votre béguin attend votre lien. S'il vous plaît, partagez-le !";
+"NotificationDescriptonKey02" = "🎭👻👽";
+"NotificationDescriptonKey03" = "Salut ! Votre personne spéciale vous a surpris avec une carte. Allez-y et vérifiez de qui ça vient !❤️";
+"NotificationDescriptonKey04" = "Copiez, collez et partagez...";
+"NotificationDescriptonKey05" = "Partagez à nouveau pour continuer à recevoir le message.";
+"NotificationDescriptonKey06" = "Partagez d'abord le lien et obtenez une carte.";
+"NotificationDescriptonKey07" = "Quelqu'un de votre ami vous a envoyé une carte. Découvrez de qui il s'agissait !";
+"NotificationDescriptonKey08" = "Jenifer a créé une carte d'amour pour vous !";
+"NotificationDescriptonKey09" = "Narendra Modi a créé une carte joyeuse pour vous. Veuillez le partager sur les réseaux sociaux et identifier @narendramodi.";
+"NotificationDescriptonKey10" = "L'une de vos superstars préférées vous a envoyé une carte. Découvrez qui c'est !";
+

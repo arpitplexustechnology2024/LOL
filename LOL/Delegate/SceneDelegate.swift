@@ -2,51 +2,94 @@
 //  SceneDelegate.swift
 //  LOL
 //
-//  Created by Arpit iOS Dev. on 18/09/24.
+//  Created by Arpit iOS Dev. on 31/07/24.
 //
 
 import UIKit
+import FBSDKCoreKit
+
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
+    enum ActionType: String {
+        case sendMessageAction = "SendMessageAction"
+        case InboxAction       = "InboxAction"
+        case moreAction        = "MoreAction"
+        case shareAction       = "ShareAction"
+    }
+    
     var window: UIWindow?
-
-
+    var savedShortCutItem: UIApplicationShortcutItem!
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        ApplicationDelegate.shared.application(UIApplication.shared, didFinishLaunchingWithOptions: nil)
+        if let shortcutItem = connectionOptions.shortcutItem {
+            savedShortCutItem = shortcutItem
+        }
         guard let _ = (scene as? UIWindowScene) else { return }
     }
-
-    func sceneDidDisconnect(_ scene: UIScene) {
-        // Called as the scene is being released by the system.
-        // This occurs shortly after the scene enters the background, or when its session is discarded.
-        // Release any resources associated with this scene that can be re-created the next time the scene connects.
-        // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        for urlContext in URLContexts {
+            ApplicationDelegate.shared.application(UIApplication.shared, open: urlContext.url, options: [:])
+        }
     }
-
+    
     func sceneDidBecomeActive(_ scene: UIScene) {
-        // Called when the scene has moved from an inactive state to an active state.
-        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        if savedShortCutItem != nil {
+            _ = handleShortCutItem(shortcutItem: savedShortCutItem)
+            savedShortCutItem = nil
+        }
+        // Call checkForUpdate when the scene becomes active
+        (UIApplication.shared.delegate as? AppDelegate)?.checkForUpdate()
     }
-
-    func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
+    
+    func windowScene(_ windowScene: UIWindowScene, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        let handled = handleShortCutItem(shortcutItem: shortcutItem)
+        completionHandler(handled)
     }
-
-    func sceneWillEnterForeground(_ scene: UIScene) {
-        // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on entering the background.
+    
+    func handleShortCutItem(shortcutItem: UIApplicationShortcutItem) -> Bool {
+        if let actionTypeValue = ActionType(rawValue: shortcutItem.type) {
+            switch actionTypeValue {
+            case .sendMessageAction:
+                self.navigateToLaunchVC(actionKey: "SendMessageActionKey")
+            case .shareAction:
+                self.triggerShareSheet()
+            case .InboxAction:
+                self.navigateToLaunchVC(actionKey: "InboxActionKey")
+            case .moreAction:
+                self.navigateToLaunchVC(actionKey: "MoreActionKey")
+            }
+        }
+        return true
     }
-
-    func sceneDidEnterBackground(_ scene: UIScene) {
-        // Called as the scene transitions from the foreground to the background.
-        // Use this method to save data, release shared resources, and store enough scene-specific state information
-        // to restore the scene back to its current state.
+    
+    func navigateToLaunchVC(actionKey: String) {
+        if let navVC = window?.rootViewController as? UINavigationController,
+           let launchVC = navVC.viewControllers.first as? LaunchViewController {
+            launchVC.passedActionKey = actionKey
+        }
     }
-
-
+    
+    func triggerShareSheet() {
+        let appURL = URL(string: "https://apps.apple.com/app/id639191551")!
+        let shareController = UIActivityViewController(activityItems: [appURL], applicationActivities: nil)
+        
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            let tempWindow = UIWindow(windowScene: windowScene)
+            tempWindow.rootViewController = UIViewController()
+            tempWindow.windowLevel = UIWindow.Level.alert + 1
+            tempWindow.makeKeyAndVisible()
+            
+            tempWindow.rootViewController?.present(shareController, animated: true, completion: {
+                shareController.completionWithItemsHandler = { activityType, completed, returnedItems, activityError in
+                    tempWindow.isHidden = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        UIControl().sendAction(#selector(NSXPCConnection.suspend), to: UIApplication.shared, for: nil)
+                    }
+                }
+            })
+        }
+    }
 }
-

@@ -1,7 +1,181 @@
-/* 
+/*
   Localizable.strings
   LOL
 
-  Created by Arpit iOS Dev. on 18/09/24.
+  Created by Arpit iOS Dev. on 05/08/24.
   
 */
+// Sign up View Controller
+"SignupTitleKey" = "Daftar";
+"SignupInstagramKey" = "Apa nama Instagram Anda?";
+"SignupSnapchatKey" = "Apa nama Snapchat Anda?";
+"SignupExKey" = "(Contoh: @kylie_jenner)";
+"SignupUsernameKey" = "@nama_pengguna";
+"SignupErrorKey" = "* Nama pengguna wajib diisi";
+"SignupErrorExistKey" = "* Nama pengguna sudah ada";
+"SignupNoInternetMessage" = "Harap nyalakan koneksi Internet.";
+"SignupPrivacyKey" = "Dengan mengetuk “Lanjutkan”, Anda mengakui bahwa Anda telah membaca Kebijakan Privasi";
+"SignupPrivacyKeyRange" = "Kebijakan Privasi";
+"SignupNextBtnKey" = "Berikutnya";
+
+// Privacy Policy ViewController
+"PrivacyTitleKey" = "Kebijakan Privasi";
+"PrivacyDoneBtnKey" = "Selesai";
+
+// Profile View Controller
+"ProfileTitleKey" = "Profil";
+"ProfileSelectAvtarKey" = "Pilih avatar Anda";
+"ProfileNameKey" = "Nama";
+"ProfileErrorKey" = "* Nama wajib diisi";
+"ProfileLetsgoBtnKey" = "Ayo pergi";
+"AvatarKey" = "Avatar";
+"AvatarNoInternetMessage" = "Harap nyalakan koneksi Internet.";
+
+// Tab bar Item
+"TabbarItemKey01" = "Beranda";
+"TabbarItemKey02" = "Kotak masuk";
+"TabbarItemKey03" = "Aplikasi Lain";
+"TabbarItemKey04" = "Pengaturan";
+
+// Home View Controller
+"TitleKey01" = "";
+"TitleKey02" = "tbh";
+"TitleKey03" = "Kartu lucu";
+"TitleKey04" = "Kartu ceria";
+"TitleKey05" = "1 Kartu";
+"TitleKey06" = "NEVER  HAVE I EVER";
+"TitleKey07" = "KARTU RAHASIA";
+"QuestionsKey01" = "Buatkan saya kartu lucu.";
+"QuestionsKey02" = "Saya ingin memeriksa seberapa baik Anda mengenal saya.";
+"QuestionsKey03" = "Apa pendapat Anda tentang saya?";
+"QuestionsKey04" = "Kirim kartu lucu saya!";
+"QuestionsKey05" = "Deskripsikan saya dalam satu kartu, anonim.";
+"QuestionsKey06" = "Bisakah Anda mengirimkan kartu 'Never Have I Ever' tanpa mengungkapkan identitas saya?";
+"QuestionsKey07" = "Seberapa banyak rahasia saya yang Anda tahu? Tolong beri tahu saya.";
+"SnackbarNoFaceDetected" = "Tidak ada wajah terdeteksi. Coba gambar lain.";
+"SnackbarCameraPermissionAccess" = "Harap berikan izin untuk mengakses kamera Anda.";
+"SnackbarGalleryPermissionAccess" = "Harap berikan izin untuk mengakses perpustakaan foto Anda.";
+"Settings" = "Pengaturan";
+"EditProfilePictureKey" = "Ubah foto profil";
+"CameraKey" = "Kamera";
+"GalleryKey" = "Galeri";
+"SelectAvatarKey" = "Pilih Avatar";
+"CancelKey" = "Batal";
+
+// Card Question View Controller
+"CardQuesKey" = "Pertanyaan Kartu";
+"CardDescriptionKey" = "Pilih pertanyaan dari kartu untuk mengetahui tentang diri Anda ketika orang lain membuka tautan Anda. Anda dapat mengedit pertanyaan...";
+"FiveQuesKey" = "Lima Pertanyaan";
+"EditQuesBtnKey" = "Edit Pertanyaan";
+"ShareBtnKey" = "Bagikan!";
+"CardNoInternetMessage" = "Harap nyalakan koneksi Internet.";
+
+// Share link View Controller
+"CopyLabelKey" = "Langkah 1: Salin tautan Anda";
+"ShareLabelKey" = "Langkah 2: Bagikan tautan di cerita Instagram Anda";
+"CopyBtnKey" = "Salin Tautan";
+"CopyLinkKey" = "🔗 Tautan Disalin!";
+"ShareLinkLabelKey" = "Cara menambahkan Tautan ke Cerita Anda";
+"ClickImagekey" = "Klik gambar";
+"Buttonkey" = "Tombol";
+"ClickKey" = "Klik";
+"PasteLinkKey" = "Tempel tautan Anda!";
+"ClickAttachkey" = "Klik 'Lampirkan ke Snap'";
+"FrameLinkKey" = "Bingkai tautannya!";
+"InstagramSnackbarError" = "Harap Instal Aplikasi Instagram";
+"SnapchatSnackbarError" = "Harap Instal Aplikasi Snapchat";
+
+// Edit View Controller
+"EditTitleKey" = "Layar Formulir";
+"EditDescriptionKey" = "Pilih pertanyaan dari kartu untuk mengetahui tentang diri Anda ketika orang lain membuka tautan Anda. Anda dapat mengedit pertanyaan...";
+"EditNameKey" = "Nama";
+"EditSelectQuesKey" = "Pilih lima pertanyaan";
+"EditSaveCardBtnKey" = "Simpan Kartu";
+"SnackbarPleaseSelect5Questions" = "Harap pilih setidaknya 5 pertanyaan.";
+"SnackbarSelectUpTo5QuestionsOnly" = "Anda hanya dapat memilih hingga 5 pertanyaan.";
+"SnackbarPleaseTurnOnInternet" = "Harap nyalakan koneksi Internet.";
+"SnackbarCardTitlesUpdated" = "Judul kartu berhasil diperbarui!";
+"EditNickNameKey" = "Nama Panggilan";
+
+// More App View Controller
+"MoreTitleKey" = "SEGERA HADIR";
+"MoreDescriptionKey" = "Kami akan segera meluncurkan aplikasi kami, tetap disini";
+"MoreNoInternetMessage" = "Harap nyalakan koneksi Internet.";
+"DownloadBtnKey" = "Unduh";
+
+// Setting View Controller
+"SettingPart01Key" = "UMUM";
+"NotificationKey" = "Notifikasi";
+"PauseKey" = "Jeda tautan";
+"PremiumKey" = "Premium";
+"LanguageKey" = "Pengaturan Bahasa";
+"LanguageSetKey" = "Bahasa Inggris";
+"SettingPart02Key" = "KOMUNITAS";
+"ReviewKey" = "Tulis ulasan aplikasi";
+"InstagramKey" = "Ikuti kami di Instagram";
+"ShareAppKey" = "Bagikan aplikasi dengan teman";
+"SettingPart03Key" = "DUKUNGAN";
+"HelpKey" = "Saya butuh Bantuan";
+"PrivacyPolicyKey" = "Kebijakan Privasi";
+"DeleteAccountKey" = "Hapus akun";
+"SettingNoInternetMessage" = "Harap nyalakan koneksi Internet.";
+
+// Delete View
+"DeleteTitleKey" = "Hapus akun";
+"DeleteDescriptionKey" = "Setelah Anda menghapus akun ini, Anda tidak dapat memulihkan akun.";
+"CancelBtnKey" = "Batal";
+"DeleteBtnKey" = "Hapus";
+
+// Premium View Controller
+"UnlockBtnKey" = "Buka";
+"PremiumFeaturesKey" = "👉fitur pro seharga %@ seumur hidup👈";
+"PremiumTitleKey1" = "Ungkap Profil Pengirim";
+"PremiumTitleKey2" = "Petunjuk Penonton";
+"PremiumTitleKey3" = "Edit Pertanyaan Kartu";
+"PremiumDescriptionKey1" = "Dapatkan petunjuk seperti gambar, lokasi, perangkat, lol id, dan lainnya...";
+"PremiumDescriptionKey2" = "Dapatkan petunjuk lucu siapa yang membuat kartu lucu Anda?";
+"PremiumDescriptionKey3" = "Anda dapat mengedit pertanyaan kartu saat meminta pertanyaan untuk membuat kartu!";
+"PremiumNoInternetMessage" = "Harap nyalakan koneksi Internet.";
+"PremiumCongraMessageKey" = "Selamat...";
+"PremiumSuccessMessageKey" = "Semua sudah siap.";
+"PremiumFailedMessageKey" = "Gagal!";
+"PremiumFailedPaymentKey" = "Permintaan gagal. Silakan coba lagi setelah beberapa waktu!";
+
+// Inbox viewController
+"InboxSenderBtnKey" = "Siapa pengirim?";
+"InboxNoInternetMessage" = "Harap nyalakan koneksi Internet.";
+
+// Preview View Controller
+"PreviewTitleKey" = "Pratinjau";
+"PreviewProfileKey" = "Tampilkan Profil";
+
+// View
+"NoDataTitleKey" = "Tidak ada data yang ditemukan.";
+"NoDataDescriptionKey" = "Permintaan gagal! Silakan coba lagi \n setelah beberapa saat.";
+"NoInternetTitleKey" = "Oops... \n Tidak ada koneksi internet!";
+"NoInternetDescriptionKey" = "Harap nyalakan koneksi internet!";
+"InboxTitleKey" = "Kotak masuk Anda kosong 🥺";
+"InboxDescriptionKey" = "Bagikan tautan Anda untuk mendapatkan kartu di \n kotak masuk Anda!";
+"InboxGetMessageBtnKey" = "Dapatkan pesan!";
+
+// Local Notification
+"NotificationTitleKey01" = "Crush menunggu...";
+"NotificationTitleKey02" = "Chin Tapak Dum Dum...";
+"NotificationTitleKey03" = "Kartu Cinta";
+"NotificationTitleKey04" = "Bagikan Tautan LOL";
+"NotificationTitleKey05" = "Cerita LOL Anda kedaluwarsa di IG 📸 & Snapchat 👻";
+"NotificationTitleKey06" = "Hidup itu singkat _______";
+"NotificationTitleKey07" = "Teman Bajingan🐶";
+"NotificationTitleKey08" = "Periksa kotak masuk LOL!";
+"NotificationTitleKey09" = "Kirim-Pinjam-Lend";
+"NotificationTitleKey10" = "Kartu LOL Selebriti";
+"NotificationDescriptonKey01" = "Crush Anda sedang menunggu tautan Anda. Bagikan di IG!";
+"NotificationDescriptonKey02" = "🎭👻👽";
+"NotificationDescriptonKey03" = "Hai! Seseorang yang spesial mengejutkan Anda dengan sebuah kartu. Silakan dan periksa untuk melihat dari siapa itu!❤️";
+"NotificationDescriptonKey04" = "Bagikan tautan LOL Anda untuk mendapatkan kartu.";
+"NotificationDescriptonKey05" = "Perbarui Cerita LOL Anda dan dapatkan lebih banyak kartu.";
+"NotificationDescriptonKey06" = "Bagikan tautan LOL Anda dan lihat apa yang terjadi!";
+"NotificationDescriptonKey07" = "Pesan khusus menunggu Anda di kotak masuk Anda.";
+"NotificationDescriptonKey08" = "Periksa kartu rahasia Anda di kotak masuk Anda!";
+"NotificationDescriptonKey09" = "Seseorang telah meminta Anda untuk meminjamkan mereka kartu LOL!";
+"NotificationDescriptonKey10" = "Pasti orang terkenal yang baru saja mengirimi Anda kartu! Coba lihat!";

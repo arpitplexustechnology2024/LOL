@@ -1,7 +1,182 @@
-/* 
+/*
   Localizable.strings
   LOL
 
-  Created by Arpit iOS Dev. on 18/09/24.
+  Created by Arpit iOS Dev. on 05/08/24.
   
 */
+// Sign up View Controller
+"SignupTitleKey" = "Inscreva-se";
+"SignupInstagramKey" = "Qual é o seu usuário do Instagram?";
+"SignupSnapchatKey" = "Qual é o seu usuário do Snapchat?";
+"SignupExKey" = "(Ex: @kylie_jenner)";
+"SignupUsernameKey" = "@usuário";
+"SignupErrorKey" = "* Nome de usuário é obrigatório";
+"SignupErrorExistKey" = "* Nome de usuário já existe";
+"SignupNoInternetMessage" = "Por favor, ative a conexão com a internet.";
+"SignupPrivacyKey" = "Ao tocar em “Continuar”, você reconhece que leu a Política de Privacidade";
+"SignupPrivacyKeyRange" = "Política de Privacidade";
+"SignupNextBtnKey" = "Próximo";
+
+// Privacy Policy ViewController
+"PrivacyTitleKey" = "Política de Privacidade";
+"PrivacyDoneBtnKey" = "Concluído";
+
+// Profile View Controller
+"ProfileTitleKey" = "Perfil";
+"ProfileSelectAvtarKey" = "Selecione seu avatar";
+"ProfileNameKey" = "Nome";
+"ProfileErrorKey" = "* Nome é obrigatório";
+"ProfileLetsgoBtnKey" = "Vamos lá";
+"AvatarKey" = "Avatar";
+"AvatarNoInternetMessage" = "Por favor, ative a conexão com a internet.";
+
+// Tab bar Item
+"TabbarItemKey01" = "Início";
+"TabbarItemKey02" = "Caixa de entrada";
+"TabbarItemKey03" = "Mais Aplicativos";
+"TabbarItemKey04" = "Configurações";
+
+// Home View Controller
+"TitleKey01" = "";
+"TitleKey02" = "confidencial";
+"TitleKey03" = "Cartão engraçado";
+"TitleKey04" = "Cartão alegre";
+"TitleKey05" = "1 Cartão";
+"TitleKey06" = "EU NUNCA";
+"TitleKey07" = "CARTÃO SECRETO";
+"QuestionsKey01" = "Por favor, crie um cartão engraçado para mim.";
+"QuestionsKey02" = "Quero ver o quanto você me conhece?";
+"QuestionsKey03" = "O que você acha de mim?";
+"QuestionsKey04" = "Envie meu cartão engraçado!";
+"QuestionsKey05" = "Descreva-me em um cartão, anonimamente.";
+"QuestionsKey06" = "Você pode me enviar um cartão de “Eu nunca” sem revelar minha identidade?";
+"QuestionsKey07" = "O quanto do meu segredo você conhece? Conte-me.";
+"SnackbarNoFaceDetected" = "Nenhum rosto detectado. Tente outra imagem.";
+"SnackbarCameraPermissionAccess" = "Por favor, conceda permissão para acessar sua câmera.";
+"SnackbarGalleryPermissionAccess" = "Por favor, conceda permissão para acessar sua biblioteca de fotos.";
+"Settings" = "Configurações";
+"EditProfilePictureKey" = "Editar foto do perfil";
+"CameraKey" = "Câmera";
+"GalleryKey" = "Galeria";
+"SelectAvatarKey" = "Selecione Avatar";
+"CancelKey" = "Cancelar";
+
+// Card Question View Controller
+"CardQuesKey" = "Pergunta do Cartão";
+"CardDescriptionKey" = "Selecione as perguntas do cartão para saber sobre você quando outra pessoa abrir seu link. você pode editar sua pergunta...";
+"FiveQuesKey" = "Cinco Perguntas";
+"EditQuesBtnKey" = "Editar Pergunta";
+"ShareBtnKey" = "Compartilhar!";
+"CardNoInternetMessage" = "Por favor, ative a conexão com a internet.";
+
+// Share link View Controller
+"CopyLabelKey" = "Etapa 1: Copie seu link";
+"ShareLabelKey" = "Etapa 2: Compartilhe o link na sua história do Instagram";
+"CopyBtnKey" = "Copiar Link";
+"CopyLinkKey" = "🔗 Link Copiado!";
+"ShareLinkLabelKey" = "Como adicionar o link à sua história";
+"ClickImagekey" = "Clique na imagem";
+"Buttonkey" = "Botão";
+"ClickKey" = "Clique no";
+"PasteLinkKey" = "Cole seu link!";
+"ClickAttachkey" = "Clique em “Anexar ao Snap”";
+"FrameLinkKey" = "Enquadre o link!";
+"InstagramSnackbarError" = "Por favor, instale o aplicativo Instagram";
+"SnapchatSnackbarError" = "Por favor, instale o aplicativo Snapchat";
+
+// Edit View Controller
+"EditTitleKey" = "Tela do Formulário";
+"EditDescriptionKey" = "Selecione as perguntas do cartão para saber sobre você quando outra pessoa abrir seu link. você pode editar sua pergunta...";
+"EditNameKey" = "Nome";
+"EditSelectQuesKey" = "Selecione cinco perguntas";
+"EditSaveCardBtnKey" = "Salvar Cartão";
+"SnackbarPleaseSelect5Questions" = "Por favor, selecione pelo menos 5 perguntas.";
+"SnackbarSelectUpTo5QuestionsOnly" = "Você pode selecionar até 5 perguntas apenas.";
+"SnackbarPleaseTurnOnInternet" = "Por favor, ative a conexão com a internet.";
+"SnackbarCardTitlesUpdated" = "Títulos dos cartões atualizados com sucesso!";
+"EditNickNameKey" = "Apelido";
+
+// More App View Controller
+"MoreTitleKey" = "EM BREVE";
+"MoreDescriptionKey" = "Estamos lançando nosso aplicativo em breve, fique atento";
+"MoreNoInternetMessage" = "Por favor, ative a conexão com a internet.";
+"DownloadBtnKey" = "Baixar";
+
+// Setting View Controller
+"SettingPart01Key" = "GERAL";
+"NotificationKey" = "Notificação";
+"PauseKey" = "Pausar link";
+"PremiumKey" = "Premium";
+"LanguageKey" = "Configuração de idioma";
+"LanguageSetKey" = "Inglês";
+"SettingPart02Key" = "COMUNIDADE";
+"ReviewKey" = "Escrever uma avaliação do aplicativo";
+"InstagramKey" = "Siga-nos no Instagram";
+"ShareAppKey" = "Compartilhar aplicativo com um amigo";
+"SettingPart03Key" = "SUPORTE";
+"HelpKey" = "Preciso de Ajuda";
+"PrivacyPolicyKey" = "Política de Privacidade";
+"DeleteAccountKey" = "Excluir conta";
+"SettingNoInternetMessage" = "Por favor, ative a conexão com a internet.";
+
+// Delete View
+"DeleteTitleKey" = "Excluir conta";
+"DeleteDescriptionKey" = "Depois de excluir esta conta, você não poderá restaurá-la.";
+"CancelBtnKey" = "Cancelar";
+"DeleteBtnKey" = "Excluir";
+
+// Premium View Controller
+"UnlockBtnKey" = "Desbloquear";
+"PremiumFeaturesKey" = "👉recursos pro por %@ vitalício👈";
+"PremiumTitleKey1" = "Revelar Perfil do Remetente";
+"PremiumTitleKey2" = "Dicas dos Visualizadores";
+"PremiumTitleKey3" = "Editar Perguntas do Cartão";
+"PremiumDescriptionKey1" = "Obtenha dicas como a imagem, localização, dispositivo, ID do lol e mais...";
+"PremiumDescriptionKey2" = "Receba dicas engraçadas sobre quem criou seu cartão engraçado?";
+"PremiumDescriptionKey3" = "Você pode editar as perguntas do cartão ao fazer perguntas para criar um cartão!";
+"PremiumNoInternetMessage" = "Por favor, ative a conexão com a internet.";
+"PremiumCongraMessageKey" = "Parabéns...";
+"PremiumSuccessMessageKey" = "Tudo pronto.";
+"PremiumFailedMessageKey" = "Falhou!";
+"PremiumFailedPaymentKey" = "Solicitação falhou. Por favor, tente novamente depois de algum tempo!";
+
+// Inbox viewController
+"InboxSenderBtnKey" = "Quem é o remetente?";
+"InboxNoInternetMessage" = "Por favor, ative a conexão com a internet.";
+
+// Preview View Controller
+"PreviewTitleKey" = "Pré-visualização";
+"PreviewProfileKey" = "Mostrar Perfil";
+
+// View
+"NoDataTitleKey" = "Nenhum dado encontrado.";
+"NoDataDescriptionKey" = "Falha na solicitação! Tente novamente \n depois de algum tempo.";
+"NoInternetTitleKey" = "Ops... \n Sem conexão com a internet!";
+"NoInternetDescriptionKey" = "Por favor, ative a conexão com a internet!";
+"InboxTitleKey" = "Sua caixa de entrada está vazia 🥺";
+"InboxDescriptionKey" = "Compartilhe seu link para receber cartões \n na sua caixa de entrada!";
+"InboxGetMessageBtnKey" = "Receber mensagem!";
+
+// Local Notification
+"NotificationTitleKey01" = "Crush esperando...";
+"NotificationTitleKey02" = "Chin Tapak Dum Dum...";
+"NotificationTitleKey03" = "Cartão de Amor";
+"NotificationTitleKey04" = "Compartilhar Link LOL";
+"NotificationTitleKey05" = "Sua história LOL expirou no IG 📸 & Snapchat 👻";
+"NotificationTitleKey06" = "A vida é curta _______";
+"NotificationTitleKey07" = "Amigo safado🐶";
+"NotificationTitleKey08" = "Confira a caixa de entrada LOL!";
+"NotificationTitleKey09" = "Envie-Empreste-Lend";
+"NotificationTitleKey10" = "Cartão de Celebridade LOL";
+"NotificationDescriptonKey01" = "Seu crush está esperando pelo seu link. Por favor, compartilhe no IG!";
+"NotificationDescriptonKey02" = "🎭👻👽";
+"NotificationDescriptonKey03" = "Ei! Alguém especial te surpreendeu com um cartão. Vá em frente e descubra de quem é!❤️";
+"NotificationDescriptonKey04" = "Copiar, Colar e Reenviar! Seus amigos o estão esperando!";
+"NotificationDescriptonKey05" = "Sua história LOL expirou, compartilhe-a novamente para continuar a diversão!";
+"NotificationDescriptonKey06" = "Vá em frente e crie um cartão engraçado e compartilhe com seus amigos!";
+"NotificationDescriptonKey07" = "Seu amigo criou um cartão de amor pra você. Confira quem enviou!";
+"NotificationDescriptonKey08" = "Você tem novas mensagens esperando. Abra seu LOL e descubra quem as enviou!";
+"NotificationDescriptonKey09" = "Confira quem enviou e compartilhou seu link LOL! Surpresas esperam por você!";
+"NotificationDescriptonKey10" = "Você recebeu um cartão de uma celebridade LOL. Abra seu LOL para ver o que está rolando!";
+

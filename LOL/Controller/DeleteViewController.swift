@@ -2,28 +2,84 @@
 //  DeleteViewController.swift
 //  LOL
 //
-//  Created by Arpit iOS Dev. on 18/09/24.
+//  Created by Arpit iOS Dev. on 12/08/24.
 //
 
 import UIKit
 
 class DeleteViewController: UIViewController {
-
+    
+    @IBOutlet weak var deleteTitleLabel: UILabel!
+    @IBOutlet weak var deleteDescriptionLabel: UILabel!
+    @IBOutlet weak var deleteView: UIView!
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
+    private var activityIndicator: UIActivityIndicatorView!
+    private let viewModel = DeleteuserViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupUI()
+        localizeUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupUI() {
+        deleteView.layer.cornerRadius = 16
+        deleteButton.layer.cornerRadius = deleteButton.frame.height / 2
+        deleteButton.frame = CGRect(x: (view.frame.width - 100) / 2, y: view.center.y - 20, width: 100, height: 40)
+        deleteButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
+        cancelButton.layer.cornerRadius = cancelButton.frame.height / 2
+        cancelButton.layer.borderWidth = 1.5
+        if traitCollection.userInterfaceStyle == .dark {
+            cancelButton.layer.borderColor = UIColor.white.cgColor
+            cancelButton.setTitleColor(.white, for: .normal)
+        } else {
+            cancelButton.layer.borderColor = UIColor.black.cgColor
+            cancelButton.setTitleColor(.black, for: .normal)
+        }
     }
-    */
-
+    
+    func localizeUI() {
+        deleteTitleLabel.text = NSLocalizedString("DeleteTitleKey", comment: "")
+        deleteDescriptionLabel.text = NSLocalizedString("DeleteDescriptionKey", comment: "")
+        deleteButton.setTitle(NSLocalizedString("DeleteBtnKey", comment: ""), for: .normal)
+        cancelButton.setTitle(NSLocalizedString("CancelBtnKey", comment: ""), for: .normal)
+    }
+    
+    @IBAction func btnCancelTapped(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func btnDeleteTapped(_ sender: UIButton) {
+        let username = UserDefaults.standard.string(forKey: ConstantValue.user_name)
+        
+        viewModel.requestDeleteUser(username: username!) { [weak self] result in
+            guard let self = self else { return }
+            
+            DispatchQueue.main.async { [self] in
+                switch result {
+                case .success(let profile):
+                    print("Delete User : \(profile.message)")
+                    UserDefaults.standard.set(false, forKey: ConstantValue.is_UserRegistered)
+                    UserDefaults.standard.set(false, forKey: ConstantValue.profile_Image)
+                    UserDefaults.standard.set(false, forKey: ConstantValue.avatar_URL)
+                    UserDefaults.standard.set(false, forKey: ConstantValue.name)
+                    UserDefaults.standard.set(false, forKey: ConstantValue.isPurchase)
+                    UserDefaults.standard.set(false, forKey: "deviceToken")
+                    DispatchQueue.main.async {
+                        self.dismiss(animated: true) {
+                            if let window = UIApplication.shared.windows.first {
+                                if let rootViewController = window.rootViewController as? UINavigationController {
+                                    let signupVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
+                                    rootViewController.pushViewController(signupVC, animated: true)
+                                }
+                            }
+                        }
+                    }
+                case .failure(let error):
+                    print("Delete User error: \(error.localizedDescription)")
+                }
+            }
+        }
+    }
 }

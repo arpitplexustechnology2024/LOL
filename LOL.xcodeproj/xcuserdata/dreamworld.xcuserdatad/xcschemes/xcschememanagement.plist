@@ -7,7 +7,35 @@
 		<key>LOL.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>60</integer>
+		</dict>
+		<key>OneSignalPushNotificationExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>61</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>BDA0B4FA2C9B8CD0001FAFFF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BDDDF1492C9B832F00080F16</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BDDDF15F2C9B833100080F16</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BDDDF1692C9B833100080F16</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

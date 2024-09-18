@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-SemiBold.ttf">
+            <string>Lato-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Instagram03" customModule="LOL" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="TRv-9G-izI" id="bJQ-MO-eYb"/>
+                <outlet property="titleLable" destination="C2v-ZF-Tax" id="gi1-48-9KN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="s9Y-sJ-UEM">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TRv-9G-izI">
+                    <rect key="frame" x="25" y="99" width="343" height="190"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="190" id="KiO-HN-RRI"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paste your link!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2v-ZF-Tax">
+                    <rect key="frame" x="0.0" y="59" width="393" height="24"/>
+                    <fontDescription key="fontDescription" name="Lato-SemiBold" family="Lato" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="nTn-4q-oZB"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="nTn-4q-oZB" firstAttribute="trailing" secondItem="TRv-9G-izI" secondAttribute="trailing" constant="25" id="7GG-gG-b9W"/>
+                <constraint firstItem="TRv-9G-izI" firstAttribute="leading" secondItem="nTn-4q-oZB" secondAttribute="leading" constant="25" id="DmV-K3-9uE"/>
+                <constraint firstItem="C2v-ZF-Tax" firstAttribute="top" secondItem="nTn-4q-oZB" secondAttribute="top" id="FBr-wM-VzN"/>
+                <constraint firstItem="nTn-4q-oZB" firstAttribute="trailing" secondItem="C2v-ZF-Tax" secondAttribute="trailing" id="LST-6M-dYx"/>
+                <constraint firstItem="TRv-9G-izI" firstAttribute="top" secondItem="C2v-ZF-Tax" secondAttribute="bottom" constant="16" id="Wjj-IJ-zus"/>
+                <constraint firstItem="C2v-ZF-Tax" firstAttribute="leading" secondItem="nTn-4q-oZB" secondAttribute="leading" id="tEy-vc-d3w"/>
+            </constraints>
+            <point key="canvasLocation" x="104.58015267175573" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

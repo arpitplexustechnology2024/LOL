@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-SemiBold.ttf">
+            <string>Lato-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Snapchat03" customModule="LOL" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="Kww-bO-5pb" id="B6f-ET-tr2"/>
+                <outlet property="titleLable" destination="zOS-sR-A0L" id="2Z4-Ih-hAm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="gB9-ql-aaO">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kww-bO-5pb">
+                    <rect key="frame" x="25" y="99" width="343" height="190"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="190" id="AdD-j6-Uba"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paste your link!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOS-sR-A0L">
+                    <rect key="frame" x="0.0" y="59" width="393" height="24"/>
+                    <fontDescription key="fontDescription" name="Lato-SemiBold" family="Lato" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Ans-C8-g12"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="zOS-sR-A0L" firstAttribute="leading" secondItem="Ans-C8-g12" secondAttribute="leading" id="8dJ-Jm-6dy"/>
+                <constraint firstItem="zOS-sR-A0L" firstAttribute="top" secondItem="Ans-C8-g12" secondAttribute="top" id="LML-BG-KQw"/>
+                <constraint firstItem="Ans-C8-g12" firstAttribute="trailing" secondItem="zOS-sR-A0L" secondAttribute="trailing" id="Mux-8l-nt8"/>
+                <constraint firstItem="Kww-bO-5pb" firstAttribute="leading" secondItem="Ans-C8-g12" secondAttribute="leading" constant="25" id="ckO-HV-kfg"/>
+                <constraint firstItem="Kww-bO-5pb" firstAttribute="top" secondItem="zOS-sR-A0L" secondAttribute="bottom" constant="16" id="e1D-28-jpP"/>
+                <constraint firstItem="Ans-C8-g12" firstAttribute="trailing" secondItem="Kww-bO-5pb" secondAttribute="trailing" constant="25" id="j8f-nw-vQ9"/>
+            </constraints>
+            <point key="canvasLocation" x="104.58015267175573" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,7 +1,181 @@
-/* 
-  Localizable.strings
-  LOL
+/*
+ Localizable.strings
+ LOL
+ 
+ Created by Arpit iOS Dev. on 05/08/24.
+ 
+ */
+// Sign up View Controller
+"SignupTitleKey" = "سائن اپ کریں";
+"SignupInstagramKey" = "آپ کا انسٹاگرام ہینڈل کیا ہے؟";
+"SignupSnapchatKey" = "آپ کا اسنیپ چیٹ ہینڈل کیا ہے؟";
+"SignupExKey" = "(جیسے: @kylie_jenner)";
+"SignupUsernameKey" = "@صارف نام";
+"SignupErrorKey" = "* صارف نام ضروری ہے";
+"SignupErrorExistKey" = "* صارف کا نام پہلے سے موجود ہے";
+"SignupNoInternetMessage" = "براہ کرم انٹرنیٹ کنکشن آن کریں۔";
+"SignupPrivacyKey" = "“جاری رکھیں” پر ٹیپ کرکے، آپ تسلیم کرتے ہیں کہ آپ نے پرائیویسی پالیسی پڑھ لی ہے";
+"SignupPrivacyKeyRange" = "پرائیویسی پالیسی";
+"SignupNextBtnKey" = "اگلا";
 
-  Created by Arpit iOS Dev. on 18/09/24.
-  
-*/
+// Privacy Policy ViewController
+"PrivacyTitleKey" = "رازداری کی پالیسی";
+"PrivacyDoneBtnKey" = "مکمل";
+
+// Profile View Controller
+"ProfileTitleKey" = "پروفائل";
+"ProfileSelectAvtarKey" = "اپنا ایوٹار منتخب کریں";
+"ProfileNameKey" = "نام";
+"ProfileErrorKey" = "* نام درکار ہے";
+"ProfileLetsgoBtnKey" = "چلیں";
+"AvatarKey" = "ایوٹار";
+"AvatarNoInternetMessage" = "براہ کرم انٹرنیٹ کنکشن آن کریں۔";
+
+// Tab bar Item
+"TabbarItemKey01" = "گھر";
+"TabbarItemKey02" = "انباکس";
+"TabbarItemKey03" = "مزید ایپ";
+"TabbarItemKey04" = "ترتیبات";
+
+// Home View Controller
+"TitleKey01" = "";
+"TitleKey02" = "ٹی بی ایچ";
+"TitleKey03" = "مضحکہ خیز کارڈ";
+"TitleKey04" = "جولی کارڈ";
+"TitleKey05" = "1 کارڈ";
+"TitleKey06" = "میں نے کبھی نہیں";
+"TitleKey07" = "خفیہ کارڈ";
+"QuestionsKey01" = "برائے مہربانی میرے لیے ایک مضحکہ خیز کارڈ بنائیں.";
+"QuestionsKey02" = "میں چیک کرنا چاہتا ہوں کہ آپ کتنے ہیں۔ مجھے جانتے ہو؟";
+"QuestionsKey03" = "تم میرے بارے میں کیا سوچتے ہو؟";
+"QuestionsKey04" = "میرا مضحکہ خیز کارڈ بھیجیں!";
+"QuestionsKey05" = "مجھے ایک کارڈ میں بیان کریں، گمنام طور پر";
+"QuestionsKey06" = "کیا آپ میری شناخت ظاہر کیے بغیر مجھے “کبھی کبھی نہیں“ کارڈ بھیج سکتے ہیں؟";
+"QuestionsKey07" = "میرا کتنا راز تم جانتے ہو؟ براہ کرم مجھے بتائیں۔";
+"SnackbarNoFaceDetected" = "کوئی چہرہ نہیں ملا۔ براہ کرم دوسری تصویر آزمائیں۔";
+"SnackbarCameraPermissionAccess" = "براہ کرم اپنے کیمرے تک رسائی کی اجازت دیں۔";
+"SnackbarGalleryPermissionAccess" = "براہ کرم اپنے فوٹو لائبریری تک رسائی کی اجازت دیں۔";
+"Settings" = "سیٹنگز";
+"EditProfilePictureKey" = "پروفائل تصویر کو ترمیم کریں";
+"CameraKey" = "کیمرہ";
+"GalleryKey" = "گیلری";
+"SelectAvatarKey" = "اوتار منتخب کریں";
+"CancelKey" = "منسوخ کریں";
+
+// Edit View Controller
+"EditTitleKey" = "فارم اسکرین";
+"EditDescriptionKey" = "جب کوئی دوسرا شخص آپ کا لنک کھولتا ہے تو اپنے بارے میں جاننے کے لیے کارڈ سے سوالات کا انتخاب کریں۔ آپ اپنے سوال میں ترمیم کر سکتے ہیں...";
+"EditNameKey" = "نام";
+"EditSelectQuesKey" = "پانچ-سوالات کا انتخاب کریں";
+"EditSaveCardBtnKey" = "کارڈ محفوظ کریں۔";
+"SnackbarPleaseSelect5Questions" = "براہ کرم کم از کم 5 سوالات منتخب کریں۔";
+"SnackbarSelectUpTo5QuestionsOnly" = "آپ صرف 5 سوالات تک منتخب کر سکتے ہیں۔";
+"SnackbarPleaseTurnOnInternet" = "براہ کرم انٹرنیٹ کنکشن آن کریں۔";
+"SnackbarCardTitlesUpdated" = "کارڈ کے عنوانات کامیابی کے ساتھ اپ ڈیٹ ہوگئے!";
+"EditNickNameKey" = "عرفی نام";
+
+// Card Question
+"CardQuesKey" = "کارڈ کا سوال";
+"CardDescriptionKey" = "جب کوئی دوسرا شخص آپ کا لنک کھولتا ہے تو اپنے بارے میں جاننے کے لیے کارڈ سے سوالات کا انتخاب کریں۔ آپ اپنے سوال میں ترمیم کر سکتے ہیں...";
+"FiveQuesKey" = "پانچ سوال";
+"EditQuesBtnKey" = "سوال میں ترمیم کریں۔";
+"ShareBtnKey" = "بانٹیں!";
+"CardNoInternetMessage" = "براہ کرم انٹرنیٹ کنکشن آن کریں۔";
+
+// Share link View Controller
+"CopyLabelKey" = "مرحلہ 1: اپنا لنک کاپی کریں۔";
+"ShareLabelKey" = "مرحلہ 2: اپنی انساگرام کہانی پر لنک شیئر کریں۔";
+"CopyBtnKey" = "لنک کاپی کریں۔";
+"CopyLinkKey" = "🔗 لنک کاپی ہو گیا!";
+"ShareLinkLabelKey" = "اپنی کہانی میں لنک کیسے شامل کریں۔";
+"ClickImagekey" = "تصویر پر کلک کریں۔";
+"Buttonkey" = "بٹن";
+"ClickKey" = "پر کلک کریں۔";
+"PasteLinkKey" = "اپنا لنک چسپاں کریں!";
+"ClickAttachkey" = "”اسنیپ سے منسلک کریں ”پر کلک کریں";
+"FrameLinkKey" = "لنک کو فریم کریں!";
+"InstagramSnackbarError" = "براہ کرم انسٹاگرام ایپ انسٹال کریں";
+"SnapchatSnackbarError" = "براہ کرم اسنیپ چیٹ ایپ انسٹال کریں";
+
+// More App View Controller
+"MoreTitleKey" = "جلد آرہا ہے۔";
+"MoreDescriptionKey" = "ہم بہت جلد اپنی ایپ لانچ کرنے جا رہے ہیں۔";
+"MoreNoInternetMessage" = "براہ کرم انٹرنیٹ کنکشن آن کریں۔";
+"DownloadBtnKey" = "ڈاؤن لوڈ کریں";
+
+// Setting View Controller
+"SettingPart01Key" = "جنرل";
+"NotificationKey" = "اطلاع";
+"PauseKey" = "لنک روکیں";
+"PremiumKey" = "پریمیم";
+"LanguageKey" = "زبان کی ترتیب";
+"LanguageSetKey" = "اردو";
+"SettingPart02Key" = "کمیونٹی";
+"ReviewKey" = "ایپ کا جائزہ لکھیں۔";
+"InstagramKey" = "ہمیں انسٹاگرام پر فالو کریں۔";
+"ShareAppKey" = "کسی دوست کے ساتھ ایپ کا اشتراک کریں۔";
+"SettingPart03Key" = "سپورٹ";
+"HelpKey" = "مجھے مدد کی ضرورت ہے۔";
+"PrivacyPolicyKey" = "رازداری کی پالیسی";
+"DeleteAccountKey" = "اکاؤنٹ حذف کریں۔";
+"SettingNoInternetMessage" = "براہ کرم انٹرنیٹ کنکشن آن کریں۔";
+
+// Delete View
+"DeleteTitleKey" = "اکاؤنٹ حذف کریں۔";
+"DeleteDescriptionKey" = "ایک بار جب آپ اس اکاؤنٹ کو حذف کرنے کے بعد اکاؤنٹ کو بحال نہیں کر سکتے ہیں۔";
+"CancelBtnKey" = "منسوخ کریں۔";
+"DeleteBtnKey" = "حذف کریں۔";
+
+// Premium View Controller
+"UnlockBtnKey" = "غیر مقفل کریں۔";
+"PremiumFeaturesKey" = "👉%@ میں زندگی بھر کے لیے پرو فیچرز👈";
+"PremiumTitleKey1" = "بھیجنے والے کا پروفائل ظاہر کریں۔";
+"PremiumTitleKey2" = "ناظرین کے اشارے";
+"PremiumTitleKey3" = "کارڈ کے سوالات میں ترمیم کریں۔";
+"PremiumDescriptionKey1" = "ان کی تصویر، مقام، ڈیوائس، LOL id اور مزید جیسے اشارے حاصل کریں...";
+"PremiumDescriptionKey2" = "کچھ مضحکہ خیز اشارہ حاصل کریں جو آپ کا مضحکہ خیز کارڈ بناتا ہے؟";
+"PremiumDescriptionKey3" = "جب آپ کارڈ بنانے کے لیے سوالات پوچھتے ہیں تو آپ کارڈ کے سوالات میں ترمیم کر سکتے ہیں!";
+"PremiumNoInternetMessage" = "براہ کرم انٹرنیٹ کنکشن آن کریں۔";
+"PremiumCongraMessageKey" = "مبارک ہو...";
+"PremiumSuccessMessageKey" = "آپ تیار ہیں۔";
+"PremiumFailedMessageKey" = "ناکام!";
+"PremiumFailedPaymentKey" = "درخواست ناکام ہو گئی۔ براہ کرم کچھ وقت بعد دوبارہ کوشش کریں!";
+
+// Inbox viewController
+"InboxSenderBtnKey" = "مرسل کون ہے؟";
+"InboxNoInternetMessage" = "براہ کرم انٹرنیٹ کنکشن آن کریں۔";
+
+// Preview View Controller
+"PreviewTitleKey" = "پیش نظارہ";
+"PreviewProfileKey" = "پروفائل دکھائیں";
+
+// View
+"NoDataTitleKey" = "کوئی ڈیٹا نہیں ملا۔";
+"NoDataDescriptionKey" = "درخواست ناکام ہوگئی! براہ کرم کچھ دیر بعد \n دوبارہ کوشش کریں۔";
+"NoInternetTitleKey" = "اوہ... \n کوئی انٹرنیٹ کنکشن نہیں!";
+"NoInternetDescriptionKey" = "براہ کرم انٹرنیٹ کنکشن آن کریں!";
+"InboxTitleKey" = "آپ کا ان باکس خالی ہے 🥺";
+"InboxDescriptionKey" = "اپنے ان باکس میں کارڈز حاصل کرنے کے لئے \n اپنا لنک شیئر کریں!";
+"InboxGetMessageBtnKey" = "پیغام حاصل کریں!";
+
+// Local Notification
+"NotificationTitleKey01" = "انتظار کو کچلنا...";
+"NotificationTitleKey02" = "چن تپاک دم دم...";
+"NotificationTitleKey03" = "محبت کارڈ";
+"NotificationTitleKey04" = "LOL لنک شیئر کریں۔";
+"NotificationTitleKey05" = "آپ کی LOL کہانی IG 📸 اور Snapchat 👻 پر ختم ہوگئی";
+"NotificationTitleKey06" = "زندگی مختصر ہے _______";
+"NotificationTitleKey07" = "🐶کمینے دوست";
+"NotificationTitleKey08" = "LOL ان باکس چیک کریں!";
+"NotificationTitleKey09" = "بھیجیں-بینڈ-لینڈ";
+"NotificationTitleKey10" = "مشہور شخصیت LOL کارڈ";
+"NotificationDescriptonKey01" = "آپ کا چاہنے والا آپ کے لنک کا انتظار کر رہا ہے۔ براہ کرم اسے شیئر کریں!";
+"NotificationDescriptonKey02" = "🎭👻👽";
+;"ارے وہاں! آپ کے کسی خاص نے آپ کو کارڈ دے کر حیران کر دیا ہے۔ آگے بڑھو اور یہ دیکھنے کے لیے چیک کریں کہ یہ کس کا ہے!❤️" = "NotificationDescriptonKey03"
+"NotificationDescriptonKey04" = "کاپی، پیسٹ اور شیئر کریں...";
+"NotificationDescriptonKey05" = "پیغام ملتا رہنے کے لیے دوبارہ شئیر کریں۔";
+"NotificationDescriptonKey06" = "پہلے لنک شیئر کریں اور کارڈ حاصل کریں۔";
+"NotificationDescriptonKey07" = "آپ کے کسی دوست نے آپ کو کارڈ بھیجا ہے۔ معلوم کریں کہ یہ کون تھا!";
+"NotificationDescriptonKey08" = "جینیفر نے آپ کے لیے محبت کا کارڈ بنایا!";
+"NotificationDescriptonKey09" = "نریندر مودی نے آپ کے لیے جولی کارڈ بنایا ہے۔ براہ کرم اسے سوشل میڈیا پر شیئر کریں اور @narendramodi کو ٹیگ کریں۔";
+"NotificationDescriptonKey10" = "آپ کے پسندیدہ سپر اسٹار نے آپ کو ایک کارڈ بھیجا ہے۔ معلوم کریں کہ یہ کون ہے!";

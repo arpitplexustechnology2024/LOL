@@ -1,0 +1,6 @@
+framework module Pods_LOL_LOLUITests {
+  umbrella header "Pods-LOL-LOLUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

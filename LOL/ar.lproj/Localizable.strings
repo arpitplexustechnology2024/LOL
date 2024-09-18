@@ -1,7 +1,181 @@
-/* 
-  Localizable.strings
-  LOL
+/*
+ Localizable.strings
+ LOL
+ 
+ Created by Arpit iOS Dev. on 05/08/24.
+ 
+ */
+// Sign up View Controller
+"SignupTitleKey" = "التسجيل";
+"SignupInstagramKey" = "ما هو حسابك على إنستجرام؟";
+"SignupSnapchatKey" = "ما هو حسابك على سناب شات؟";
+"SignupExKey" = "(مثال: @kylie_jenner)";
+"SignupUsernameKey" = "@اسم المستخدم";
+"SignupErrorKey" = "* اسم المستخدم مطلوب";
+"SignupErrorExistKey" = "* اسم المستخدم موجود بالفعل";
+"SignupNoInternetMessage" = "يرجى تشغيل اتصال الإنترنت.";
+"SignupPrivacyKey" = "بالنقر على 'متابعة'، فإنك تقر بأنك قد قرأت سياسة الخصوصية";
+"SignupPrivacyKeyRange" = "سياسة الخصوصية";
+"SignupNextBtnKey" = "التالي";
 
-  Created by Arpit iOS Dev. on 18/09/24.
-  
-*/
+// Privacy Policy ViewController
+"PrivacyTitleKey" = "سياسة الخصوصية";
+"PrivacyDoneBtnKey" = "تم";
+
+// Profile View Controller
+"ProfileTitleKey" = "الملف الشخصي";
+"ProfileSelectAvtarKey" = "اختر صورتك الرمزية";
+"ProfileNameKey" = "الاسم";
+"ProfileErrorKey" = "* الاسم مطلوب";
+"ProfileLetsgoBtnKey" = "هيا بنا";
+"AvatarKey" = "صورة رمزية";
+"AvatarNoInternetMessage" = "يرجى تشغيل اتصال الإنترنت.";
+
+// Tab bar Item
+"TabbarItemKey01" = "الرئيسية";
+"TabbarItemKey02" = "الوارد";
+"TabbarItemKey03" = "المزيد من التطبيقات";
+"TabbarItemKey04" = "الإعدادات";
+
+// Home View Controller
+"TitleKey01" = "";
+"TitleKey02" = "tbh";
+"TitleKey03" = "بطاقة مضحكة";
+"TitleKey04" = "بطاقة مرحة";
+"TitleKey05" = "بطاقة واحدة";
+"TitleKey06" = "أبداً لم أفعل";
+"TitleKey07" = "بطاقة سرية";
+"QuestionsKey01" = "يرجى إنشاء بطاقة مضحكة لي...";
+"QuestionsKey02" = "أريد معرفة مدى معرفتك بي؟";
+"QuestionsKey03" = "ما رأيك فيّ؟";
+"QuestionsKey04" = "أرسل بطاقتي المضحكة!";
+"QuestionsKey05" = "صفني في بطاقة واحدة، بشكل مجهول.";
+"QuestionsKey06" = "هل يمكنك إرسال بطاقة 'أبداً لم أفعل' دون الكشف عن هويتي؟";
+"QuestionsKey07" = "إلى أي مدى تعرف أسراري؟ من فضلك أخبرني.";
+"SnackbarNoFaceDetected" = "لم يتم اكتشاف أي وجوه. يرجى تجربة صورة أخرى.";
+"SnackbarCameraPermissionAccess" = "يرجى منح الإذن للوصول إلى الكاميرا.";
+"SnackbarGalleryPermissionAccess" = "يرجى منح الإذن للوصول إلى مكتبة الصور.";
+"Settings" = "الإعدادات";
+"EditProfilePictureKey" = "تعديل صورة الملف الشخصي";
+"CameraKey" = "الكاميرا";
+"GalleryKey" = "المعرض";
+"SelectAvatarKey" = "اختر صورة رمزية";
+"CancelKey" = "إلغاء";
+
+// Card Question View Controller
+"CardQuesKey" = "سؤال البطاقة";
+"CardDescriptionKey" = "اختر الأسئلة من البطاقة لتعرف عن نفسك عندما يفتح الشخص الآخر الرابط. يمكنك تعديل سؤالك...";
+"FiveQuesKey" = "خمسة أسئلة";
+"EditQuesBtnKey" = "تعديل السؤال";
+"ShareBtnKey" = "شارك!";
+"CardNoInternetMessage" = "يرجى تشغيل اتصال الإنترنت.";
+
+// Share link View Controller
+"CopyLabelKey" = "الخطوة 1 : نسخ الرابط الخاص بك";
+"ShareLabelKey" = "الخطوة 2 : شارك الرابط في قصتك على إنستجرام";
+"CopyBtnKey" = "نسخ الرابط";
+"CopyLinkKey" = "🔗 تم نسخ الرابط!";
+"ShareLinkLabelKey" = "كيفية إضافة الرابط إلى قصتك";
+"ClickImagekey" = "انقر على الصورة";
+"Buttonkey" = "الزر";
+"ClickKey" = "انقر على";
+"PasteLinkKey" = "الصق الرابط الخاص بك!";
+"ClickAttachkey" = "انقر على 'إرفاق إلى سناب'";
+"FrameLinkKey" = "أضف إطارًا للرابط!";
+"InstagramSnackbarError" = "يرجى تثبيت تطبيق إنستجرام";
+"SnapchatSnackbarError" = "يرجى تثبيت تطبيق سناب شات";
+
+// Edit View Controller
+"EditTitleKey" = "شاشة النموذج";
+"EditDescriptionKey" = "اختر الأسئلة من البطاقة لتعرف عن نفسك عندما يفتح الشخص الآخر الرابط. يمكنك تعديل سؤالك...";
+"EditNameKey" = "الاسم";
+"EditSelectQuesKey" = "اختر خمسة أسئلة";
+"EditSaveCardBtnKey" = "حفظ البطاقة";
+"SnackbarPleaseSelect5Questions" = "يرجى اختيار ما لا يقل عن 5 أسئلة.";
+"SnackbarSelectUpTo5QuestionsOnly" = "يمكنك اختيار ما يصل إلى 5 أسئلة فقط.";
+"SnackbarPleaseTurnOnInternet" = "يرجى تشغيل اتصال الإنترنت.";
+"SnackbarCardTitlesUpdated" = "تم تحديث عناوين البطاقة بنجاح!";
+"EditNickNameKey" = "اسم مستعار";
+
+// More App View Controller
+"MoreTitleKey" = "قريبًا";
+"MoreDescriptionKey" = "سنطلق تطبيقنا قريبًا، ابقوا متابعين";
+"MoreNoInternetMessage" = "يرجى تشغيل اتصال الإنترنت.";
+"DownloadBtnKey" = "تحميل";
+
+// Setting View Controller
+"SettingPart01Key" = "عام";
+"NotificationKey" = "الإشعارات";
+"PauseKey" = "إيقاف الرابط مؤقتًا";
+"PremiumKey" = "بريميوم";
+"LanguageKey" = "إعداد اللغة";
+"LanguageSetKey" = "الإنجليزية";
+"SettingPart02Key" = "المجتمع";
+"ReviewKey" = "اكتب مراجعة للتطبيق";
+"InstagramKey" = "تابعنا على إنستجرام";
+"ShareAppKey" = "شارك التطبيق مع صديق";
+"SettingPart03Key" = "الدعم";
+"HelpKey" = "أحتاج إلى مساعدة";
+"PrivacyPolicyKey" = "سياسة الخصوصية";
+"DeleteAccountKey" = "حذف الحساب";
+"SettingNoInternetMessage" = "يرجى تشغيل اتصال الإنترنت.";
+
+// Delete View
+"DeleteTitleKey" = "حذف الحساب";
+"DeleteDescriptionKey" = "بمجرد حذف هذا الحساب، لن تتمكن من استعادة الحساب.";
+"CancelBtnKey" = "إلغاء";
+"DeleteBtnKey" = "حذف";
+
+// Premium View Controller
+"UnlockBtnKey" = "فتح";
+"PremiumFeaturesKey" = "👉الميزات الاحترافية مقابل %@ مدى الحياة👈";
+"PremiumTitleKey1" = "كشف ملف المرسل";
+"PremiumTitleKey2" = "تلميحات المشاهدين";
+"PremiumTitleKey3" = "تعديل أسئلة البطاقة";
+"PremiumDescriptionKey1" = "احصل على تلميحات مثل الصورة والموقع والجهاز ومعرف LOL والمزيد...";
+"PremiumDescriptionKey2" = "احصل على تلميحات مضحكة حول من أنشأ بطاقتك المضحكة؟";
+"PremiumDescriptionKey3" = "يمكنك تعديل أسئلة البطاقة عندما تطلب إنشاء بطاقة!";
+"PremiumNoInternetMessage" = "يرجى تشغيل اتصال الإنترنت.";
+"PremiumCongraMessageKey" = "تهانينا...";
+"PremiumSuccessMessageKey" = "أنت جاهز.";
+"PremiumFailedMessageKey" = "فشل!";
+"PremiumFailedPaymentKey" = "فشل الطلب. يرجى المحاولة مرة أخرى بعد فترة!";
+
+// Inbox ViewController
+"InboxSenderBtnKey" = "من هو المرسل؟";
+"InboxNoInternetMessage" = "يرجى تشغيل اتصال الإنترنت.";
+
+// Preview View Controller
+"PreviewTitleKey" = "معاينة";
+"PreviewProfileKey" = "إظهار الملف الشخصي";
+
+// View
+"NoDataTitleKey" = "لم يتم العثور على بيانات.";
+"NoDataDescriptionKey" = "فشل الطلب! يرجى المحاولة مرة أخرى \n في وقت لاحق.";
+"NoInternetTitleKey" = "أوه... \n لا يوجد اتصال بالإنترنت!";
+"NoInternetDescriptionKey" = "يرجى تشغيل اتصال الإنترنت!";
+"InboxTitleKey" = "صندوق الوارد فارغ 🥺";
+"InboxDescriptionKey" = "شارك الرابط الخاص بك للحصول على بطاقات \n في صندوق الوارد الخاص بك!";
+"InboxGetMessageBtnKey" = "احصل على رسالة!";
+
+// Local Notification
+"NotificationTitleKey01" = "الإعجاب ينتظر...";
+"NotificationTitleKey02" = "تشين تاباك دوم دوم...";
+"NotificationTitleKey03" = "بطاقة حب";
+"NotificationTitleKey04" = "شارك رابط LOL";
+"NotificationTitleKey05" = "انتهت صلاحية قصة LOL الخاصة بك على IG 📸 وSnapchat 👻";
+"NotificationTitleKey06" = "الحياة قصيرة _______";
+"NotificationTitleKey07" = "صديق لعين 🐶";
+"NotificationTitleKey08" = "تحقق من صندوق الوارد لـ LOL!";
+"NotificationTitleKey09" = "أرسل - اقرض - أعطِ";
+"NotificationTitleKey10" = "بطاقة LOL من المشاهير";
+"NotificationDescriptonKey01" = "الإعجاب الخاص بك ينتظر رابطك. يرجى المشاركة على إنستجرام!";
+"NotificationDescriptonKey02" = "🎭👻👽";
+"NotificationDescriptonKey03" = "مرحبًا! شخصك المميز فاجأك ببطاقة. اذهب وتحقق من هو! ❤️";
+"NotificationDescriptonKey04" = "نسخ، لصق وشارك...";
+"NotificationDescriptonKey05" = "شارك مرة أخرى للاستمرار في تلقي الرسائل.";
+"NotificationDescriptonKey06" = "شارك الرابط أولاً واحصل على بطاقة.";
+"NotificationDescriptonKey07" = "أرسل لك صديقك بطاقة. اكتشف من هو!";
+"NotificationDescriptonKey08" = "جينيفر أنشأت لك بطاقة حب!";
+"NotificationDescriptonKey09" = "ناريندرا مودي أنشأ لك بطاقة مرحة. يرجى مشاركتها على وسائل التواصل الاجتماعي ووضع علامة @narendramodi.";
+"NotificationDescriptonKey10" = "أحد نجومك المفضلين أرسل لك بطاقة. اكتشف من هو!";

@@ -1,7 +1,182 @@
-/* 
+/*
   Localizable.strings
   LOL
 
-  Created by Arpit iOS Dev. on 18/09/24.
+  Created by Arpit iOS Dev. on 05/08/24.
   
 */
+// Sign up View Controller
+"SignupTitleKey" = "Sign up";
+"SignupInstagramKey" = "What's your instagram handle?";
+"SignupSnapchatKey" = "What's your snapchat handle?";
+"SignupExKey" = "(Ex: @kylie_jenner)";
+"SignupUsernameKey" = "@username";
+"SignupErrorKey" = "* Username is required";
+"SignupErrorExistKey" = "* Username is already Exist";
+"SignupNoInternetMessage" = "Please turn on Internet connection.";
+"SignupPrivacyKey" = "By tapping “Continue”, you acknowledge that you have read the Privacy Policy";
+"SignupPrivacyKeyRange" = "Privacy Policy";
+"SignupNextBtnKey" = "Next";
+
+// Privacy Policy ViewController
+"PrivacyTitleKey" = "Privacy Policy";
+"PrivacyDoneBtnKey" = "Done";
+
+// Profile View Controller
+"ProfileTitleKey" = "Profile";
+"ProfileSelectAvtarKey" = "Select your avatar";
+"ProfileNameKey" = "Name";
+"ProfileErrorKey" = "* Name is required";
+"ProfileLetsgoBtnKey" = "Let's go";
+"AvatarKey" = "Avatar";
+"AvatarNoInternetMessage" = "Please turn on Internet connection.";
+
+// Tab bar Item
+"TabbarItemKey01" = "Home";
+"TabbarItemKey02" = "Inbox";
+"TabbarItemKey03" = "More App";
+"TabbarItemKey04" = "Settings";
+
+// Home View Controller
+"TitleKey01" = "";
+"TitleKey02" = "tbh";
+"TitleKey03" = "Funny card";
+"TitleKey04" = "Jolly card";
+"TitleKey05" = "1 Card";
+"TitleKey06" = "NEVER  HAVE I EVER";
+"TitleKey07" = "SECRET CARD";
+"QuestionsKey01" = "Please create a funny card for me..";
+"QuestionsKey02" = "I want to check how much you know me?";
+"QuestionsKey03" = "What do you think about me ?";
+"QuestionsKey04" = "Send my funny card!";
+"QuestionsKey05" = "Describe me in one card, anonymously.";
+"QuestionsKey06" = "Can you send me a “Never Have i ever” card without revealing my identity?";
+"QuestionsKey07" = "How much of my secret do you know ? Please tell me.";
+"SnackbarNoFaceDetected" = "No faces detected. Please try another image.";
+"SnackbarCameraPermissionAccess" = "Please grant permission to access your camera.";
+"SnackbarGalleryPermissionAccess" = "Please grant permission to access your photo library.";
+"Settings" = "Settings";
+"EditProfilePictureKey" = "Edit profile picture";
+"CameraKey" = "Camera";
+"GalleryKey" = "Gallery";
+"SelectAvatarKey" = "Select Avatar";
+"CancelKey" = "Cancel";
+
+// Card Question View Controller
+"CardQuesKey" = "Card Question";
+"CardDescriptionKey" = "Select the questions from the card to know about yourself when other person open your link. you can edit your question...";
+"FiveQuesKey" = "Five Question";
+"EditQuesBtnKey" = "Edit Question";
+"ShareBtnKey" = "Share!";
+"CardNoInternetMessage" = "Please turn on Internet connection.";
+
+// Share link View Controller
+"CopyLabelKey" = "Step 1 : Copy your link";
+"ShareLabelKey" = "Step 2 : Share Link on your insagram story";
+"CopyBtnKey" = "Copy Link";
+"CopyLinkKey" = "🔗 Link Copied!";
+"ShareLinkLabelKey" = "How to add the Link to your Story";
+"ClickImagekey" = "Click the image";
+"Buttonkey" = "Button";
+"ClickKey" = "Click the";
+"PasteLinkKey" = "Paste your link!";
+"ClickAttachkey" = "Click “Attach to Snap”";
+"FrameLinkKey" = "Frame the link!";
+"InstagramSnackbarError" = "Please Install Installgram App";
+"SnapchatSnackbarError" = "Please Install Snapchat App";
+
+// Edit View Controller
+"EditTitleKey" = "Form screen";
+"EditDescriptionKey" = "Select the questions from the card to know about yourself when other person open your link. you can edit your question... ";
+"EditNameKey" = "Name";
+"EditSelectQuesKey" = "Select a five-question";
+"EditSaveCardBtnKey" = "Save Card";
+"SnackbarPleaseSelect5Questions" = "Please select at least 5 questions.";
+"SnackbarSelectUpTo5QuestionsOnly" = "You can select up to 5 questions only.";
+"SnackbarPleaseTurnOnInternet" = "Please turn on Internet connection.";
+"SnackbarCardTitlesUpdated" = "Card titles updated successfully!";
+"EditNickNameKey" = "Nick Name";
+
+// More App View Controller
+"MoreTitleKey" = "COMING SOON";
+"MoreDescriptionKey" = "We are going to launch our app very soon stay tune";
+"MoreNoInternetMessage" = "Please turn on Internet connection.";
+"DownloadBtnKey" = "Download";
+
+// Setting View Controller
+"SettingPart01Key" = "GENERAL";
+"NotificationKey" = "Notification";
+"PauseKey" = "Pause link";
+"PremiumKey" = "Premium";
+"LanguageKey" = "Language setup";
+"LanguageSetKey" = "English";
+"SettingPart02Key" = "COMMUNITY";
+"ReviewKey" = "Write a app review";
+"InstagramKey" = "Follow us on instagram";
+"ShareAppKey" = "Share app with a friend";
+"SettingPart03Key" = "SUPPORT";
+"HelpKey" = "I need Help";
+"PrivacyPolicyKey" = "Privacy Policy";
+"DeleteAccountKey" = "Delete account";
+"SettingNoInternetMessage" = "Please turn on Internet connection.";
+
+// Delete View
+"DeleteTitleKey" = "Delete account";
+"DeleteDescriptionKey" = "Once you delete this account after you can not restore account.";
+"CancelBtnKey" = "Cancel";
+"DeleteBtnKey" = "Delete";
+
+// Premium View Controller
+"UnlockBtnKey" = "Unlock";
+"PremiumFeaturesKey" = "👉pro features for %@ lifetime👈";
+"PremiumTitleKey1" = "Reveal Sender Profile";
+"PremiumTitleKey2" = "Viewers Hints";
+"PremiumTitleKey3" = "Edit Card Questions";
+"PremiumDescriptionKey1" = "Get hints like their image, location, device, lol id and more...";
+"PremiumDescriptionKey2" = "Get some funny hint who creates your funny card?";
+"PremiumDescriptionKey3" = "You can edit the card's questions when you ask questions to create a card!";
+"PremiumNoInternetMessage" = "Please turn on Internet connection.";
+"PremiumCongraMessageKey" = "Congratulation...";
+"PremiumSuccessMessageKey" = "You're all set.";
+"PremiumFailedMessageKey" = "Failed!";
+"PremiumFailedPaymentKey" = "Request failed. Please try again after some time!";
+
+// Inbox viewController
+"InboxSenderBtnKey" = "Who is sender?";
+"InboxNoInternetMessage" = "Please turn on Internet connection.";
+
+// Preview View Controller
+"PreviewTitleKey" = "Preview";
+"PreviewProfileKey" = "Show Profile";
+
+// View
+"NoDataTitleKey" = "No data found.";
+"NoDataDescriptionKey" = "Request failed! Please try again \n after some time.";
+"NoInternetTitleKey" = "Oops... \n No internet connection!";
+"NoInternetDescriptionKey" = "Please turn on internet connection!";
+"InboxTitleKey" = "Your inbox is empty 🥺";
+"InboxDescriptionKey" = "Share your link to get cards in \n your inbox!";
+"InboxGetMessageBtnKey" = "Get message!";
+
+// Local Notification
+"NotificationTitleKey01" = "Crush waiting...";
+"NotificationTitleKey02" = "Chin Tapak Dum Dum...";
+"NotificationTitleKey03" = "Love Card";
+"NotificationTitleKey04" = "Share LOL Link";
+"NotificationTitleKey05" = "Your LOL story expired on IG 📸 & Snapchat 👻";
+"NotificationTitleKey06" = "Life's short _______";
+"NotificationTitleKey07" = "Bastard friend🐶";
+"NotificationTitleKey08" = "Check LOL inbox!";
+"NotificationTitleKey09" = "Send-Bend-Lend";
+"NotificationTitleKey10" = "Celebrity LOL card";
+"NotificationDescriptonKey01" = "Your crush is waiting for your link. Please share on IG!";
+"NotificationDescriptonKey02" = "🎭👻👽";
+"NotificationDescriptonKey03" = "Hey there! Your special someone surprised you with a card. Go ahead and check to see who it's from!❤️";
+"NotificationDescriptonKey04" = "Copy, Paste & Share...";
+"NotificationDescriptonKey05" = "Share again to keep getting the message.";
+"NotificationDescriptonKey06" = "Share the link first & get a card.";
+"NotificationDescriptonKey07" = "Someone your friend sent you a card. Find out who it was!";
+"NotificationDescriptonKey08" = "Jenifer created a love card for you!";
+"NotificationDescriptonKey09" = "Narendra Modi has created a jolly card for you. Please share it on social media and tag @narendramodi.";
+"NotificationDescriptonKey10" = "One of your favourite Superstar has sent you a card. Discover who it is!";
+
