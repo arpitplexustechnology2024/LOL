@@ -36,7 +36,9 @@ class CustomAlertViewController: UIViewController {
     
     private func setupContainerView() {
         containerView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.backgroundColor = .white
+        containerView.backgroundColor = UIColor { traitCollection in
+            return traitCollection.userInterfaceStyle == .dark ? .systemGray6 : .white
+        }
         containerView.layer.cornerRadius = 16
         containerView.layer.masksToBounds = true
         view.addSubview(containerView)
@@ -70,7 +72,9 @@ class CustomAlertViewController: UIViewController {
         messageLabel.text = message
         messageLabel.numberOfLines = 0
         messageLabel.textAlignment = .center
-        messageLabel.textColor = UIColor.black
+        messageLabel.textColor = UIColor { traitCollection in
+            return traitCollection.userInterfaceStyle == .dark ? .white : .black
+        }
         messageLabel.font = UIFont(name: "Lato-Bold", size: 18)
         containerView.addSubview(messageLabel)
         
@@ -147,7 +151,9 @@ class AlertViewController: UIViewController {
     
     private func setupContainerView() {
         containerView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.backgroundColor = .white
+        containerView.backgroundColor = UIColor { traitCollection in
+            return traitCollection.userInterfaceStyle == .dark ? .systemGray6 : .white
+        }
         containerView.layer.cornerRadius = 16
         containerView.layer.masksToBounds = true
         view.addSubview(containerView)
@@ -181,7 +187,9 @@ class AlertViewController: UIViewController {
         messageLabel.text = message
         messageLabel.numberOfLines = 0
         messageLabel.textAlignment = .center
-        messageLabel.textColor = UIColor.black
+        messageLabel.textColor = UIColor { traitCollection in
+            return traitCollection.userInterfaceStyle == .dark ? .white : .black
+        }
         messageLabel.font = UIFont(name: "Lato-Bold", size: 18)
         containerView.addSubview(messageLabel)
         

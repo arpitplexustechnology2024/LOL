@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         registerForPushNotifications()
         FirebaseApp.configure()
         OneSignal.Debug.setLogLevel(.LL_VERBOSE)
-        OneSignal.initialize("bd3921d2-a2f7-44fb-862f-8ab87e37f09e", withLaunchOptions: launchOptions)
+        OneSignal.initialize("69c53fa2-c84d-42a9-b377-1e4fff31fa18", withLaunchOptions: launchOptions)
         OneSignal.Notifications.requestPermission({ accepted in
             print("User accepted notifications: \(accepted)")
         }, fallbackToSettings: true)

@@ -17,7 +17,7 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
     @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var proFeaturesLabel: UILabel!
     
-    let productID = "com.lol.anonymousfeature"
+    let productID = "com.lol.anonymousfeatures"
     
     private var premiumSlider: [PremiumModel] = []
     private var currentPage = 0 {

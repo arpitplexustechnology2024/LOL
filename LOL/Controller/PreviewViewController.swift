@@ -21,8 +21,6 @@ class PreviewViewController: UIViewController {
     @IBOutlet weak var card_BGView: UIView!
     @IBOutlet weak var card_ImageView: UIImageView!
     @IBOutlet weak var card_ProfileImageView: UIImageView!
-    @IBOutlet weak var watermarkView: UIView!
-    @IBOutlet weak var watermarkImage: UIImageView!
     @IBOutlet weak var card_textView: UIView!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var showProfieButton: UIButton!
@@ -400,4 +398,3 @@ class PreviewViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
 }
-
