@@ -236,11 +236,16 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func btnEditQuestionTapped(_ sender: UIButton) {
-        
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "PurchaseEditViewController") as! PurchaseEditViewController
-        vc.isSuccess = true
-        self.navigationController?.pushViewController(vc, animated: true)
-        
+        let isPurchased = UserDefaults.standard.bool(forKey: ConstantValue.isPurchase)
+        if isPurchased {
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "PurchaseEditViewController") as! PurchaseEditViewController
+            vc.isSuccess = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "EditViewController") as! EditViewController
+            vc.isSuccess = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
