@@ -70,6 +70,10 @@ class ProfileViewController: UIViewController {
             activityIndicator.centerXAnchor.constraint(equalTo: letsgoButton.centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: letsgoButton.centerYAnchor)
         ])
+        
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            appDelegate.getAndStoreOneSignalPlayerId()
+        }
     }
     
     func localizeUI() {
@@ -115,7 +119,7 @@ class ProfileViewController: UIViewController {
         let username = UserDefaults.standard.string(forKey: ConstantValue.user_name)
         let defaultAvatar = "https://lolcards.link/api/public/images/AvatarDefault.png"
         let avatar = UserDefaults.standard.string(forKey: ConstantValue.avatar_URL) ?? defaultAvatar
-        let deviceToken = UserDefaults.standard.string(forKey: "deviceToken")
+        let deviceToken = UserDefaults.standard.string(forKey: "SubscriptionID")
         
         viewModel.registerUser(name: nameTextfiled.text!, avatar: avatar, username: username!, deviceToken: deviceToken!) { [weak self] result in
             guard let self = self else { return }

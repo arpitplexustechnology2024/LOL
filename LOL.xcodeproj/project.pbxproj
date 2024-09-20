@@ -210,6 +210,8 @@
 		9D8E799613549A04EBF2B605 /* Pods_LOLTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LOLTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10A3ECF311E7C062202829B /* Pods-LOLTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOLTests.release.xcconfig"; path = "Target Support Files/Pods-LOLTests/Pods-LOLTests.release.xcconfig"; sourceTree = "<group>"; };
 		A858936BB5597ED3AF184108 /* Pods-LOL-LOLUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOL-LOLUITests.debug.xcconfig"; path = "Target Support Files/Pods-LOL-LOLUITests/Pods-LOL-LOLUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD5115AB2C9CA155008735D0 /* SCSDKCoreKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SCSDKCoreKit.xcframework; path = Pods/SnapSDK/SCSDKCoreKit.xcframework; sourceTree = "<group>"; };
+		BD5115AF2C9CA162008735D0 /* SCSDKLoginKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SCSDKLoginKit.xcframework; path = Pods/SnapSDK/SCSDKLoginKit.xcframework; sourceTree = "<group>"; };
 		BDA0B4FB2C9B8CD0001FAFFF /* OneSignalPushNotificationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalPushNotificationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA0B4FD2C9B8CD0001FAFFF /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		BDA0B4FF2C9B8CD0001FAFFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -424,6 +426,8 @@
 		35AA9D68E913F5E910901592 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD5115AF2C9CA162008735D0 /* SCSDKLoginKit.xcframework */,
+				BD5115AB2C9CA155008735D0 /* SCSDKCoreKit.xcframework */,
 				185647B86BDB83FCED3ACA56 /* Pods_LOL.framework */,
 				699A2D1CB5149831E0F8A330 /* Pods_LOL_LOLUITests.framework */,
 				9D8E799613549A04EBF2B605 /* Pods_LOLTests.framework */,

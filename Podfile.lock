@@ -172,6 +172,8 @@ PODS:
     - nanopb/encode (= 2.30910.0)
   - nanopb/decode (2.30910.0)
   - nanopb/encode (2.30910.0)
+  - OneSignal (5.2.4):
+    - OneSignal/OneSignalComplete (= 5.2.4)
   - OneSignal/OneSignal (5.2.4):
     - OneSignal/OneSignalCore
     - OneSignal/OneSignalExtension
@@ -180,6 +182,10 @@ PODS:
     - OneSignal/OneSignalOSCore
     - OneSignal/OneSignalOutcomes
     - OneSignal/OneSignalUser
+  - OneSignal/OneSignalComplete (5.2.4):
+    - OneSignal/OneSignal
+    - OneSignal/OneSignalInAppMessages
+    - OneSignal/OneSignalLocation
   - OneSignal/OneSignalCore (5.2.4)
   - OneSignal/OneSignalExtension (5.2.4):
     - OneSignal/OneSignalCore
@@ -230,9 +236,7 @@ DEPENDENCIES:
   - FirebaseAuth
   - GoogleMLKit/FaceDetection
   - lottie-ios
-  - OneSignal/OneSignal (< 6.0, >= 5.0.0)
-  - OneSignal/OneSignalInAppMessages (< 6.0, >= 5.0.0)
-  - OneSignal/OneSignalLocation (< 6.0, >= 5.0.0)
+  - OneSignal
   - SDWebImage
   - TTGSnackbar
 
@@ -313,6 +317,6 @@ SPEC CHECKSUMS:
   SDWebImage: 8a6b7b160b4d710e2a22b6900e25301075c34cb3
   TTGSnackbar: 8e7650b9b1f5f44e40228473455986f5c12213c7
 
-PODFILE CHECKSUM: fa1cea99a864135ea18cef20608dcd33bfd298df
+PODFILE CHECKSUM: 823ffc6c81bbb794ced140ef0e0a6f8f8ce56ff3
 
 COCOAPODS: 1.15.2

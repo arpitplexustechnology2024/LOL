@@ -15,7 +15,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         case sendMessageAction = "SendMessageAction"
         case InboxAction       = "InboxAction"
         case moreAction        = "MoreAction"
-        case shareAction       = "ShareAction"
     }
     
     var window: UIWindow?
@@ -54,8 +53,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             switch actionTypeValue {
             case .sendMessageAction:
                 self.navigateToLaunchVC(actionKey: "SendMessageActionKey")
-            case .shareAction:
-                self.triggerShareSheet()
             case .InboxAction:
                 self.navigateToLaunchVC(actionKey: "InboxActionKey")
             case .moreAction:
@@ -69,27 +66,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let navVC = window?.rootViewController as? UINavigationController,
            let launchVC = navVC.viewControllers.first as? LaunchViewController {
             launchVC.passedActionKey = actionKey
-        }
-    }
-    
-    func triggerShareSheet() {
-        let appURL = URL(string: "https://apps.apple.com/app/id639191551")!
-        let shareController = UIActivityViewController(activityItems: [appURL], applicationActivities: nil)
-        
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-            let tempWindow = UIWindow(windowScene: windowScene)
-            tempWindow.rootViewController = UIViewController()
-            tempWindow.windowLevel = UIWindow.Level.alert + 1
-            tempWindow.makeKeyAndVisible()
-            
-            tempWindow.rootViewController?.present(shareController, animated: true, completion: {
-                shareController.completionWithItemsHandler = { activityType, completed, returnedItems, activityError in
-                    tempWindow.isHidden = true
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                        UIControl().sendAction(#selector(NSXPCConnection.suspend), to: UIApplication.shared, for: nil)
-                    }
-                }
-            })
         }
     }
 }

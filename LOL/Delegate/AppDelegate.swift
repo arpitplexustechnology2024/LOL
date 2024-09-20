@@ -13,7 +13,9 @@ import FBSDKCoreKit
 import OneSignalFramework
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+    
+    var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         registerForPushNotifications()
@@ -23,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         OneSignal.Notifications.requestPermission({ accepted in
             print("User accepted notifications: \(accepted)")
         }, fallbackToSettings: true)
+        getAndStoreOneSignalPlayerId()
         return true
     }
     
@@ -40,12 +43,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    func getAndStoreOneSignalPlayerId() {
+        if let playerId = OneSignal.User.pushSubscription.id {
+            print("OneSignal Player ID: \(playerId)")
+            UserDefaults.standard.set(playerId, forKey: "SubscriptionID")
+        } else {
+            print("Failed to get OneSignal Player ID")
+        }
+    }
+    
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
-        let token = tokenParts.joined()
-        print("Device Token: \(token)")
-        
-        UserDefaults.standard.set(token, forKey: "deviceToken")
+        print("Device registered for push notifications")
+        getAndStoreOneSignalPlayerId()
     }
     
     // MARK: UISceneSession Lifecycle
@@ -65,7 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Update Check
     
     func fetchAppStoreVersion(completion: @escaping (String?) -> Void) {
-        let appID = "your-app-id" // Replace with your app's App Store ID
+        let appID = "6670788272"
         let urlString = "https://itunes.apple.com/lookup?id=\(appID)"
         
         guard let url = URL(string: urlString) else {
@@ -136,7 +145,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func openAppStoreForUpdate() {
-        let appID = "your-app-id" // Replace with your app's App Store ID
+        let appID = "6670788272"
         if let url = URL(string: "https://apps.apple.com/app/id\(appID)") {
             if UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
@@ -144,10 +153,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    // Call checkForUpdate when the app becomes active
     func applicationDidBecomeActive(_ application: UIApplication) {
         checkForUpdate()
     }
 }
-
-

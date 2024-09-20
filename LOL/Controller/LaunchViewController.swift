@@ -7,8 +7,8 @@
 
 import UIKit
 import Lottie
-import UserNotifications
 import FBSDKCoreKit
+import UserNotifications
 
 class LaunchViewController: UIViewController {
     

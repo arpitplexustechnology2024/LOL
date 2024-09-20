@@ -236,7 +236,7 @@ class ShareLinkViewController: UIViewController {
     private func shareInstagramStory() {
         guard let selectedIndex = selectedIndex else { return }
         
-        if let urlScheme = URL(string: "instagram-stories://share?source_application=com.plexustechnology.LOL") {
+        if let urlScheme = URL(string: "instagram-stories://share?source_application=com.fun.lol.card") {
             if UIApplication.shared.canOpenURL(urlScheme) {
                 
                 let screenSize = UIScreen.main.bounds.size
@@ -285,6 +285,7 @@ class ShareLinkViewController: UIViewController {
                     UIPasteboard.general.setItems([items])
                     UIApplication.shared.open(urlScheme, options: [:], completionHandler: nil)
                 }
+                self.dismiss(animated: true)
             } else {
                 let snackbar = TTGSnackbar(message: NSLocalizedString("InstagramSnackbarError", comment: ""), duration: .middle)
                 snackbar.show()
@@ -298,6 +299,7 @@ class ShareLinkViewController: UIViewController {
         
         let snapchatURL = URL(string: "snapchat://")
         if let url = snapchatURL, UIApplication.shared.canOpenURL(url) {
+            
             let shareView: UIView
             switch selectedIndex {
             case 0:
@@ -326,6 +328,7 @@ class ShareLinkViewController: UIViewController {
                 UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
             }
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            self.dismiss(animated: true)
         } else {
             let snackbar = TTGSnackbar(message: NSLocalizedString("SnapchatSnackbarError", comment: ""), duration: .middle)
             snackbar.show()

@@ -65,7 +65,7 @@ class DeleteViewController: UIViewController {
                     UserDefaults.standard.set(false, forKey: ConstantValue.avatar_URL)
                     UserDefaults.standard.set(false, forKey: ConstantValue.name)
                     UserDefaults.standard.set(false, forKey: ConstantValue.isPurchase)
-                    UserDefaults.standard.set(false, forKey: "deviceToken")
+                    UserDefaults.standard.set(false, forKey: "SubscriptionID")
                     DispatchQueue.main.async {
                         self.dismiss(animated: true) {
                             if let window = UIApplication.shared.windows.first {

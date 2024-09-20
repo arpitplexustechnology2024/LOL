@@ -299,9 +299,6 @@ ZCB0aGUDAwMgUHJpdmFjeSBQb2xpY3k
                                 <state key="normal" image="arrow.backward" catalog="system">
                                     <color key="titleColor" name="settingIcon"/>
                                 </state>
-                                <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system">
-                                    <color key="baseForegroundColor" name="settingIcon"/>
-                                </buttonConfiguration>
                                 <connections>
                                     <action selector="btnBackTapped:" destination="3pm-uq-tVl" eventType="touchUpInside" id="n5A-bG-fC4"/>
                                 </connections>
@@ -387,9 +384,6 @@ ZCB0aGUDAwMgUHJpdmFjeSBQb2xpY3k
                                 <state key="normal" image="arrow.backward" catalog="system">
                                     <color key="titleColor" name="settingIcon"/>
                                 </state>
-                                <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system">
-                                    <color key="baseForegroundColor" name="settingIcon"/>
-                                </buttonConfiguration>
                                 <connections>
                                     <action selector="btnBackTapped:" destination="ZFO-tv-op3" eventType="touchUpInside" id="lLb-3v-2Hu"/>
                                 </connections>
@@ -1255,7 +1249,7 @@ insagram story</string>
                                     <constraint firstAttribute="bottom" secondItem="lD1-jc-TRT" secondAttribute="bottom" constant="16" id="mhw-eY-VcA"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="jBm-9C-pR0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="jBm-9C-pR0">
                                 <rect key="frame" x="5" y="83" width="50" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="iAW-NU-NoZ"/>
@@ -1266,9 +1260,6 @@ insagram story</string>
                                 <state key="normal" image="arrow.backward" catalog="system">
                                     <color key="titleColor" name="settingIcon"/>
                                 </state>
-                                <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system">
-                                    <color key="baseForegroundColor" name="settingIcon"/>
-                                </buttonConfiguration>
                                 <connections>
                                     <action selector="btnBackTapped:" destination="HJb-zd-EHP" eventType="touchUpInside" id="MIA-Uo-gz7"/>
                                 </connections>
@@ -2203,6 +2194,7 @@ your Story</string>
                                                             <string key="text">You can edit the card's questions
 when you ask questions to create a card!</string>
                                                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                                                            <nil key="textColor"/>
                                                             <color key="highlightedColor" systemColor="systemBackgroundColor"/>
                                                         </label>
                                                     </subviews>
@@ -2617,12 +2609,14 @@ when you ask questions to create a card!</string>
                         <outlet property="ansLabel04" destination="IsJ-1f-uj9" id="06T-MC-lON"/>
                         <outlet property="ansLabel05" destination="kYd-Tm-L2a" id="zMZ-ON-xFp"/>
                         <outlet property="backButton" destination="JAF-vy-1lF" id="htz-Nj-QWj"/>
+                        <outlet property="blockButton" destination="9y6-RB-Quo" id="2tF-fV-aE0"/>
                         <outlet property="blurBGImageView" destination="WCg-GS-opn" id="Zyi-Ro-V0I"/>
                         <outlet property="cardTitleBGImage" destination="WlB-qB-bG9" id="fab-MJ-d9X"/>
                         <outlet property="card_BGView" destination="R2z-Ib-veM" id="foW-hF-zHH"/>
                         <outlet property="card_ImageView" destination="vGU-FV-aHg" id="ClF-rQ-KOJ"/>
                         <outlet property="card_ProfileImageView" destination="k07-5G-mMy" id="FUe-MK-UqL"/>
                         <outlet property="card_textView" destination="zp6-89-d5d" id="yzk-yp-DhM"/>
+                        <outlet property="deleteButton" destination="3v8-sz-3ve" id="bah-iD-BGC"/>
                         <outlet property="instagramShareButton" destination="ddK-0C-ZX7" id="jkI-SL-qQQ"/>
                         <outlet property="moreAppShareButton" destination="OBp-E0-5fj" id="8gY-GU-0Lb"/>
                         <outlet property="navigationTtitleLabel" destination="Hta-qE-JYy" id="qNV-ep-QK7"/>
@@ -2770,10 +2764,9 @@ when you ask questions to create a card!</string>
                                 </constraints>
                                 <color key="tintColor" name="settingIcon"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="arrow.backward" catalog="system"/>
-                                <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system">
-                                    <color key="baseForegroundColor" name="settingIcon"/>
-                                </buttonConfiguration>
+                                <state key="normal" image="arrow.backward" catalog="system">
+                                    <color key="titleColor" name="settingIcon"/>
+                                </state>
                                 <connections>
                                     <action selector="btnBackTapped:" destination="KIt-vy-SJF" eventType="touchUpInside" id="hDc-aH-23w"/>
                                 </connections>
@@ -3199,6 +3192,10 @@ when you ask questions to create a card!</string>
             <point key="canvasLocation" x="6311" y="1318"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="9Ee-Ix-0ee"/>
+        <designable name="iTV-iQ-lJT"/>
+    </designables>
     <resources>
         <image name="Anonyms" width="159" height="159"/>
         <image name="Block.Card" width="22" height="22"/>

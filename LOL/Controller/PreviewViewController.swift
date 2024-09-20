@@ -27,6 +27,8 @@ class PreviewViewController: UIViewController {
     @IBOutlet weak var instagramShareButton: UIButton!
     @IBOutlet weak var snapchatShareButton: UIButton!
     @IBOutlet weak var moreAppShareButton: UIButton!
+    @IBOutlet weak var blockButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var blurBGImageView: UIImageView!
     @IBOutlet weak var cardTitleBGImage: UIImageView!
     @IBOutlet weak var nickNameLabel: UILabel!
@@ -181,9 +183,7 @@ class PreviewViewController: UIViewController {
         }
         
         nickNameLabel.text = data.nickname
-        
-        
-        
+    
         let styles: [() -> String] = [applyRoundedCorners, applyCircle]
         if let randomStyle = styles.randomElement() {
         }
@@ -308,25 +308,39 @@ class PreviewViewController: UIViewController {
         
         if UIApplication.shared.canOpenURL(instagramURLScheme) {
             
-            let targetSize = CGSize(width: 1080, height: 1920)
-            let cardBGSize = card_BGView.bounds.size
+            let elementsToHide = [navigationTtitleLabel, backButton, showProfieButton, instagramShareButton, snapchatShareButton, moreAppShareButton, deleteButton, blockButton]
+            let originalAlphas = elementsToHide.map { $0!.alpha }
+            elementsToHide.forEach { $0!.alpha = 0 }
             
-            let scale = min(targetSize.width / cardBGSize.width, targetSize.height / cardBGSize.height)
-            let scaledCardSize = CGSize(width: cardBGSize.width * scale, height: cardBGSize.height * scale)
+            let screenSize = UIScreen.main.bounds.size
+            let targetAspectRatio: CGFloat = 8.0 / 15.0
+            let screenAspectRatio = screenSize.width / screenSize.height
             
-            UIGraphicsBeginImageContextWithOptions(targetSize, false, 0.0)
+            var targetSize: CGSize
             
-            let xOffset = (targetSize.width - scaledCardSize.width) / 2
-            let yOffset = (targetSize.height - scaledCardSize.height) / 2
-            card_BGView.drawHierarchy(in: CGRect(x: xOffset, y: yOffset, width: scaledCardSize.width, height: scaledCardSize.height), afterScreenUpdates: true)
+            if screenAspectRatio > targetAspectRatio {
+                targetSize = CGSize(width: screenSize.height * targetAspectRatio, height: screenSize.height)
+            } else {
+                targetSize = CGSize(width: screenSize.width, height: screenSize.width / targetAspectRatio)
+            }
+            
+            UIGraphicsBeginImageContextWithOptions(targetSize, false, UIScreen.main.scale)
+            
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+               let window = windowScene.windows.first {
+                window.drawHierarchy(in: window.bounds, afterScreenUpdates: true)
+            }
             
             let image = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             
+            for (element, alpha) in zip(elementsToHide, originalAlphas) {
+                element!.alpha = alpha
+            }
             
             if let imageData = image?.pngData() {
                 let items: [String: Any] = [
-                    "com.instagram.sharedSticker.backgroundImage": imageData
+                    "com.instagram.sharedSticker.backgroundImage": imageData,
                 ]
                 
                 UIPasteboard.general.setItems([items])
@@ -343,18 +357,8 @@ class PreviewViewController: UIViewController {
         
         if UIApplication.shared.canOpenURL(snapchatURLScheme) {
             
-            let targetSize = CGSize(width: 1080, height: 1920)
-            let cardBGSize = card_BGView.bounds.size
-            
-            let scale = min(targetSize.width / cardBGSize.width, targetSize.height / cardBGSize.height)
-            let scaledCardSize = CGSize(width: cardBGSize.width * scale, height: cardBGSize.height * scale)
-            
-            UIGraphicsBeginImageContextWithOptions(targetSize, false, 0.0)
-            
-            let xOffset = (targetSize.width - scaledCardSize.width) / 2
-            let yOffset = (targetSize.height - scaledCardSize.height) / 2
-            card_BGView.drawHierarchy(in: CGRect(x: xOffset, y: yOffset, width: scaledCardSize.width, height: scaledCardSize.height), afterScreenUpdates: true)
-            
+            UIGraphicsBeginImageContextWithOptions(card_BGView.bounds.size, false, 0.0)
+            card_BGView.drawHierarchy(in: card_BGView.bounds, afterScreenUpdates: true)
             let image = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             
