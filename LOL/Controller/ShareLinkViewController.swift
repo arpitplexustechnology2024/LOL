@@ -283,8 +283,7 @@ class ShareLinkViewController: UIViewController {
                     let items: [String: Any] = [
                         "com.instagram.sharedSticker.backgroundImage": imageData
                     ]
-                    let snackbar = TTGSnackbar(message: linkLabel!, duration: .middle)
-                    snackbar.show()
+                    
                     UIPasteboard.general.string = linkLabel
                     UIPasteboard.general.setItems([items])
                     UIApplication.shared.open(urlScheme, options: [:], completionHandler: nil)
