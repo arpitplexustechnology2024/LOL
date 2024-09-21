@@ -12,25 +12,18 @@ class PrivacyPolicyViewController: UIViewController {
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var privacyPolicyTextView: UITextView!
-    
     @IBOutlet weak var privacyPolicyLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        localizeUI()
     }
     
     func setupUI() {
-        
-        // Privacy Policy Text setup
         self.privacyPolicyTextView.text = privacyPolicyTextSet().privacyPolicyText
-        
-        // Done Button Gradient Color
         self.doneButton.layer.cornerRadius = doneButton.frame.height / 2
         self.doneButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
-        
-        // Localize UI elements
-        localizeUI()
     }
     
     func localizeUI() {
@@ -38,10 +31,12 @@ class PrivacyPolicyViewController: UIViewController {
         self.doneButton.setTitle(NSLocalizedString("PrivacyDoneBtnKey", comment: ""), for: .normal)
     }
     
+    // MARK: - Done Button
     @IBAction func btnDoneTapped(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
+    // MARK: - Back Button
     @IBAction func btnBackTapped(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }

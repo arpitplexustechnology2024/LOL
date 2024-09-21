@@ -48,6 +48,7 @@ class HomeViewController: UIViewController {
         self.navigationTitle.text = NSLocalizedString("TabbarItemKey01", comment: "")
     }
     
+    // MARK: - Profile Change Button
     @objc func profileChangeButton(_ sender: UIButton) {
         let titleString = NSAttributedString(string: NSLocalizedString("EditProfilePictureKey", comment: ""), attributes: [
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)
@@ -78,6 +79,7 @@ class HomeViewController: UIViewController {
         present(actionSheet, animated: true, completion: nil)
     }
     
+    // MARK: - Camera Button
     func btnCameraTapped() {
         let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: .video)
         switch cameraAuthorizationStatus {
@@ -100,6 +102,7 @@ class HomeViewController: UIViewController {
         }
     }
     
+    // MARK: - Gallery Button
     func btnGalleryTapped() {
         let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
         switch photoAuthorizationStatus {
@@ -164,7 +167,6 @@ class HomeViewController: UIViewController {
         
         snackbar.show()
     }
-    
     
     func btnAvatarTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -235,6 +237,7 @@ class HomeViewController: UIViewController {
         }
     }
     
+    // MARK: - Edit Question Button
     @IBAction func btnEditQuestionTapped(_ sender: UIButton) {
         let isPurchased = UserDefaults.standard.bool(forKey: ConstantValue.isPurchase)
         if isPurchased {

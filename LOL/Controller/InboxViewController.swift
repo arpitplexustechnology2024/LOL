@@ -210,11 +210,11 @@ class InboxViewController: UIViewController, PreviewViewControllerDelegate {
     }
     
     func didDeleteItem(at indexPath: IndexPath) {
-        inboxViewModel.fetchCardTitles()
+        self.checkInternetAndFetchData()
     }
     
     func didUpdateInbox() {
-        inboxViewModel.fetchCardTitles()
+        self.checkInternetAndFetchData()
     }
 }
 

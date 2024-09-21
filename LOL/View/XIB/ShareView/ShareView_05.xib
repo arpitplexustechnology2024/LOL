@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -43,10 +43,10 @@
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lol_WaterMark" translatesAutoresizingMaskIntoConstraints="NO" id="czm-S6-vHX">
-                    <rect key="frame" x="127.66666666666669" y="642" width="138" height="80"/>
+                    <rect key="frame" x="131.66666666666666" y="638" width="129.99999999999997" height="70"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="138" id="CaF-qd-qAx"/>
-                        <constraint firstAttribute="height" constant="80" id="oap-nA-pWs"/>
+                        <constraint firstAttribute="width" constant="130" id="CaF-qd-qAx"/>
+                        <constraint firstAttribute="height" constant="70" id="oap-nA-pWs"/>
                     </constraints>
                 </imageView>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSg-qx-iOb">
@@ -80,7 +80,7 @@
                                 <constraint firstAttribute="bottom" secondItem="hRy-eA-rdn" secondAttribute="bottom" id="v6l-8Q-Uyj"/>
                             </constraints>
                         </view>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g8A-1K-Liq">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g8A-1K-Liq">
                             <rect key="frame" x="146.66666666666666" y="14" width="60" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="60" id="GVy-k2-M5M"/>
@@ -110,7 +110,7 @@
             <constraints>
                 <constraint firstItem="fZQ-Ab-IdX" firstAttribute="top" secondItem="cSg-qx-iOb" secondAttribute="bottom" constant="40" id="AEm-ux-E92"/>
                 <constraint firstItem="ZLW-3e-iLs" firstAttribute="trailing" secondItem="cSg-qx-iOb" secondAttribute="trailing" constant="20" id="JGb-Yy-3G1"/>
-                <constraint firstItem="czm-S6-vHX" firstAttribute="top" secondItem="fZQ-Ab-IdX" secondAttribute="bottom" constant="84" id="LFa-Qt-l9H"/>
+                <constraint firstItem="czm-S6-vHX" firstAttribute="top" secondItem="fZQ-Ab-IdX" secondAttribute="bottom" constant="80" id="LFa-Qt-l9H"/>
                 <constraint firstItem="fbJ-Fo-2qM" firstAttribute="top" secondItem="kv3-C0-9yl" secondAttribute="top" id="OZ0-iJ-1aH"/>
                 <constraint firstItem="ZLW-3e-iLs" firstAttribute="trailing" secondItem="fbJ-Fo-2qM" secondAttribute="trailing" id="WcG-lC-tWa"/>
                 <constraint firstAttribute="bottom" secondItem="fbJ-Fo-2qM" secondAttribute="bottom" id="iAj-HO-mYG"/>

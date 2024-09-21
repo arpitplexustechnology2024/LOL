@@ -83,7 +83,7 @@ class EditViewController: UIViewController {
         self.editQuestionButton.layer.cornerRadius = editQuestionButton.layer.frame.height / 2
         self.formImageView.layer.cornerRadius = formImageView.layer.frame.height / 2
         self.saveCardButton.layer.cornerRadius = saveCardButton.frame.height / 2
-        self.saveCardButton.frame = CGRect(x: (view.frame.width - 398) / 2, y: view.center.y - 25, width: 398, height: 50)
+        self.saveCardButton.frame = CGRect(x: (view.frame.width - 408) / 2, y: view.center.y - 25, width: 408, height: 50)
         self.saveCardButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
         self.formCollectionView.delegate = self
         self.formCollectionView.dataSource = self
@@ -231,22 +231,26 @@ class EditViewController: UIViewController {
             snackbar.show()
             return
         }
-        
-        editTitleViewModel.selecteCardTitle { [self] result in
-            switch result {
-            case .success(_):
-                if isSuccess {
-                    let snackbar = TTGSnackbar(message: NSLocalizedString("SnackbarCardTitlesUpdated", comment: ""), duration: .middle)
-                    snackbar.show()
-                } else {
-                    let snackbar = TTGSnackbar(message: NSLocalizedString("SnackbarCardTitlesUpdated", comment: ""), duration: .middle)
-                    snackbar.show()
-                    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "CardQuestionViewController") as! CardQuestionViewController
-                    self.navigationController?.pushViewController(vc, animated: true)
+        if isConnectedToInternet() {
+            editTitleViewModel.selecteCardTitle { [self] result in
+                switch result {
+                case .success(_):
+                    if isSuccess {
+                        let snackbar = TTGSnackbar(message: NSLocalizedString("SnackbarCardTitlesUpdated", comment: ""), duration: .middle)
+                        snackbar.show()
+                    } else {
+                        let snackbar = TTGSnackbar(message: NSLocalizedString("SnackbarCardTitlesUpdated", comment: ""), duration: .middle)
+                        snackbar.show()
+                        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "CardQuestionViewController") as! CardQuestionViewController
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                case .failure(let error):
+                    print("Error : \(error.localizedDescription)")
                 }
-            case .failure(let error):
-                print("Error : \(error.localizedDescription)")
             }
+        } else {
+            let snackbar = TTGSnackbar(message: NSLocalizedString("SnackbarPleaseTurnOnInternet", comment: ""), duration: .middle)
+            snackbar.show()
         }
     }
     

@@ -36,7 +36,6 @@ class ComingSoonView: UIView {
     }
     
     func localizeUI() {
-        let selectedLanguage = UserDefaults.standard.string(forKey: LanguageSet.languageSelected) ?? "1"
         titleLabel.text = NSLocalizedString("MoreTitleKey", comment: "")
         messageLabel.text = NSLocalizedString("MoreDescriptionKey", comment: "")
     }

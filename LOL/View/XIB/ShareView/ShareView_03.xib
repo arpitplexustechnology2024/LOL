@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -43,10 +43,10 @@
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lol_WaterMark" translatesAutoresizingMaskIntoConstraints="NO" id="3cb-B2-3ly">
-                    <rect key="frame" x="127.66666666666669" y="642" width="138" height="80"/>
+                    <rect key="frame" x="131.66666666666666" y="638" width="129.99999999999997" height="70"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="80" id="Bwd-PV-fkU"/>
-                        <constraint firstAttribute="width" constant="138" id="ysn-rU-jWI"/>
+                        <constraint firstAttribute="height" constant="70" id="Bwd-PV-fkU"/>
+                        <constraint firstAttribute="width" constant="130" id="ysn-rU-jWI"/>
                     </constraints>
                 </imageView>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="do3-7w-Mr9">
@@ -80,7 +80,7 @@
                                 <constraint firstAttribute="bottom" secondItem="Mdi-ch-PaH" secondAttribute="bottom" id="uEC-Bl-unc"/>
                             </constraints>
                         </view>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ek-3b-U8S">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ek-3b-U8S">
                             <rect key="frame" x="146.66666666666666" y="14" width="60" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="60" id="r7c-Ga-tlX"/>
@@ -112,7 +112,7 @@
                 <constraint firstItem="3cb-B2-3ly" firstAttribute="centerX" secondItem="Q1u-tL-eDY" secondAttribute="centerX" id="AJe-dW-N83"/>
                 <constraint firstItem="xjW-5n-XHX" firstAttribute="trailing" secondItem="do3-7w-Mr9" secondAttribute="trailing" constant="20" id="Y7G-fb-Cp1"/>
                 <constraint firstItem="xjW-5n-XHX" firstAttribute="trailing" secondItem="Chq-Eq-Q2l" secondAttribute="trailing" id="YXF-JJ-grb"/>
-                <constraint firstItem="3cb-B2-3ly" firstAttribute="top" secondItem="8AX-ZJ-09X" secondAttribute="bottom" constant="84" id="bAa-Kc-iZ9"/>
+                <constraint firstItem="3cb-B2-3ly" firstAttribute="top" secondItem="8AX-ZJ-09X" secondAttribute="bottom" constant="80" id="bAa-Kc-iZ9"/>
                 <constraint firstItem="Chq-Eq-Q2l" firstAttribute="leading" secondItem="xjW-5n-XHX" secondAttribute="leading" constant="-1" id="e6c-Ne-VX8"/>
                 <constraint firstItem="8AX-ZJ-09X" firstAttribute="centerX" secondItem="Q1u-tL-eDY" secondAttribute="centerX" id="ekn-Zi-bKa"/>
                 <constraint firstItem="do3-7w-Mr9" firstAttribute="leading" secondItem="xjW-5n-XHX" secondAttribute="leading" constant="20" id="r7k-bQ-WI8"/>

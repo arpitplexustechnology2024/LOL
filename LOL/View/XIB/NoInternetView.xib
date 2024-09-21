@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,8 +17,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoInternetView" customModule="LOL" customModuleProvider="target">
             <connections>
                 <outlet property="imageView" destination="IOS-6A-kAF" id="SRH-CV-8Ak"/>
+                <outlet property="imageViewHeightConstraint" destination="Efa-Ar-G26" id="1NF-jm-Bdy"/>
+                <outlet property="imageViewTopConstraint" destination="3SS-LS-gWB" id="SEH-Bb-Vs5"/>
+                <outlet property="labelTopConstraint" destination="yDG-cP-zV6" id="0RO-Kz-B1J"/>
                 <outlet property="messageLabel" destination="7d1-e8-eYz" id="NxC-JA-G6Z"/>
                 <outlet property="retryButton" destination="9AT-lE-uDB" id="3zT-kX-gOo"/>
+                <outlet property="retryButtonTopConstraint" destination="Wsv-iR-XCx" id="mZu-OR-scX"/>
                 <outlet property="titleLabel" destination="RyX-eb-ATe" id="pfi-8Z-vtK"/>
             </connections>
         </placeholder>
@@ -33,7 +38,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RyX-eb-ATe">
-                    <rect key="frame" x="73.666666666666686" y="466" width="246" height="55.333333333333371"/>
+                    <rect key="frame" x="76" y="466" width="241" height="53.666666666666629"/>
                     <string key="text">Oops...
 No internet connection!</string>
                     <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="23"/>
@@ -41,7 +46,7 @@ No internet connection!</string>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7d1-e8-eYz">
-                    <rect key="frame" x="42" y="529.33333333333337" width="309.33333333333331" height="24"/>
+                    <rect key="frame" x="40.333333333333343" y="527.66666666666663" width="312.33333333333326" height="23.333333333333371"/>
                     <attributedString key="attributedText">
                         <fragment content="Please turn on internet connection!">
                             <attributes>
@@ -54,7 +59,7 @@ No internet connection!</string>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AT-lE-uDB">
-                    <rect key="frame" x="171.66666666666666" y="613.33333333333337" width="50" height="50"/>
+                    <rect key="frame" x="171.66666666666666" y="611" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="VwC-QT-iZf"/>
                         <constraint firstAttribute="width" constant="50" id="fLn-7c-2Nc"/>

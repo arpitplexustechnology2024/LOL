@@ -75,7 +75,7 @@ class CardQuestionViewController: UIViewController {
         
         // Share Button Gradient color
         self.shareButton.layer.cornerRadius = shareButton.frame.height / 2
-        self.shareButton.frame = CGRect(x: (view.frame.width - 398) / 2, y: view.center.y - 25, width: 398, height: 50)
+        self.shareButton.frame = CGRect(x: (view.frame.width - 408) / 2, y: view.center.y - 25, width: 408, height: 50)
         self.shareButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
     }
     

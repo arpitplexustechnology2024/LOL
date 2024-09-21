@@ -60,7 +60,7 @@ class ShareLinkViewController: UIViewController {
         self.textView.layer.masksToBounds = true
         self.ShareLinkPopup.layer.cornerRadius = 24
         self.nextButton.layer.cornerRadius = nextButton.frame.height / 2
-        self.nextButton.frame = CGRect(x: (view.frame.width - 154) / 2, y: view.center.y - 20, width: 154, height: 45)
+        self.nextButton.frame = CGRect(x: (view.frame.width - 159) / 2, y: view.center.y - 20, width: 159, height: 45)
         self.nextButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
         if traitCollection.userInterfaceStyle == .dark {
             self.cancelButton.layer.cornerRadius = cancelButton.frame.height / 2
@@ -250,6 +250,7 @@ class ShareLinkViewController: UIViewController {
                 } else {
                     targetSize = CGSize(width: screenSize.width, height: screenSize.width / targetAspectRatio)
                 }
+                
                 let shareView: UIView
                 switch selectedIndex {
                 case 0:
@@ -269,6 +270,7 @@ class ShareLinkViewController: UIViewController {
                 default:
                     shareView = ShareView01(frame: CGRect(origin: .zero, size: targetSize))
                 }
+                
                 shareView.center = CGPoint(x: screenSize.width / 2, y: screenSize.height / 2)
                 shareView.layoutIfNeeded()
                 UIGraphicsBeginImageContextWithOptions(targetSize, false, UIScreen.main.scale)
@@ -281,7 +283,9 @@ class ShareLinkViewController: UIViewController {
                     let items: [String: Any] = [
                         "com.instagram.sharedSticker.backgroundImage": imageData
                     ]
-                    
+                    let snackbar = TTGSnackbar(message: linkLabel!, duration: .middle)
+                    snackbar.show()
+                    UIPasteboard.general.string = linkLabel
                     UIPasteboard.general.setItems([items])
                     UIApplication.shared.open(urlScheme, options: [:], completionHandler: nil)
                 }

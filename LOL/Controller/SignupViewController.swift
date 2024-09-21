@@ -76,7 +76,7 @@ class SignupViewController: UIViewController {
         
         // Next button Gradient Color
         self.nextButton.layer.cornerRadius = nextButton.frame.height / 2
-        self.nextButton.frame = CGRect(x: (view.frame.width - 398) / 2, y: view.center.y - 25, width: 398, height: 50)
+        self.nextButton.frame = CGRect(x: (view.frame.width - 408) / 2, y: view.center.y - 25, width: 408, height: 50)
         self.nextButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
         
         // Error label
@@ -140,6 +140,7 @@ class SignupViewController: UIViewController {
         }
     }
     
+    // MARK: - Privacy Policy CheckBox
     @IBAction func privacyPolicyCheckBoxTapped(_ sender: UIButton) {
         isCheckboxChecked.toggle()
         if isCheckboxChecked {
@@ -149,7 +150,7 @@ class SignupViewController: UIViewController {
         }
     }
     
-    //MARK: - Next Button Action
+    //MARK: - Next Button
     @IBAction func btnNextTapped(_ sender: UIButton) {
         self.errorLabel.isHidden = true
         UIView.animate(withDuration: 0.3, animations: {
@@ -302,4 +303,3 @@ extension SignupViewController: UITextFieldDelegate {
         return false
     }
 }
-

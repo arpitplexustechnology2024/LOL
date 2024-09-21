@@ -9,8 +9,8 @@ import UIKit
 import CoreData
 import FirebaseCore
 import UserNotifications
-import FBSDKCoreKit
 import OneSignalFramework
+import FBSDKCoreKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         registerForPushNotifications()
         FirebaseApp.configure()
         OneSignal.Debug.setLogLevel(.LL_VERBOSE)
@@ -30,7 +31,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        return ApplicationDelegate.shared.application(app, open: url, options: options)
+        return ApplicationDelegate.shared.application(
+            app,
+            open: url,
+            sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+            annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+        )
     }
     
     func registerForPushNotifications() {

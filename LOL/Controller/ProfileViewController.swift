@@ -8,6 +8,7 @@
 import UIKit
 import TTGSnackbar
 import SDWebImage
+import Alamofire
 
 class ProfileViewController: UIViewController {
     
@@ -37,7 +38,7 @@ class ProfileViewController: UIViewController {
         self.AvtarImageview.addGestureRecognizer(tapGestureRecognizer)
         
         // Let's Go button Gradient Color
-        self.letsgoButton.frame = CGRect(x: (view.frame.width - 398) / 2, y: view.center.y - 25, width: 398, height: 50)
+        self.letsgoButton.frame = CGRect(x: (view.frame.width - 408) / 2, y: view.center.y - 25, width: 408, height: 50)
         self.letsgoButton.layer.cornerRadius = letsgoButton.frame.height / 2
         self.letsgoButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
         
@@ -83,6 +84,7 @@ class ProfileViewController: UIViewController {
         self.letsgoButton.setTitle(NSLocalizedString("ProfileLetsgoBtnKey", comment: ""), for: .normal)
     }
     
+    // MARK: - Avatar Select
     @objc func selectAvtarTapped(_ sender: UITapGestureRecognizer) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let bottomSheetVC = storyboard.instantiateViewController(withIdentifier: "AvtarBottomViewController") as! AvtarBottomViewController
@@ -103,42 +105,52 @@ class ProfileViewController: UIViewController {
         present(bottomSheetVC, animated: true, completion: nil)
     }
     
-    //MARK: - Let'sgo Button Action
+    private func isConnectedToInternet() -> Bool {
+        let networkManager = NetworkReachabilityManager()
+        return networkManager?.isReachable ?? false
+    }
+    
+    // MARK: - Let'sgo Button
     @IBAction func btnLetsgoTapped(_ sender: UIButton) {
-        
-        letsgoButton.setTitle("", for: .normal)
-        activityIndicator.startAnimating()
-        self.errorLabel.isHidden = true
-        guard let name = nameTextfiled.text, !name.isEmpty else {
-            showError(message: NSLocalizedString("ProfileErrorKey", comment: ""))
-            self.activityIndicator.stopAnimating()
-            self.letsgoButton.setTitle(NSLocalizedString("ProfileLetsgoBtnKey", comment: ""), for: .normal)
-            return
-        }
-        UserDefaults.standard.set(name, forKey: ConstantValue.name)
-        let username = UserDefaults.standard.string(forKey: ConstantValue.user_name)
-        let defaultAvatar = "https://lolcards.link/api/public/images/AvatarDefault.png"
-        let avatar = UserDefaults.standard.string(forKey: ConstantValue.avatar_URL) ?? defaultAvatar
-        let deviceToken = UserDefaults.standard.string(forKey: "SubscriptionID")
-        
-        viewModel.registerUser(name: nameTextfiled.text!, avatar: avatar, username: username!, deviceToken: deviceToken!) { [weak self] result in
-            guard let self = self else { return }
-            
-            DispatchQueue.main.async { [self] in
+        if isConnectedToInternet() {
+            letsgoButton.setTitle("", for: .normal)
+            activityIndicator.startAnimating()
+            self.errorLabel.isHidden = true
+            guard let name = nameTextfiled.text, !name.isEmpty else {
+                showError(message: NSLocalizedString("ProfileErrorKey", comment: ""))
                 self.activityIndicator.stopAnimating()
                 self.letsgoButton.setTitle(NSLocalizedString("ProfileLetsgoBtnKey", comment: ""), for: .normal)
+                return
+            }
+            UserDefaults.standard.set(name, forKey: ConstantValue.name)
+            let username = UserDefaults.standard.string(forKey: ConstantValue.user_name)
+            let defaultAvatar = "https://lolcards.link/api/public/images/AvatarDefault.png"
+            let avatar = UserDefaults.standard.string(forKey: ConstantValue.avatar_URL) ?? defaultAvatar
+            let deviceToken = UserDefaults.standard.string(forKey: "SubscriptionID")
+            
+            
+            viewModel.registerUser(name: nameTextfiled.text!, avatar: avatar, username: username!, deviceToken: deviceToken!) { [weak self] result in
+                guard let self = self else { return }
                 
-                switch result {
-                case .success(let profile):
-                    print("Registration : \(profile.data)")
-                    UserDefaults.standard.set(true, forKey: ConstantValue.is_UserRegistered)
-                    UserDefaults.standard.set(profile.data.link, forKey: ConstantValue.is_UserLink)
-                    self.navigateToTabbarViewcontroller()
+                DispatchQueue.main.async { [self] in
+                    self.activityIndicator.stopAnimating()
+                    self.letsgoButton.setTitle(NSLocalizedString("ProfileLetsgoBtnKey", comment: ""), for: .normal)
                     
-                case .failure(let error):
-                    print("Registration error: \(error.localizedDescription)")
+                    switch result {
+                    case .success(let profile):
+                        print("Registration : \(profile.data)")
+                        UserDefaults.standard.set(true, forKey: ConstantValue.is_UserRegistered)
+                        UserDefaults.standard.set(profile.data.link, forKey: ConstantValue.is_UserLink)
+                        self.navigateToTabbarViewcontroller()
+                        
+                    case .failure(let error):
+                        print("Registration error: \(error.localizedDescription)")
+                    }
                 }
             }
+        } else {
+            let snackbar = TTGSnackbar(message: NSLocalizedString("AvatarNoInternetMessage", comment: ""), duration: .middle)
+            snackbar.show()
         }
     }
     

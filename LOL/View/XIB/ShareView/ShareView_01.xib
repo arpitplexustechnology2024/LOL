@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -52,10 +53,10 @@ messages!</string>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lol_WaterMark" translatesAutoresizingMaskIntoConstraints="NO" id="Hgh-V8-FbM">
-                    <rect key="frame" x="127.66666666666669" y="642" width="138" height="80"/>
+                    <rect key="frame" x="131.66666666666666" y="639" width="129.99999999999997" height="70"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="80" id="RjT-dk-dWb"/>
-                        <constraint firstAttribute="width" constant="138" id="uVZ-kr-Cn7"/>
+                        <constraint firstAttribute="height" constant="70" id="RjT-dk-dWb"/>
+                        <constraint firstAttribute="width" constant="130" id="uVZ-kr-Cn7"/>
                     </constraints>
                 </imageView>
             </subviews>
@@ -64,7 +65,7 @@ messages!</string>
             <constraints>
                 <constraint firstItem="Urh-WS-Scd" firstAttribute="top" secondItem="zix-Mj-kct" secondAttribute="bottom" constant="35" id="31l-6j-pk6"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="D5F-MY-qyb" secondAttribute="trailing" id="4T4-4K-thv"/>
-                <constraint firstItem="Hgh-V8-FbM" firstAttribute="top" secondItem="Urh-WS-Scd" secondAttribute="bottom" constant="35" id="58e-Ik-Cwx"/>
+                <constraint firstItem="Hgh-V8-FbM" firstAttribute="top" secondItem="Urh-WS-Scd" secondAttribute="bottom" constant="32" id="58e-Ik-Cwx"/>
                 <constraint firstItem="D5F-MY-qyb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="87b-md-Flx"/>
                 <constraint firstItem="FJD-3m-LoZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ALN-gq-dyL"/>
                 <constraint firstItem="FJD-3m-LoZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="121" id="Ihl-BC-Nkd"/>

@@ -9,6 +9,7 @@ import UIKit
 import SDWebImage
 import TTGSnackbar
 import StoreKit
+import Alamofire
 
 protocol PreviewViewControllerDelegate: AnyObject {
     func didDeleteItem(at indexPath: IndexPath)
@@ -107,7 +108,7 @@ class PreviewViewController: UIViewController {
             case 1136, 1334, 1920, 2208:
                 width = 100
                 height = 100
-                fontSize = 10
+                fontSize = 12
             case 2436, 2688, 1792, 2556:
                 width = 150
                 height = 150
@@ -183,7 +184,7 @@ class PreviewViewController: UIViewController {
         }
         
         nickNameLabel.text = data.nickname
-    
+        
         let styles: [() -> String] = [applyRoundedCorners, applyCircle]
         if let randomStyle = styles.randomElement() {
         }
@@ -209,6 +210,12 @@ class PreviewViewController: UIViewController {
         return "circle"
     }
     
+    private func isConnectedToInternet() -> Bool {
+        let networkManager = NetworkReachabilityManager()
+        return networkManager?.isReachable ?? false
+    }
+    
+    // MARK: - Block User
     @IBAction func btnBlockTapped(_ sender: UIButton) {
         let alertController = UIAlertController(
             title: "Block",
@@ -222,11 +229,16 @@ class PreviewViewController: UIViewController {
             self.blockUserViewModel.blockUser(ip: ip) { [self] result in
                 switch result {
                 case .success(let blockUserResponse):
-                    print("User blocked successfully: \(blockUserResponse.message)")
-                    delegate?.didDeleteItem(at: indexPath)
-                    self.navigationController?.popViewController(animated: true)
-                    let snackbar = TTGSnackbar(message: "User blocked successfully!", duration: .middle)
-                    snackbar.show()
+                    if isConnectedToInternet() {
+                        print("User blocked successfully: \(blockUserResponse.message)")
+                        delegate?.didDeleteItem(at: indexPath)
+                        self.navigationController?.popViewController(animated: true)
+                        let snackbar = TTGSnackbar(message: "User blocked successfully!", duration: .middle)
+                        snackbar.show()
+                    } else {
+                        let snackbar = TTGSnackbar(message: NSLocalizedString("InboxNoInternetMessage", comment: ""), duration: .middle)
+                        snackbar.show()
+                    }
                 case .failure(let error):
                     print("Failed to block user: \(error.localizedDescription)")
                 }
@@ -241,6 +253,7 @@ class PreviewViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    // MARK: - Delete Card
     @IBAction func btnDeleteTapped(_ sender: UIButton) {
         let alertController = UIAlertController(
             title: "Delete",
@@ -254,11 +267,16 @@ class PreviewViewController: UIViewController {
             self.deleteInboxViewModel.deleteInbox(inboxId: inboxId) { [self] result in
                 switch result {
                 case .success(let deleteInboxResponse):
-                    print("Inbox deleted successfully: \(deleteInboxResponse.message)")
-                    delegate?.didDeleteItem(at: indexPath)
-                    self.navigationController?.popViewController(animated: true)
-                    let snackbar = TTGSnackbar(message: "Card deleted successfully!", duration: .middle)
-                    snackbar.show()
+                    if isConnectedToInternet() {
+                        print("Inbox deleted successfully: \(deleteInboxResponse.message)")
+                        delegate?.didDeleteItem(at: indexPath)
+                        self.navigationController?.popViewController(animated: true)
+                        let snackbar = TTGSnackbar(message: "Card deleted successfully!", duration: .middle)
+                        snackbar.show()
+                    } else {
+                        let snackbar = TTGSnackbar(message: NSLocalizedString("InboxNoInternetMessage", comment: ""), duration: .middle)
+                        snackbar.show()
+                    }
                 case .failure(let error):
                     print("Failed to delete inbox: \(error.localizedDescription)")
                 }
@@ -273,6 +291,7 @@ class PreviewViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    // MARK: - Show Profile
     @IBAction func btnShowProfileTapped(_ sender: UIButton) {
         let isPurchased = UserDefaults.standard.bool(forKey: ConstantValue.isPurchase)
         if isPurchased {
@@ -302,8 +321,9 @@ class PreviewViewController: UIViewController {
         }
     }
     
+    // MARK: - Instagram Share
     @IBAction func btnInstagramShareTapped(_ sender: UIButton) {
-        let instagramURLScheme = URL(string: "instagram-stories://share?source_application=com.plexustechnology.LOL")!
+        let instagramURLScheme = URL(string: "instagram-stories://share?source_application=com.fun.lol.card")!
         let instagramWebURL = URL(string: "https://www.instagram.com")!
         
         if UIApplication.shared.canOpenURL(instagramURLScheme) {
@@ -312,19 +332,59 @@ class PreviewViewController: UIViewController {
             let originalAlphas = elementsToHide.map { $0!.alpha }
             elementsToHide.forEach { $0!.alpha = 0 }
             
+            
             let screenSize = UIScreen.main.bounds.size
-            let targetAspectRatio: CGFloat = 8.0 / 15.0
-            let screenAspectRatio = screenSize.width / screenSize.height
             
-            var targetSize: CGSize
+            let adjustedSize = CGSize(width: screenSize.width, height: screenSize.height)
             
-            if screenAspectRatio > targetAspectRatio {
-                targetSize = CGSize(width: screenSize.height * targetAspectRatio, height: screenSize.height)
-            } else {
-                targetSize = CGSize(width: screenSize.width, height: screenSize.width / targetAspectRatio)
+            UIGraphicsBeginImageContextWithOptions(adjustedSize, false, UIScreen.main.scale)
+            
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+               let window = windowScene.windows.first {
+                
+                window.drawHierarchy(in: CGRect(origin: .zero, size: adjustedSize), afterScreenUpdates: true)
             }
             
-            UIGraphicsBeginImageContextWithOptions(targetSize, false, UIScreen.main.scale)
+            
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            
+            for (element, alpha) in zip(elementsToHide, originalAlphas) {
+                element!.alpha = alpha
+            }
+            
+            if let imageData = image?.pngData() {
+                let items: [String: Any] = [
+                    "com.instagram.sharedSticker.backgroundImage": imageData,
+                ]
+                
+                
+                UIPasteboard.general.setItems([items])
+                UIApplication.shared.open(instagramURLScheme, options: [:], completionHandler: nil)
+            }
+        } else {
+            UIApplication.shared.open(instagramWebURL, options: [:], completionHandler: nil)
+        }
+    }
+    
+    // MARK: - Snapchat Share
+    @IBAction func btnSnapchatShareTapped(_ sender: UIButton) {
+        let snapchatURLScheme = URL(string: "snapchat://")!
+        let snapchatWebURL = URL(string: "https://www.snapchat.com")!
+        
+        if UIApplication.shared.canOpenURL(snapchatURLScheme) {
+            
+            let elementsToHide = [navigationTtitleLabel, backButton, showProfieButton, instagramShareButton, snapchatShareButton, moreAppShareButton, deleteButton, blockButton]
+            let originalAlphas = elementsToHide.map { $0!.alpha }
+            elementsToHide.forEach { $0!.alpha = 0 }
+            
+            let screenSize = UIScreen.main.bounds.size
+            
+            UIGraphicsBeginImageContextWithOptions(screenSize, false, UIScreen.main.scale)
+            if let context = UIGraphicsGetCurrentContext() {
+                view.layer.render(in: context)
+            }
             
             if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
                let window = windowScene.windows.first {
@@ -337,30 +397,6 @@ class PreviewViewController: UIViewController {
             for (element, alpha) in zip(elementsToHide, originalAlphas) {
                 element!.alpha = alpha
             }
-            
-            if let imageData = image?.pngData() {
-                let items: [String: Any] = [
-                    "com.instagram.sharedSticker.backgroundImage": imageData,
-                ]
-                
-                UIPasteboard.general.setItems([items])
-                UIApplication.shared.open(instagramURLScheme, options: [:], completionHandler: nil)
-            }
-        } else {
-            UIApplication.shared.open(instagramWebURL, options: [:], completionHandler: nil)
-        }
-    }
-    
-    @IBAction func btnSnapchatShareTapped(_ sender: UIButton) {
-        let snapchatURLScheme = URL(string: "snapchat://")!
-        let snapchatWebURL = URL(string: "https://www.snapchat.com")!
-        
-        if UIApplication.shared.canOpenURL(snapchatURLScheme) {
-            
-            UIGraphicsBeginImageContextWithOptions(card_BGView.bounds.size, false, 0.0)
-            card_BGView.drawHierarchy(in: card_BGView.bounds, afterScreenUpdates: true)
-            let image = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
             
             if let image = image {
                 UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
@@ -379,6 +415,7 @@ class PreviewViewController: UIViewController {
         }
     }
     
+    // MARK: - More App Share
     @IBAction func btnMoreAppShareTapped(_ sender: UIButton) {
         UIGraphicsBeginImageContextWithOptions(card_BGView.bounds.size, false, 0.0)
         card_BGView.drawHierarchy(in: card_BGView.bounds, afterScreenUpdates: true)
@@ -397,6 +434,7 @@ class PreviewViewController: UIViewController {
         }
     }
     
+    // MARK: - Back Button
     @IBAction func btnBackTapped(_ sender: UIButton) {
         delegate?.didUpdateInbox()
         self.navigationController?.popViewController(animated: true)

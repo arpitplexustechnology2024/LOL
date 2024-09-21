@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,6 +20,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoDataView" customModule="LOL" customModuleProvider="target">
             <connections>
                 <outlet property="imageView" destination="lyS-Qk-089" id="89x-d5-rGU"/>
+                <outlet property="imageViewHeightConstraint" destination="MLd-dR-58d" id="kaP-yt-VFV"/>
+                <outlet property="imageViewTopConstraint" destination="R1v-Gt-Fyn" id="5Ab-QT-eqE"/>
+                <outlet property="labelTopConstraint" destination="LGF-xL-bVl" id="ZbO-8h-Ccv"/>
                 <outlet property="messageLabel" destination="XR3-MH-1ot" id="HGJ-K9-sTi"/>
                 <outlet property="titleLabel" destination="z5D-XC-TkX" id="zPc-eh-hvZ"/>
             </connections>
@@ -35,13 +39,13 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No data found." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5D-XC-TkX">
-                    <rect key="frame" x="120" y="466" width="153" height="28"/>
+                    <rect key="frame" x="119.66666666666669" y="466" width="154" height="27"/>
                     <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="23"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XR3-MH-1ot">
-                    <rect key="frame" x="58" y="502" width="277.33333333333326" height="48"/>
+                    <rect key="frame" x="53" y="501.00000000000006" width="287" height="46.666666666666686"/>
                     <string key="text">Request failed! Please try again 
 after some time.</string>
                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>

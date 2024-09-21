@@ -15,7 +15,9 @@ target 'LOL' do
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Core'
   pod 'Firebase/InAppMessaging'
-  pod 'FBSDKCoreKit'
+  pod 'FBSDKCoreKit', '~> 17.1.0'
+  pod 'FBSDKLoginKit', '~> 17.1.0'
+  pod 'FBSDKShareKit', '~> 17.1.0'
   pod 'OneSignal'
   
   target 'LOLTests' do

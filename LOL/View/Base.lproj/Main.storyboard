@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vdE-IZ-Zas">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vdE-IZ-Zas">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -2225,7 +2225,7 @@ when you ask questions to create a card!</string>
                                 </connections>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="YaY-Ub-rfj">
-                                <rect key="frame" x="138.66666666666666" y="383" width="115.66666666666666" height="25.666666666666686"/>
+                                <rect key="frame" x="160" y="383" width="73" height="25.666666666666686"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.99215686270000003" green="0.4941176471" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
@@ -2827,7 +2827,7 @@ when you ask questions to create a card!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="PL8-h9-w3z">
-                                <rect key="frame" x="20" y="119" width="353" height="135"/>
+                                <rect key="frame" x="20" y="114" width="353" height="135"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stf-wL-hwo">
                                         <rect key="frame" x="0.0" y="0.0" width="168.66666666666666" height="135"/>
@@ -2939,7 +2939,7 @@ when you ask questions to create a card!</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="k0p-1J-9X6">
-                                <rect key="frame" x="20" y="270" width="353" height="135"/>
+                                <rect key="frame" x="20" y="265" width="353" height="135"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5Q-Ge-gPB">
                                         <rect key="frame" x="0.0" y="0.0" width="168.66666666666666" height="135"/>
@@ -3059,7 +3059,7 @@ when you ask questions to create a card!</string>
                             <constraint firstItem="k0p-1J-9X6" firstAttribute="leading" secondItem="ElG-SM-wOW" secondAttribute="leading" constant="20" id="Ja1-TL-1dx"/>
                             <constraint firstItem="ElG-SM-wOW" firstAttribute="trailing" secondItem="k0p-1J-9X6" secondAttribute="trailing" constant="20" id="Jzq-5R-tGH"/>
                             <constraint firstItem="PL8-h9-w3z" firstAttribute="leading" secondItem="ElG-SM-wOW" secondAttribute="leading" constant="20" id="SeJ-O9-veg"/>
-                            <constraint firstItem="PL8-h9-w3z" firstAttribute="top" secondItem="ElG-SM-wOW" secondAttribute="top" constant="60" id="xFN-DR-xtR"/>
+                            <constraint firstItem="PL8-h9-w3z" firstAttribute="top" secondItem="ElG-SM-wOW" secondAttribute="top" constant="55" id="xFN-DR-xtR"/>
                         </constraints>
                     </view>
                     <connections>
@@ -3192,10 +3192,6 @@ when you ask questions to create a card!</string>
             <point key="canvasLocation" x="6311" y="1318"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="9Ee-Ix-0ee"/>
-        <designable name="iTV-iQ-lJT"/>
-    </designables>
     <resources>
         <image name="Anonyms" width="159" height="159"/>
         <image name="Block.Card" width="22" height="22"/>

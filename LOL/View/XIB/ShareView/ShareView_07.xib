@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -43,10 +43,10 @@
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lol_WaterMark" translatesAutoresizingMaskIntoConstraints="NO" id="C2X-nO-GZn">
-                    <rect key="frame" x="127.66666666666669" y="642" width="138" height="80"/>
+                    <rect key="frame" x="131.66666666666666" y="638" width="129.99999999999997" height="70"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="80" id="H1M-Zt-3rh"/>
-                        <constraint firstAttribute="width" constant="138" id="aOq-Et-STb"/>
+                        <constraint firstAttribute="height" constant="70" id="H1M-Zt-3rh"/>
+                        <constraint firstAttribute="width" constant="130" id="aOq-Et-STb"/>
                     </constraints>
                 </imageView>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uk1-2n-YXZ">
@@ -80,7 +80,7 @@
                                 <constraint firstItem="ecv-Qo-pgx" firstAttribute="top" secondItem="I1Z-6U-OF9" secondAttribute="top" id="bFV-jN-pSW"/>
                             </constraints>
                         </view>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oVi-HF-1cE">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oVi-HF-1cE">
                             <rect key="frame" x="146.66666666666666" y="14" width="60" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="Hmh-Gw-wKx"/>
@@ -113,7 +113,7 @@
                 <constraint firstItem="AYe-by-WtG" firstAttribute="centerX" secondItem="KDc-3j-Oda" secondAttribute="centerX" id="9O2-hK-R4J"/>
                 <constraint firstAttribute="bottom" secondItem="XLB-HV-WHO" secondAttribute="bottom" id="B2d-jB-jI8"/>
                 <constraint firstItem="C2X-nO-GZn" firstAttribute="centerX" secondItem="KDc-3j-Oda" secondAttribute="centerX" id="JOj-xH-ib4"/>
-                <constraint firstItem="C2X-nO-GZn" firstAttribute="top" secondItem="AYe-by-WtG" secondAttribute="bottom" constant="84" id="JcH-Qg-VQc"/>
+                <constraint firstItem="C2X-nO-GZn" firstAttribute="top" secondItem="AYe-by-WtG" secondAttribute="bottom" constant="80" id="JcH-Qg-VQc"/>
                 <constraint firstItem="B0S-HU-HMR" firstAttribute="trailing" secondItem="Uk1-2n-YXZ" secondAttribute="trailing" constant="20" id="Qjl-0I-adp"/>
                 <constraint firstItem="XLB-HV-WHO" firstAttribute="top" secondItem="KDc-3j-Oda" secondAttribute="top" id="ZOX-Sm-O7o"/>
                 <constraint firstItem="XLB-HV-WHO" firstAttribute="leading" secondItem="B0S-HU-HMR" secondAttribute="leading" id="lxT-Rk-Yqx"/>
