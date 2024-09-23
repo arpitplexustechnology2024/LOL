@@ -49,7 +49,7 @@ class MoreAppViewController: UIViewController {
     }
     
     private func fetchMoreData() {
-        let packageName = "id1487614236"
+        let packageName = "id6670788272"
         self.activityIndicator.startAnimating()
         viewModel.fetchMoreData(packageName: packageName) { [weak self] result in
             guard let self = self else { return }
