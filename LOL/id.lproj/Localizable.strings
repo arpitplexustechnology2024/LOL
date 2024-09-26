@@ -140,6 +140,8 @@
 "PremiumSuccessMessageKey" = "Semua sudah siap.";
 "PremiumFailedMessageKey" = "Gagal!";
 "PremiumFailedPaymentKey" = "Permintaan gagal. Silakan coba lagi setelah beberapa waktu!";
+"RestorePurchaseKey" = "Pulihkan";
+"NoPreviousPurchaseMessage" = "Anda belum membeli item ini. Silakan beli untuk melanjutkan.";
 
 // Inbox viewController
 "InboxSenderBtnKey" = "Siapa pengirim?";

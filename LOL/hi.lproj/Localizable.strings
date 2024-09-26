@@ -140,6 +140,8 @@
 "PremiumSuccessMessageKey" = "आप तैयार हैं।";
 "PremiumFailedMessageKey" = "असफल!";
 "PremiumFailedPaymentKey" = "अनुरोध असफल रहा। कृपया कुछ समय बाद पुनः प्रयास करें!";
+"RestorePurchaseKey" = "पुनर्स्थापित करें";
+"NoPreviousPurchaseMessage" = "आपने अभी तक यह वस्तु नहीं खरीदी है। कृपया आगे बढ़ने के लिए खरीदें।";
 
 // Inbox viewController
 "InboxSenderBtnKey" = "भेजने वाला कौन है?";

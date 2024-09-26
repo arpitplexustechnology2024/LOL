@@ -16,6 +16,7 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var proFeaturesLabel: UILabel!
+    @IBOutlet weak var restoreButton: UIButton!
     
     let productID = "com.lol.anonymousfeatures"
     
@@ -27,6 +28,7 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
     }
     
     private var product: SKProduct?
+    private var isRestoringPurchases = false
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -55,6 +57,8 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
         self.unlockButton.layer.cornerRadius = self.unlockButton.frame.height / 2
         unlockButton.frame = CGRect(x: (view.frame.width - 336) / 2, y: view.center.y - 25, width: 336, height: 50)
         self.unlockButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
+        restoreButton.setTitle(NSLocalizedString("RestorePurchaseKey", comment: ""), for: .normal)
+        unlockButton.setTitle(NSLocalizedString("UnlockBtnKey", comment: ""), for: .normal)
         SKPaymentQueue.default().add(self)
     }
     
@@ -117,6 +121,19 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
         }
     }
     
+    // MARK: - Purchase Restore
+    @IBAction func btnRestoreTapped(_ sender: UIButton) {
+        if !isConnectedToInternet() {
+            let snackbar = TTGSnackbar(message: NSLocalizedString("PremiumNoInternetMessage", comment: ""), duration: .middle)
+            snackbar.show()
+            return
+        }
+        
+        isRestoringPurchases = true
+        SKPaymentQueue.default().restoreCompletedTransactions()
+    }
+    
+    
     // MARK: - Purchase Premium Features
     @IBAction func btnUnlockTapped(_ sender: UIButton) {
         if !isConnectedToInternet() {
@@ -137,50 +154,97 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
         for transaction in transactions {
             if transaction.transactionState == .purchased {
                 print("Purchase Successfully")
-                
-                let customAlertVC = CustomAlertViewController()
-                customAlertVC.modalPresentationStyle = .overFullScreen
-                customAlertVC.modalTransitionStyle = .crossDissolve
-                customAlertVC.message = NSLocalizedString("PremiumCongraMessageKey", comment: "")
-                customAlertVC.link = NSLocalizedString("PremiumSuccessMessageKey", comment: "")
-                customAlertVC.image = UIImage(named: "CopyLink")
-                
-                self.present(customAlertVC, animated: true) {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                        customAlertVC.animateDismissal {
-                            customAlertVC.dismiss(animated: false, completion: nil)
-                            self.dismiss(animated: true)
-                        }
-                    }
-                }
                 SKPaymentQueue.default().finishTransaction(transaction)
-                viewModel.updatePurchase { result in
-                    switch result {
-                    case .success(_):
-                        print("You have purchased successfully!")
-                    case .failure(let error):
-                        print("Error : \(error.localizedDescription)")
-                    }
-                }
-                UserDefaults.standard.set(true, forKey: ConstantValue.isPurchase)
+                showPremiumSuccessAlert()
                 
             } else if transaction.transactionState == .failed {
-                let customAlertVC = AlertViewController()
-                customAlertVC.modalPresentationStyle = .overFullScreen
-                customAlertVC.modalTransitionStyle = .crossDissolve
-                customAlertVC.message = NSLocalizedString("PremiumFailedMessageKey", comment: "")
-                customAlertVC.link = NSLocalizedString("PremiumFailedPaymentKey", comment: "")
-                customAlertVC.image = UIImage(named: "PurchaseFailed")
+                print("Purchase or Restore Failed")
+                SKPaymentQueue.default().finishTransaction(transaction)
+                handleFailedPurchaseOrRestore(transaction: transaction)
                 
-                self.present(customAlertVC, animated: true) {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                        customAlertVC.animateDismissal {
-                            customAlertVC.dismiss(animated: false, completion: nil)
-                            self.dismiss(animated: true)
-                        }
+            } else if transaction.transactionState == .restored {
+                print("Restore Successful")
+                SKPaymentQueue.default().finishTransaction(transaction)
+                handleSuccessfulRestore(transaction: transaction)
+            }
+        }
+    }
+    
+    func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
+        isRestoringPurchases = false
+        if queue.transactions.isEmpty {
+            let snackbar = TTGSnackbar(message: NSLocalizedString("NoPreviousPurchaseMessage", comment: ""), duration: .middle)
+            snackbar.show()
+            self.dismiss(animated: true)
+        }
+    }
+    
+    func paymentQueue(_ queue: SKPaymentQueue, restoreCompletedTransactionsFailedWithError error: Error) {
+        isRestoringPurchases = false
+        showFailureAlert()
+    }
+    
+    private func handleSuccessfulRestore(transaction: SKPaymentTransaction) {
+        if isRestoringPurchases {
+            showPremiumSuccessAlert()
+        }
+    }
+    
+    private func handleFailedPurchaseOrRestore(transaction: SKPaymentTransaction) {
+        if isRestoringPurchases {
+            showFailureAlert()
+        } else {
+            showFailureAlert()
+        }
+    }
+    
+    // MARK: - Show Premium Successfully Alert
+    private func showPremiumSuccessAlert() {
+        DispatchQueue.main.async { [self] in
+            let customAlertVC = CustomAlertViewController()
+            customAlertVC.modalPresentationStyle = .overFullScreen
+            customAlertVC.modalTransitionStyle = .crossDissolve
+            customAlertVC.message = NSLocalizedString("PremiumCongraMessageKey", comment: "")
+            customAlertVC.link = NSLocalizedString("PremiumSuccessMessageKey", comment: "")
+            customAlertVC.image = UIImage(named: "CopyLink")
+            
+            self.present(customAlertVC, animated: true) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    customAlertVC.animateDismissal {
+                        customAlertVC.dismiss(animated: false, completion: nil)
+                        self.dismiss(animated: true)
                     }
                 }
-                SKPaymentQueue.default().finishTransaction(transaction)
+            }
+            viewModel.updatePurchase { result in
+                switch result {
+                case .success(_):
+                    print("You have purchased successfully!")
+                case .failure(let error):
+                    print("Error : \(error.localizedDescription)")
+                }
+            }
+            UserDefaults.standard.set(true, forKey: ConstantValue.isPurchase)
+        }
+    }
+    
+    // MARK: - Show Failed Alert
+    private func showFailureAlert() {
+        DispatchQueue.main.async {
+            let customAlertVC = AlertViewController()
+            customAlertVC.modalPresentationStyle = .overFullScreen
+            customAlertVC.modalTransitionStyle = .crossDissolve
+            customAlertVC.message = NSLocalizedString("PremiumFailedMessageKey", comment: "")
+            customAlertVC.link = NSLocalizedString("PremiumFailedPaymentKey", comment: "")
+            customAlertVC.image = UIImage(named: "PurchaseFailed")
+            
+            self.present(customAlertVC, animated: true) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    customAlertVC.animateDismissal {
+                        customAlertVC.dismiss(animated: false, completion: nil)
+                        self.dismiss(animated: true)
+                    }
+                }
             }
         }
     }
@@ -201,13 +265,13 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
         if UIDevice.current.userInterfaceIdiom == .phone {
             switch UIScreen.main.nativeBounds.height {
             case 1136, 1334, 1920, 2208:
-                height = 205
+                height = 195
             case 2436, 1792, 2556, 2532:
-                height = 245
+                height = 235
             case 2796, 2778, 2688:
-                height = 300
+                height = 290
             default:
-                height = 245
+                height = 235
             }
         }
         

@@ -236,8 +236,17 @@ class ShareLinkViewController: UIViewController {
     private func shareInstagramStory() {
         guard let selectedIndex = selectedIndex else { return }
         
+        guard let linkText = linkLabel else {
+            let snackbar = TTGSnackbar(message: NSLocalizedString("Link text is not available", comment: ""), duration: .middle)
+            snackbar.show()
+            print("Link text is not available")
+            return
+        }
+        
         if let urlScheme = URL(string: "instagram-stories://share?source_application=com.fun.lol.card") {
             if UIApplication.shared.canOpenURL(urlScheme) {
+                
+                UIPasteboard.general.string = linkText
                 
                 let screenSize = UIScreen.main.bounds.size
                 let targetAspectRatio: CGFloat = 9.0 / 16.0
@@ -281,10 +290,10 @@ class ShareLinkViewController: UIViewController {
                 
                 if let imageData = image?.pngData() {
                     let items: [String: Any] = [
-                        "com.instagram.sharedSticker.backgroundImage": imageData
+                        "com.instagram.sharedSticker.backgroundImage": imageData,
+                        "com.instagram.sharedSticker.contentURL": linkText
                     ]
                     
-                    UIPasteboard.general.string = linkLabel
                     UIPasteboard.general.setItems([items])
                     UIApplication.shared.open(urlScheme, options: [:], completionHandler: nil)
                 }

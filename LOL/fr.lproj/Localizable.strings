@@ -140,6 +140,8 @@
 "PremiumSuccessMessageKey" = "Vous êtes prêt.";
 "PremiumFailedMessageKey" = "Échec!";
 "PremiumFailedPaymentKey" = "La demande a échoué. Veuillez réessayer après un certain temps!";
+"RestorePurchaseKey" = "Restaurer";
+"NoPreviousPurchaseMessage" = "Vous n'avez pas encore acheté cet article. Veuillez l'acheter pour continuer.";
 
 // Inbox viewController
 "InboxSenderBtnKey" = "Qui est l'expéditeur ?";

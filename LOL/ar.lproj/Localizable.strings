@@ -140,6 +140,8 @@
 "PremiumSuccessMessageKey" = "أنت جاهز.";
 "PremiumFailedMessageKey" = "فشل!";
 "PremiumFailedPaymentKey" = "فشل الطلب. يرجى المحاولة مرة أخرى بعد فترة!";
+"RestorePurchaseKey" = "استعادة";
+"NoPreviousPurchaseMessage" = "لم تقم بشراء هذا العنصر بعد. يرجى الشراء للمتابعة.";
 
 // Inbox ViewController
 "InboxSenderBtnKey" = "من هو المرسل؟";

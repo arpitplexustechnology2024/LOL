@@ -140,6 +140,8 @@
 "PremiumSuccessMessageKey" = "آپ تیار ہیں۔";
 "PremiumFailedMessageKey" = "ناکام!";
 "PremiumFailedPaymentKey" = "درخواست ناکام ہو گئی۔ براہ کرم کچھ وقت بعد دوبارہ کوشش کریں!";
+"RestorePurchaseKey" = "بحال کریں";
+"NoPreviousPurchaseMessage" = "آپ نے ابھی تک یہ آئٹم نہیں خریدا ہے۔ براہ کرم آگے بڑھنے کے لیے خریداری کریں۔";
 
 // Inbox viewController
 "InboxSenderBtnKey" = "مرسل کون ہے؟";
