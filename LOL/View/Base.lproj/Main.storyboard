@@ -100,7 +100,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmQ-hB-JbL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="443.51145038167937" y="-93.661971830985919"/>
+            <point key="canvasLocation" x="618" y="-96"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="4TW-g4-Rkj">
@@ -691,7 +691,7 @@ ZCB0aGUDAwMgUHJpdmFjeSBQb2xpY3k
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqq-B3-RAb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5631" y="-90"/>
+            <point key="canvasLocation" x="5495" y="-87"/>
         </scene>
         <!--Custom Tabbar Controller-->
         <scene sceneID="3Ui-EV-H09">
@@ -892,7 +892,7 @@ ZCB0aGUDAwMgUHJpdmFjeSBQb2xpY3k
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3mY-ij-Jwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6366" y="-91"/>
+            <point key="canvasLocation" x="6176" y="-89"/>
         </scene>
         <!--Share View Controller-->
         <scene sceneID="Eyx-V9-yi5">
@@ -1007,7 +1007,7 @@ insagram story</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ja4-E5-uJL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7054" y="-91"/>
+            <point key="canvasLocation" x="6863" y="-89"/>
         </scene>
         <!--Inbox View Controller-->
         <scene sceneID="0EL-eq-APf">
@@ -2147,7 +2147,7 @@ your Story</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mal-aO-efD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7792" y="-94"/>
+            <point key="canvasLocation" x="7556" y="-94"/>
         </scene>
         <!--Premium View Controller-->
         <scene sceneID="Su9-T7-fFK">
@@ -2260,26 +2260,22 @@ when you ask questions to create a card!</string>
                                     <action selector="btnUnlockTapped:" destination="BrO-hS-hwh" eventType="touchUpInside" id="ky4-hD-IUr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXT-5a-BJY">
-                                <rect key="frame" x="295.66666666666669" y="69" width="81.333333333333314" height="34.666666666666657"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Restore">
-                                    <fontDescription key="titleFontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
-                                    <color key="baseForegroundColor" name="settingIcon"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnRestoreTapped:" destination="BrO-hS-hwh" eventType="touchUpInside" id="IHa-dO-zZl"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restore" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTk-7V-tas">
+                                <rect key="frame" x="319.66666666666669" y="75" width="57.333333333333314" height="20.666666666666671"/>
+                                <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
+                                <color key="textColor" name="restore"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q9J-tM-rcQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Q9J-tM-rcQ" firstAttribute="trailing" secondItem="PUb-iT-JHH" secondAttribute="trailing" constant="30" id="0FV-np-7hP"/>
                             <constraint firstItem="jhm-DI-jPy" firstAttribute="top" secondItem="Q9J-tM-rcQ" secondAttribute="top" constant="26" id="1oZ-fp-93s"/>
+                            <constraint firstItem="iTk-7V-tas" firstAttribute="top" secondItem="Q9J-tM-rcQ" secondAttribute="top" constant="16" id="6rG-Ud-gQB"/>
                             <constraint firstItem="hcG-Vh-7ax" firstAttribute="top" secondItem="YaY-Ub-rfj" secondAttribute="bottom" constant="8" id="7f6-S0-whj"/>
+                            <constraint firstItem="Q9J-tM-rcQ" firstAttribute="trailing" secondItem="iTk-7V-tas" secondAttribute="trailing" constant="16" id="7p0-Rh-Wi0"/>
                             <constraint firstItem="Q9J-tM-rcQ" firstAttribute="trailing" secondItem="hcG-Vh-7ax" secondAttribute="trailing" constant="52" id="LAG-qe-oTO"/>
-                            <constraint firstItem="Q9J-tM-rcQ" firstAttribute="trailing" secondItem="bXT-5a-BJY" secondAttribute="trailing" constant="16" id="MFj-GN-qvO"/>
                             <constraint firstItem="PUb-iT-JHH" firstAttribute="leading" secondItem="Q9J-tM-rcQ" secondAttribute="leading" constant="30" id="MX4-fX-xrs"/>
                             <constraint firstItem="YaY-Ub-rfj" firstAttribute="top" secondItem="jhm-DI-jPy" secondAttribute="bottom" constant="8" id="QdL-7M-qxn"/>
                             <constraint firstItem="jhm-DI-jPy" firstAttribute="trailing" secondItem="Q9J-tM-rcQ" secondAttribute="trailing" id="Wgz-eY-1nV"/>
@@ -2287,14 +2283,13 @@ when you ask questions to create a card!</string>
                             <constraint firstItem="jhm-DI-jPy" firstAttribute="leading" secondItem="Q9J-tM-rcQ" secondAttribute="leading" id="kaR-Yg-VBg"/>
                             <constraint firstItem="YaY-Ub-rfj" firstAttribute="centerX" secondItem="WjY-52-S1G" secondAttribute="centerX" id="nG3-bF-vNM"/>
                             <constraint firstItem="hcG-Vh-7ax" firstAttribute="leading" secondItem="Q9J-tM-rcQ" secondAttribute="leading" constant="52" id="sB1-se-qed"/>
-                            <constraint firstItem="bXT-5a-BJY" firstAttribute="top" secondItem="Q9J-tM-rcQ" secondAttribute="top" constant="10" id="wDY-SC-CMR"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="jhm-DI-jPy" id="5oQ-tX-YOE"/>
                         <outlet property="pageControl" destination="YaY-Ub-rfj" id="No4-xL-V66"/>
                         <outlet property="proFeaturesLabel" destination="PUb-iT-JHH" id="CU9-cR-Qvr"/>
-                        <outlet property="restoreButton" destination="bXT-5a-BJY" id="Lcc-hK-SND"/>
+                        <outlet property="restoreButton" destination="iTk-7V-tas" id="MNr-Aj-Trf"/>
                         <outlet property="unlockButton" destination="hcG-Vh-7ax" id="ofp-MU-EsG"/>
                     </connections>
                 </viewController>
@@ -3267,6 +3262,9 @@ when you ask questions to create a card!</string>
         </namedColor>
         <namedColor name="editpopup">
             <color red="0.94901960784313721" green="0.95294117647058818" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="restore">
+            <color red="0.52941176470588236" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="settingIcon">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

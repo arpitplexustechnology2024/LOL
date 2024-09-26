@@ -16,7 +16,7 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var proFeaturesLabel: UILabel!
-    @IBOutlet weak var restoreButton: UIButton!
+    @IBOutlet weak var restoreButton: UILabel!
     
     let productID = "com.lol.anonymousfeatures"
     
@@ -57,7 +57,10 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
         self.unlockButton.layer.cornerRadius = self.unlockButton.frame.height / 2
         unlockButton.frame = CGRect(x: (view.frame.width - 336) / 2, y: view.center.y - 25, width: 336, height: 50)
         self.unlockButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
-        restoreButton.setTitle(NSLocalizedString("RestorePurchaseKey", comment: ""), for: .normal)
+        restoreButton.text = NSLocalizedString("RestorePurchaseKey", comment: "")
+        restoreButton.isUserInteractionEnabled = true
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(btnRestoreTapped(_:)))
+        self.restoreButton.addGestureRecognizer(tapGestureRecognizer)
         unlockButton.setTitle(NSLocalizedString("UnlockBtnKey", comment: ""), for: .normal)
         SKPaymentQueue.default().add(self)
     }
@@ -122,7 +125,7 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
     }
     
     // MARK: - Purchase Restore
-    @IBAction func btnRestoreTapped(_ sender: UIButton) {
+    @objc func btnRestoreTapped(_ sender: UITapGestureRecognizer) {
         if !isConnectedToInternet() {
             let snackbar = TTGSnackbar(message: NSLocalizedString("PremiumNoInternetMessage", comment: ""), duration: .middle)
             snackbar.show()
@@ -132,7 +135,6 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
         isRestoringPurchases = true
         SKPaymentQueue.default().restoreCompletedTransactions()
     }
-    
     
     // MARK: - Purchase Premium Features
     @IBAction func btnUnlockTapped(_ sender: UIButton) {
