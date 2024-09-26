@@ -2158,7 +2158,7 @@ your Story</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jhm-DI-jPy">
-                                <rect key="frame" x="0.0" y="85" width="393" height="300"/>
+                                <rect key="frame" x="0.0" y="99" width="393" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Kyp-pR-6xz"/>
@@ -2178,22 +2178,22 @@ your Story</string>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m0Q-xo-6M8">
-                                                    <rect key="frame" x="130" y="12" width="133" height="100.66666666666667"/>
+                                                    <rect key="frame" x="130" y="11.999999999999993" width="133" height="127.33333333333331"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xxv-bW-nqa">
-                                                    <rect key="frame" x="30" y="128.66666666666666" width="333" height="100.33333333333334"/>
+                                                    <rect key="frame" x="30" y="155.33333333333334" width="333" height="73.666666666666657"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Edit Card Questions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30a-rI-fZl">
-                                                            <rect key="frame" x="0.0" y="0.0" width="333" height="26.666666666666668"/>
-                                                            <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="22"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="333" height="25.333333333333332"/>
+                                                            <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="21"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvq-o5-PDY">
-                                                            <rect key="frame" x="0.0" y="31.666666666666693" width="333" height="68.666666666666686"/>
+                                                            <rect key="frame" x="0.0" y="30.333333333333318" width="333" height="43.333333333333343"/>
                                                             <string key="text">You can edit the card's questions
 when you ask questions to create a card!</string>
-                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <color key="highlightedColor" systemColor="systemBackgroundColor"/>
                                                         </label>
@@ -2225,18 +2225,18 @@ when you ask questions to create a card!</string>
                                 </connections>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="YaY-Ub-rfj">
-                                <rect key="frame" x="160" y="393" width="73" height="25.666666666666686"/>
+                                <rect key="frame" x="160" y="407" width="73" height="25.666666666666686"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.99215686270000003" green="0.4941176471" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUb-iT-JHH">
-                                <rect key="frame" x="30" y="484.66666666666669" width="333" height="0.0"/>
+                                <rect key="frame" x="30" y="498.66666666666669" width="333" height="0.0"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="hcG-Vh-7ax">
-                                <rect key="frame" x="52" y="426.66666666666669" width="289" height="50"/>
+                                <rect key="frame" x="52" y="440.66666666666669" width="289" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.14901960780000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="j8t-sr-3m0"/>
@@ -2260,24 +2260,44 @@ when you ask questions to create a card!</string>
                                     <action selector="btnUnlockTapped:" destination="BrO-hS-hwh" eventType="touchUpInside" id="ky4-hD-IUr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restore" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTk-7V-tas">
-                                <rect key="frame" x="319.66666666666669" y="75" width="57.333333333333314" height="20.666666666666671"/>
-                                <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="restore" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTk-7V-tas">
+                                <rect key="frame" x="319.33333333333331" y="78" width="43.666666666666686" height="17"/>
+                                <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="14"/>
                                 <color key="textColor" name="restore"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxX-yx-OcI">
+                                <rect key="frame" x="171.66666666666666" y="77" width="50" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cR-2P-X83">
+                                        <rect key="frame" x="10.333333333333341" y="1.6666666666666714" width="29.333333333333329" height="17"/>
+                                        <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="boadercolor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="BzA-B6-Xx9"/>
+                                    <constraint firstItem="7cR-2P-X83" firstAttribute="centerX" secondItem="oxX-yx-OcI" secondAttribute="centerX" id="Mhe-rZ-miS"/>
+                                    <constraint firstItem="7cR-2P-X83" firstAttribute="centerY" secondItem="oxX-yx-OcI" secondAttribute="centerY" id="U0z-9k-rJ5"/>
+                                    <constraint firstAttribute="height" constant="20" id="gKz-df-13N"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q9J-tM-rcQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Q9J-tM-rcQ" firstAttribute="trailing" secondItem="PUb-iT-JHH" secondAttribute="trailing" constant="30" id="0FV-np-7hP"/>
-                            <constraint firstItem="jhm-DI-jPy" firstAttribute="top" secondItem="Q9J-tM-rcQ" secondAttribute="top" constant="26" id="1oZ-fp-93s"/>
-                            <constraint firstItem="iTk-7V-tas" firstAttribute="top" secondItem="Q9J-tM-rcQ" secondAttribute="top" constant="16" id="6rG-Ud-gQB"/>
+                            <constraint firstItem="jhm-DI-jPy" firstAttribute="top" secondItem="Q9J-tM-rcQ" secondAttribute="top" constant="40" id="1oZ-fp-93s"/>
+                            <constraint firstItem="iTk-7V-tas" firstAttribute="top" secondItem="Q9J-tM-rcQ" secondAttribute="top" constant="19" id="6rG-Ud-gQB"/>
                             <constraint firstItem="hcG-Vh-7ax" firstAttribute="top" secondItem="YaY-Ub-rfj" secondAttribute="bottom" constant="8" id="7f6-S0-whj"/>
-                            <constraint firstItem="Q9J-tM-rcQ" firstAttribute="trailing" secondItem="iTk-7V-tas" secondAttribute="trailing" constant="16" id="7p0-Rh-Wi0"/>
+                            <constraint firstItem="Q9J-tM-rcQ" firstAttribute="trailing" secondItem="iTk-7V-tas" secondAttribute="trailing" constant="30" id="7p0-Rh-Wi0"/>
                             <constraint firstItem="Q9J-tM-rcQ" firstAttribute="trailing" secondItem="hcG-Vh-7ax" secondAttribute="trailing" constant="52" id="LAG-qe-oTO"/>
                             <constraint firstItem="PUb-iT-JHH" firstAttribute="leading" secondItem="Q9J-tM-rcQ" secondAttribute="leading" constant="30" id="MX4-fX-xrs"/>
                             <constraint firstItem="YaY-Ub-rfj" firstAttribute="top" secondItem="jhm-DI-jPy" secondAttribute="bottom" constant="8" id="QdL-7M-qxn"/>
+                            <constraint firstItem="oxX-yx-OcI" firstAttribute="centerX" secondItem="WjY-52-S1G" secondAttribute="centerX" id="Rzb-yK-jxN"/>
+                            <constraint firstItem="oxX-yx-OcI" firstAttribute="top" secondItem="Q9J-tM-rcQ" secondAttribute="top" constant="18" id="VFK-HL-aUj"/>
                             <constraint firstItem="jhm-DI-jPy" firstAttribute="trailing" secondItem="Q9J-tM-rcQ" secondAttribute="trailing" id="Wgz-eY-1nV"/>
                             <constraint firstItem="PUb-iT-JHH" firstAttribute="top" secondItem="hcG-Vh-7ax" secondAttribute="bottom" constant="8" id="fXC-jw-470"/>
                             <constraint firstItem="jhm-DI-jPy" firstAttribute="leading" secondItem="Q9J-tM-rcQ" secondAttribute="leading" id="kaR-Yg-VBg"/>
@@ -2289,6 +2309,8 @@ when you ask questions to create a card!</string>
                         <outlet property="collectionView" destination="jhm-DI-jPy" id="5oQ-tX-YOE"/>
                         <outlet property="pageControl" destination="YaY-Ub-rfj" id="No4-xL-V66"/>
                         <outlet property="proFeaturesLabel" destination="PUb-iT-JHH" id="CU9-cR-Qvr"/>
+                        <outlet property="proLabel" destination="7cR-2P-X83" id="6RF-w3-ydG"/>
+                        <outlet property="proView" destination="oxX-yx-OcI" id="nwj-Py-nfY"/>
                         <outlet property="restoreButton" destination="iTk-7V-tas" id="MNr-Aj-Trf"/>
                         <outlet property="unlockButton" destination="hcG-Vh-7ax" id="ofp-MU-EsG"/>
                     </connections>
@@ -3256,6 +3278,9 @@ when you ask questions to create a card!</string>
         <image name="watermark" width="1300" height="1679"/>
         <namedColor name="ImageBoader">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="boadercolor">
+            <color red="0.9882352941176471" green="0.40392156862745099" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="buttonText">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

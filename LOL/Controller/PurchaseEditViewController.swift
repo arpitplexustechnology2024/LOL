@@ -99,8 +99,6 @@ class PurchaseEditViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: .profileImageUpdated, object: nil)
     }
     
-    
-    
     func setupGradientBackground() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor(hex: "#FF5858").cgColor, UIColor(hex: "#FA9372").cgColor]

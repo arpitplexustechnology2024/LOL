@@ -140,7 +140,7 @@
 "PremiumSuccessMessageKey" = "Tudo pronto.";
 "PremiumFailedMessageKey" = "Falhou!";
 "PremiumFailedPaymentKey" = "Solicitação falhou. Por favor, tente novamente depois de algum tempo!";
-"RestorePurchaseKey" = "Restaurar";
+"RestorePurchaseKey" = "restaurar";
 "NoPreviousPurchaseMessage" = "Você ainda não comprou este item. Por favor, compre para continuar.";
 
 // Inbox viewController

@@ -17,6 +17,9 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
     @IBOutlet weak var unlockButton: UIButton!
     @IBOutlet weak var proFeaturesLabel: UILabel!
     @IBOutlet weak var restoreButton: UILabel!
+    @IBOutlet weak var proView: UIView!
+    @IBOutlet weak var proLabel: UILabel!
+    
     
     let productID = "com.lol.anonymousfeatures"
     
@@ -61,6 +64,18 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
         restoreButton.isUserInteractionEnabled = true
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(btnRestoreTapped(_:)))
         self.restoreButton.addGestureRecognizer(tapGestureRecognizer)
+        self.proView.layer.masksToBounds = true
+        self.proView.layer.cornerRadius = 4
+        let gradientLayer = CAGradientLayer()
+        
+        gradientLayer.colors = [
+            UIColor(hex: "#FA4957").cgColor,
+            UIColor(hex: "#FD7E41").cgColor
+        ]
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.frame = self.view.bounds
+        gradientLayer.masksToBounds = true
+        self.proView.layer.insertSublayer(gradientLayer, at: 0)
         unlockButton.setTitle(NSLocalizedString("UnlockBtnKey", comment: ""), for: .normal)
         SKPaymentQueue.default().add(self)
     }
@@ -267,11 +282,11 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
         if UIDevice.current.userInterfaceIdiom == .phone {
             switch UIScreen.main.nativeBounds.height {
             case 1136, 1334, 1920, 2208:
-                height = 195
+                height = 185
             case 2436, 1792, 2556, 2532:
-                height = 235
+                height = 245
             case 2796, 2778, 2688:
-                height = 290
+                height = 300
             default:
                 height = 235
             }
