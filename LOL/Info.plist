@@ -1,103 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>fb3900422423618332</string>
-			</array>
-		</dict>
-	</array>
-	<key>FacebookAdvertiserIDCollectionEnabled</key>
-	<false/>
-	<key>FacebookAppID</key>
-	<string>3900422423618332</string>
-	<key>FacebookAutoLogAppEventsEnabled</key>
-	<false/>
-	<key>FacebookDisplayName</key>
-	<string>LOL</string>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>instagram-stories</string>
-		<string>snapchat</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Lato-Black.ttf</string>
-		<string>Lato-Bold.ttf</string>
-		<string>Lato-ExtraBold.ttf</string>
-		<string>Lato-Medium.ttf</string>
-		<string>Lato-Regular.ttf</string>
-		<string>Lato-SemiBold.ttf</string>
-		<string>Lato-Light.ttf</string>
-		<string>BunnyFunny.ttf</string>
-		<string>Spider Monkey_PersonalUseOnly.ttf</string>
-		<string>Pure Joy.ttf</string>
-		<string>CCKillJoy Italic.ttf</string>
-		<string>SHOWG.TTF</string>
-		<string>HelveticaRoundedLTStd-Bd.ttf</string>
-		<string>Helvetica Rounded Bold.otf</string>
-		<string>pricedown bl.otf</string>
-		<string>baloo.regular.ttf</string>
-		<string>WendyOne-Regular.ttf</string>
-		<string>Timmana.ttf</string>
-		<string>RacingSansOne-Regular.ttf</string>
-		<string>Titan One.ttf</string>
-	</array>
-	<key>UIApplicationSceneManifest</key>
-	<dict>
-		<key>UIApplicationSupportsMultipleScenes</key>
-		<false/>
-		<key>UISceneConfigurations</key>
-		<dict>
-			<key>UIWindowSceneSessionRoleApplication</key>
-			<array>
-				<dict>
-					<key>UISceneConfigurationName</key>
-					<string>Default Configuration</string>
-					<key>UISceneDelegateClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
-					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
-				</dict>
-			</array>
-		</dict>
-	</dict>
-	<key>UIApplicationShortcutItems</key>
-	<array>
-		<dict>
-			<key>UIApplicationShortcutItemIconFile</key>
-			<string>SendMessage_Shortcut</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Send Message</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>SendMessageAction</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemIconFile</key>
-			<string>Inbox_Shortcut</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Inbox</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>InboxAction</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemIconFile</key>
-			<string>MoreApp_Shortcut</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>More App</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>MoreAction</string>
-		</dict>
-	</array>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>remote-notification</string>
-	</array>
-</dict>
+    <dict>
+        <key>UISupportedInterfaceOrientations~ipad</key>
+        <array>
+            <string>UIInterfaceOrientationPortrait</string>
+            <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        </array>
+        <key>CFBundleURLTypes</key>
+        <array>
+            <dict>
+                <key>CFBundleURLSchemes</key>
+                <array>
+                    <string>fb3900422423618332</string>
+                </array>
+            </dict>
+        </array>
+        <key>FacebookAdvertiserIDCollectionEnabled</key>
+        <false/>
+        <key>FacebookAppID</key>
+        <string>3900422423618332</string>
+        <key>FacebookAutoLogAppEventsEnabled</key>
+        <false/>
+        <key>FacebookDisplayName</key>
+        <string>LOL</string>
+        <key>ITSAppUsesNonExemptEncryption</key>
+        <false/>
+        <key>LSApplicationQueriesSchemes</key>
+        <array>
+            <string>instagram-stories</string>
+            <string>snapchat</string>
+        </array>
+        <key>UIAppFonts</key>
+        <array>
+            <string>Lato-Black.ttf</string>
+            <string>Lato-Bold.ttf</string>
+            <string>Lato-ExtraBold.ttf</string>
+            <string>Lato-Medium.ttf</string>
+            <string>Lato-Regular.ttf</string>
+            <string>Lato-SemiBold.ttf</string>
+            <string>Lato-Light.ttf</string>
+            <string>BunnyFunny.ttf</string>
+            <string>Spider Monkey_PersonalUseOnly.ttf</string>
+            <string>Pure Joy.ttf</string>
+            <string>CCKillJoy Italic.ttf</string>
+            <string>SHOWG.TTF</string>
+            <string>HelveticaRoundedLTStd-Bd.ttf</string>
+            <string>Helvetica Rounded Bold.otf</string>
+            <string>pricedown bl.otf</string>
+            <string>baloo.regular.ttf</string>
+            <string>WendyOne-Regular.ttf</string>
+            <string>Timmana.ttf</string>
+            <string>RacingSansOne-Regular.ttf</string>
+            <string>Titan One.ttf</string>
+        </array>
+        <key>UIApplicationSceneManifest</key>
+        <dict>
+            <key>UIApplicationSupportsMultipleScenes</key>
+            <false/>
+            <key>UISceneConfigurations</key>
+            <dict>
+                <key>UIWindowSceneSessionRoleApplication</key>
+                <array>
+                    <dict>
+                        <key>UISceneConfigurationName</key>
+                        <string>Default Configuration</string>
+                        <key>UISceneDelegateClassName</key>
+                        <string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+                        <key>UISceneStoryboardFile</key>
+                        <string>Main</string>
+                    </dict>
+                </array>
+            </dict>
+        </dict>
+        <key>UIApplicationShortcutItems</key>
+        <array>
+            <dict>
+                <key>UIApplicationShortcutItemIconFile</key>
+                <string>SendMessage_Shortcut</string>
+                <key>UIApplicationShortcutItemTitle</key>
+                <string>Send Message</string>
+                <key>UIApplicationShortcutItemType</key>
+                <string>SendMessageAction</string>
+            </dict>
+            <dict>
+                <key>UIApplicationShortcutItemIconFile</key>
+                <string>Inbox_Shortcut</string>
+                <key>UIApplicationShortcutItemTitle</key>
+                <string>Inbox</string>
+                <key>UIApplicationShortcutItemType</key>
+                <string>InboxAction</string>
+            </dict>
+            <dict>
+                <key>UIApplicationShortcutItemIconFile</key>
+                <string>MoreApp_Shortcut</string>
+                <key>UIApplicationShortcutItemTitle</key>
+                <string>More App</string>
+                <key>UIApplicationShortcutItemType</key>
+                <string>MoreAction</string>
+            </dict>
+        </array>
+        <key>UIBackgroundModes</key>
+        <array>
+            <string>remote-notification</string>
+        </array>
+    </dict>
 </plist>
