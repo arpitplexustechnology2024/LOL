@@ -17,16 +17,12 @@ class LaunchViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     
     var passedActionKey: String?
-    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupLoadingView()
         setupGradientBackground()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
     }
     
     func setupUI() {
@@ -132,35 +128,5 @@ class LaunchViewController: UIViewController {
             let signupVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SignupViewController")
             self.navigationController?.pushViewController(signupVC, animated: true)
         }
-    }
-}
-
-extension LaunchViewController: CLLocationManagerDelegate {
-    
-    // Handle changes in authorization status
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch status {
-        case .notDetermined:
-            print("Permission not determined")
-        case .restricted, .denied:
-            print("Permission denied")
-        case .authorizedWhenInUse, .authorizedAlways:
-            print("Permission granted")
-            locationManager.startUpdatingLocation()
-        @unknown default:
-            fatalError("Unknown authorization status")
-        }
-    }
-    
-    // Handle location updates
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            print("Current location: \(location.coordinate.latitude), \(location.coordinate.longitude)")
-        }
-    }
-    
-    // Handle errors while updating location
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Failed to get location: \(error.localizedDescription)")
     }
 }

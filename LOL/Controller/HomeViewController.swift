@@ -185,10 +185,18 @@ class HomeViewController: UIViewController {
             }
         }
         
-        if #available(iOS 15.0, *) {
-            if let sheet = bottomSheetVC.sheetPresentationController {
-                sheet.detents = [.medium()]
-                sheet.prefersGrabberVisible = true
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            bottomSheetVC.modalPresentationStyle = .formSheet
+            bottomSheetVC.preferredContentSize = CGSize(width: 540, height: 540)
+        } else {
+            if #available(iOS 15.0, *) {
+                if let sheet = bottomSheetVC.sheetPresentationController {
+                    sheet.detents = [.medium()]
+                    sheet.prefersGrabberVisible = true
+                }
+            } else {
+                bottomSheetVC.modalPresentationStyle = .custom
+                bottomSheetVC.transitioningDelegate = self
             }
         }
         present(bottomSheetVC, animated: true, completion: nil)
@@ -380,5 +388,11 @@ extension HomeViewController {
                 print("Notification scheduled for 5:00 PM daily")
             }
         }
+    }
+}
+
+extension HomeViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return CustomPresentationController(presentedViewController: presented, presenting: presenting)
     }
 }
