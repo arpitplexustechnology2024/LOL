@@ -130,7 +130,7 @@ class SettingViewController: UIViewController {
         self.present(vc, animated: true)
     }
     
-    @objc func btnPremiumTapped(_ sender: UITapGestureRecognizer){
+    @objc func btnPremiumTapped(_ sender: UITapGestureRecognizer) {
         let isPurchased = UserDefaults.standard.bool(forKey: ConstantValue.isPurchase)
         if isPurchased {
             let customAlertVC = CustomAlertViewController()
@@ -150,10 +150,18 @@ class SettingViewController: UIViewController {
             }
         } else {
             if let bottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "PremiumViewController") as? PremiumViewController {
-                if #available(iOS 15.0, *) {
-                    if let sheet = bottomSheetVC.sheetPresentationController {
-                        sheet.detents = [.medium()]
-                        sheet.prefersGrabberVisible = true
+                if UIDevice.current.userInterfaceIdiom == .pad {
+                    bottomSheetVC.modalPresentationStyle = .formSheet
+                    bottomSheetVC.preferredContentSize = CGSize(width: 540, height: 540)
+                } else {
+                    if #available(iOS 15.0, *) {
+                        if let sheet = bottomSheetVC.sheetPresentationController {
+                            sheet.detents = [.medium()]
+                            sheet.prefersGrabberVisible = true
+                        }
+                    } else {
+                        bottomSheetVC.modalPresentationStyle = .custom
+                        bottomSheetVC.transitioningDelegate = self
                     }
                 }
                 present(bottomSheetVC, animated: true, completion: nil)
@@ -219,3 +227,15 @@ class SettingViewController: UIViewController {
     }
 }
 
+extension SettingViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return CustomPresentationController(presentedViewController: presented, presenting: presenting)
+    }
+}
+
+class CustomPresentationController: UIPresentationController {
+    override var frameOfPresentedViewInContainerView: CGRect {
+        guard let containerView = containerView else { return .zero }
+        return CGRect(x: 0, y: containerView.bounds.height / 2, width: containerView.bounds.width, height: containerView.bounds.height / 2)
+    }
+}

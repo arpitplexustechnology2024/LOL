@@ -260,7 +260,7 @@ ZCB0aGUDAwMgUHJpdmFjeSBQb2xpY3k
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPx-az-mru">
-                                <rect key="frame" x="63" y="79" width="138" height="26"/>
+                                <rect key="frame" x="63" y="79" width="139" height="26"/>
                                 <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -447,7 +447,7 @@ ZCB0aGUDAwMgUHJpdmFjeSBQb2xpY3k
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avatar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alU-Rh-HAw">
-                                <rect key="frame" x="163.66666666666666" y="75" width="66" height="25.666666666666671"/>
+                                <rect key="frame" x="163.66666666666666" y="75" width="66" height="26.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -456,7 +456,7 @@ ZCB0aGUDAwMgUHJpdmFjeSBQb2xpY3k
                                 <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
                             </activityIndicatorView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="w01-cE-EeR">
-                                <rect key="frame" x="0.0" y="108.66666666666669" width="393" height="709.33333333333326"/>
+                                <rect key="frame" x="0.0" y="109.66666666666669" width="393" height="708.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="10" id="7FM-YS-1Ow">
                                     <size key="itemSize" width="150" height="150"/>
@@ -648,7 +648,7 @@ ZCB0aGUDAwMgUHJpdmFjeSBQb2xpY3k
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztw-UN-mOK">
-                                <rect key="frame" x="16.000000000000004" y="79" width="59.333333333333343" height="26"/>
+                                <rect key="frame" x="15.999999999999996" y="79" width="60.666666666666657" height="26"/>
                                 <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -723,7 +723,7 @@ ZCB0aGUDAwMgUHJpdmFjeSBQb2xpY3k
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Question" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zU-7S-QwD">
-                                <rect key="frame" x="63" y="79" width="144" height="25.666666666666671"/>
+                                <rect key="frame" x="63" y="79" width="144" height="26.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -744,7 +744,7 @@ ZCB0aGUDAwMgUHJpdmFjeSBQb2xpY3k
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxf-FT-Bfs">
-                                <rect key="frame" x="16" y="120.66666666666667" width="361" height="61.333333333333329"/>
+                                <rect key="frame" x="16" y="121.66666666666667" width="361" height="61.333333333333329"/>
                                 <string key="text">Select the questions from the card to know
  about yourself when other person open your link. you can edit your question...</string>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
@@ -767,16 +767,16 @@ ZCB0aGUDAwMgUHJpdmFjeSBQb2xpY3k
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dET-YJ-n48">
-                                <rect key="frame" x="16" y="194" width="361" height="524"/>
+                                <rect key="frame" x="16" y="195" width="361" height="523"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Five Question" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwh-Bo-X7h">
-                                        <rect key="frame" x="108.00000000000001" y="12" width="145.33333333333337" height="27"/>
+                                        <rect key="frame" x="108" y="12" width="145" height="28"/>
                                         <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWg-Us-two">
-                                        <rect key="frame" x="16" y="454" width="329" height="50"/>
+                                        <rect key="frame" x="16" y="453" width="329" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="XZZ-tw-uhd"/>
@@ -795,7 +795,7 @@ ZCB0aGUDAwMgUHJpdmFjeSBQb2xpY3k
                                         </connections>
                                     </button>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JuF-2N-dNb">
-                                        <rect key="frame" x="16" y="51" width="329" height="383"/>
+                                        <rect key="frame" x="16" y="52" width="329" height="381"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="14" minimumInteritemSpacing="14" id="gGr-uX-Vkq">
                                             <size key="itemSize" width="324" height="60"/>
@@ -903,22 +903,22 @@ ZCB0aGUDAwMgUHJpdmFjeSBQb2xpY3k
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUO-c2-Gdn">
-                                <rect key="frame" x="16" y="89.000000000000014" width="361" height="138.33333333333337"/>
+                                <rect key="frame" x="16" y="89.000000000000014" width="361" height="139.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1 : Copy your link" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRo-HM-fRG">
-                                        <rect key="frame" x="70.666666666666686" y="12.000000000000002" width="220" height="25.666666666666671"/>
+                                        <rect key="frame" x="70.666666666666686" y="12.000000000000002" width="220" height="26.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="22"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOL.LINK/abc.sh12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z30-d7-N6Z">
-                                        <rect key="frame" x="110.66666666666667" y="49.666666666666657" width="139.66666666666663" height="19"/>
+                                        <rect key="frame" x="110.66666666666669" y="50.666666666666657" width="140" height="19"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITT-fh-L4J">
-                                        <rect key="frame" x="120.66666666666666" y="78.333333333333343" width="119.66666666666666" height="40"/>
+                                        <rect key="frame" x="120.66666666666666" y="79.333333333333343" width="120" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="NyV-Ay-q2e"/>
                                         </constraints>
@@ -944,7 +944,7 @@ ZCB0aGUDAwMgUHJpdmFjeSBQb2xpY3k
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pIg-j6-JE0">
-                                <rect key="frame" x="16" y="242.33333333333337" width="361" height="147"/>
+                                <rect key="frame" x="16" y="243.33333333333337" width="361" height="147"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFp-6B-yCQ">
                                         <rect key="frame" x="47" y="12" width="267" height="53"/>
@@ -1018,7 +1018,7 @@ insagram story</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inbox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xut-VX-0nT">
-                                <rect key="frame" x="16.000000000000004" y="79" width="56.333333333333343" height="25.666666666666671"/>
+                                <rect key="frame" x="15.999999999999996" y="79" width="56.666666666666657" height="26.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1039,7 +1039,7 @@ insagram story</string>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZK4-En-FOK">
-                                <rect key="frame" x="16" y="120.66666666666669" width="361" height="598.33333333333326"/>
+                                <rect key="frame" x="16" y="121.66666666666669" width="361" height="597.33333333333326"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="MES-jG-nlp">
                                     <size key="itemSize" width="110" height="141"/>
@@ -1141,13 +1141,13 @@ insagram story</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Form screen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1N-Zl-qLx">
-                                <rect key="frame" x="63.000000000000007" y="79" width="121.66666666666669" height="25.666666666666671"/>
+                                <rect key="frame" x="63.000000000000007" y="79" width="121.66666666666669" height="26.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCc-1e-M38">
-                                <rect key="frame" x="16" y="120.66666666666667" width="361" height="61.333333333333329"/>
+                                <rect key="frame" x="16" y="121.66666666666667" width="361" height="61.333333333333329"/>
                                 <string key="text">Select the questions from the card to know
  about yourself when other person open your link. you can edit your question...</string>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
@@ -1170,10 +1170,10 @@ insagram story</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N16-bw-Rhs">
-                                <rect key="frame" x="16" y="240" width="361" height="440"/>
+                                <rect key="frame" x="16" y="241" width="361" height="439"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lD1-jc-TRT">
-                                        <rect key="frame" x="16" y="129" width="329" height="295"/>
+                                        <rect key="frame" x="16" y="131" width="329" height="292"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="azK-qO-MUH">
                                             <size key="itemSize" width="174" height="56"/>
@@ -1223,7 +1223,7 @@ insagram story</string>
                                         </cells>
                                     </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sn-L8-3Rk">
-                                        <rect key="frame" x="68.333333333333329" y="94" width="224.33333333333337" height="27"/>
+                                        <rect key="frame" x="68.666666666666686" y="95" width="224" height="28"/>
                                         <string key="text">Select a five-question
 </string>
                                         <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="23"/>
@@ -1231,7 +1231,7 @@ insagram story</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nick Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwU-3F-KGG">
-                                        <rect key="frame" x="124" y="53" width="113" height="27"/>
+                                        <rect key="frame" x="124" y="53" width="113" height="28"/>
                                         <fontDescription key="fontDescription" name="Lato-SemiBold" family="Lato" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1265,7 +1265,7 @@ insagram story</string>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zbq-Yx-xUg">
-                                <rect key="frame" x="146.66666666666666" y="192" width="100" height="100"/>
+                                <rect key="frame" x="146.66666666666666" y="193" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="OcN-WF-GWv"/>
                                     <constraint firstAttribute="width" constant="100" id="eAi-Sn-kb7"/>
@@ -1345,13 +1345,13 @@ insagram story</string>
                                 <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More App" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIy-1a-oAx">
-                                <rect key="frame" x="16" y="79" width="99" height="25.666666666666671"/>
+                                <rect key="frame" x="16" y="79" width="99" height="26.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="o2o-mY-GAn">
-                                <rect key="frame" x="0.0" y="112.66666666666669" width="393" height="656.33333333333326"/>
+                                <rect key="frame" x="0.0" y="113.66666666666669" width="393" height="655.33333333333326"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="oVH-ve-3Li">
                                     <size key="itemSize" width="363" height="65"/>
@@ -1466,19 +1466,19 @@ insagram story</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yob-Gi-2m8">
-                                <rect key="frame" x="0.0" y="112.66666666666669" width="393" height="656.33333333333326"/>
+                                <rect key="frame" x="0.0" y="113.66666666666669" width="393" height="655.33333333333326"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YoN-ET-rZv">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="670"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GENERAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wn8-Rf-x7b">
-                                                <rect key="frame" x="16" y="19.999999999999986" width="81" height="21"/>
+                                                <rect key="frame" x="16" y="19.999999999999986" width="81" height="22"/>
                                                 <fontDescription key="fontDescription" name="Lato-SemiBold" family="Lato" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8a-Ul-zxU">
-                                                <rect key="frame" x="16" y="48.999999999999986" width="361" height="50"/>
+                                                <rect key="frame" x="16" y="49.999999999999986" width="361" height="50"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pause" translatesAutoresizingMaskIntoConstraints="NO" id="azT-XN-PU5">
                                                         <rect key="frame" x="10" y="10" width="30" height="30"/>
@@ -1494,7 +1494,7 @@ insagram story</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5Y-DY-OyP">
-                                                        <rect key="frame" x="300" y="9.6666666666666856" width="51" height="31"/>
+                                                        <rect key="frame" x="300" y="9.3333333333333428" width="51" height="31"/>
                                                         <connections>
                                                             <action selector="btnPauseLinkSwitchTapped:" destination="maw-vm-UJh" eventType="valueChanged" id="4r5-tP-b5Q"/>
                                                         </connections>
@@ -1514,13 +1514,13 @@ insagram story</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMMUNITY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSN-9n-1yR">
-                                                <rect key="frame" x="16.000000000000007" y="184" width="114.66666666666669" height="21"/>
+                                                <rect key="frame" x="16.000000000000007" y="185" width="114.66666666666669" height="22"/>
                                                 <fontDescription key="fontDescription" name="Lato-SemiBold" family="Lato" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fc-Bn-azg">
-                                                <rect key="frame" x="16" y="213" width="361" height="50"/>
+                                                <rect key="frame" x="16" y="215" width="361" height="50"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Review" translatesAutoresizingMaskIntoConstraints="NO" id="krf-vn-Tgc">
                                                         <rect key="frame" x="10" y="10" width="30" height="30"/>
@@ -1536,7 +1536,7 @@ insagram story</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4O-5b-OXY">
-                                                        <rect key="frame" x="328" y="12.666666666666629" width="25" height="25"/>
+                                                        <rect key="frame" x="328" y="12.333333333333314" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="25" id="c9z-Mh-71g"/>
                                                             <constraint firstAttribute="height" constant="25" id="yzU-Se-jTO"/>
@@ -1560,7 +1560,7 @@ insagram story</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ub-qB-g27">
-                                                <rect key="frame" x="16" y="273" width="361" height="50"/>
+                                                <rect key="frame" x="16" y="275" width="361" height="50"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Instagram" translatesAutoresizingMaskIntoConstraints="NO" id="1lz-dI-bgp">
                                                         <rect key="frame" x="10" y="10" width="30" height="30"/>
@@ -1576,7 +1576,7 @@ insagram story</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjj-I5-u2Q">
-                                                        <rect key="frame" x="328" y="12.666666666666629" width="25" height="25"/>
+                                                        <rect key="frame" x="328" y="12.333333333333314" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="1dY-3m-dzH"/>
                                                             <constraint firstAttribute="width" constant="25" id="K2a-uD-P7N"/>
@@ -1600,7 +1600,7 @@ insagram story</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LdG-RH-sdL">
-                                                <rect key="frame" x="16" y="333" width="361" height="50"/>
+                                                <rect key="frame" x="16" y="335" width="361" height="50"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Share" translatesAutoresizingMaskIntoConstraints="NO" id="r3d-88-wdv">
                                                         <rect key="frame" x="10" y="10" width="30" height="30"/>
@@ -1616,7 +1616,7 @@ insagram story</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLU-G8-a2y">
-                                                        <rect key="frame" x="328" y="12.666666666666629" width="25" height="25"/>
+                                                        <rect key="frame" x="328" y="12.333333333333314" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="25" id="ERt-3O-YZe"/>
                                                             <constraint firstAttribute="height" constant="25" id="Mbj-0c-Isa"/>
@@ -1640,7 +1640,7 @@ insagram story</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Fu-Id-gRl">
-                                                <rect key="frame" x="16" y="436.99999999999994" width="361" height="50"/>
+                                                <rect key="frame" x="16" y="439.99999999999994" width="361" height="50"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Help" translatesAutoresizingMaskIntoConstraints="NO" id="gzP-qM-Px5">
                                                         <rect key="frame" x="10" y="10" width="30" height="30"/>
@@ -1656,7 +1656,7 @@ insagram story</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qma-UH-FGF">
-                                                        <rect key="frame" x="328" y="12.666666666666742" width="25" height="25"/>
+                                                        <rect key="frame" x="328" y="12.333333333333371" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="25" id="fQw-L9-BNe"/>
                                                             <constraint firstAttribute="height" constant="25" id="n3s-3v-zAe"/>
@@ -1680,7 +1680,7 @@ insagram story</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="asw-fZ-e3p">
-                                                <rect key="frame" x="16" y="497" width="361" height="50"/>
+                                                <rect key="frame" x="16" y="500" width="361" height="50"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Privacy" translatesAutoresizingMaskIntoConstraints="NO" id="4Aw-37-CCk">
                                                         <rect key="frame" x="10" y="10" width="30" height="30"/>
@@ -1696,7 +1696,7 @@ insagram story</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6Y-4g-4h6">
-                                                        <rect key="frame" x="328" y="12.666666666666742" width="25" height="25"/>
+                                                        <rect key="frame" x="328" y="12.333333333333371" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="2HL-PT-fe5"/>
                                                             <constraint firstAttribute="width" constant="25" id="ghq-hr-SMt"/>
@@ -1720,7 +1720,7 @@ insagram story</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evx-wv-9CL">
-                                                <rect key="frame" x="16" y="557" width="361" height="50"/>
+                                                <rect key="frame" x="16" y="560" width="361" height="50"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Delete" translatesAutoresizingMaskIntoConstraints="NO" id="fIF-DW-3yT">
                                                         <rect key="frame" x="10" y="10" width="30" height="30"/>
@@ -1736,7 +1736,7 @@ insagram story</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5Z-mi-NbR">
-                                                        <rect key="frame" x="328" y="12.666666666666742" width="25" height="25"/>
+                                                        <rect key="frame" x="328" y="12.333333333333371" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="fhJ-3A-G0S"/>
                                                             <constraint firstAttribute="width" constant="25" id="kNO-Ov-U80"/>
@@ -1760,13 +1760,13 @@ insagram story</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUPPORT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5l-uu-yKo">
-                                                <rect key="frame" x="16" y="407.99999999999994" width="81.666666666666671" height="21"/>
+                                                <rect key="frame" x="16" y="409.99999999999994" width="81.666666666666671" height="22"/>
                                                 <fontDescription key="fontDescription" name="Lato-SemiBold" family="Lato" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSZ-9t-qND">
-                                                <rect key="frame" x="16" y="109" width="361" height="50"/>
+                                                <rect key="frame" x="16" y="110" width="361" height="50"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Premium" translatesAutoresizingMaskIntoConstraints="NO" id="obF-uh-mLq">
                                                         <rect key="frame" x="10" y="10" width="30" height="30"/>
@@ -1782,7 +1782,7 @@ insagram story</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A44-Zc-MYk">
-                                                        <rect key="frame" x="328" y="12.666666666666686" width="25" height="25"/>
+                                                        <rect key="frame" x="328" y="12.333333333333343" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="25" id="hRq-Gd-13Y"/>
                                                             <constraint firstAttribute="height" constant="25" id="jfQ-ro-4O1"/>
@@ -1850,7 +1850,7 @@ insagram story</string>
                                 </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gs5-2j-p5C">
-                                <rect key="frame" x="16" y="79" width="85.333333333333329" height="25.666666666666671"/>
+                                <rect key="frame" x="16" y="79" width="85.666666666666671" height="26.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2040,7 +2040,7 @@ after you can not restore account.</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="361" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ue-Yw-E3q">
-                                                        <rect key="frame" x="64.666666666666671" y="13.666666666666657" width="231.66666666666663" height="53"/>
+                                                        <rect key="frame" x="64.666666666666686" y="13.666666666666657" width="231.66666666666663" height="53"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="231.66999999999999" id="Gae-ht-vM8"/>
                                                             <constraint firstAttribute="height" constant="53" id="rKQ-Oy-nu7"/>
@@ -2346,7 +2346,7 @@ when you ask questions to create a card!</string>
                                                 <rect key="frame" x="40" y="10" width="283.66666666666669" height="107.66666666666667"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARPITDHAME" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZr-Uc-OMC">
-                                                <rect key="frame" x="104.33333333333333" y="49" width="155.33333333333337" height="29.666666666666671"/>
+                                                <rect key="frame" x="104.33333333333331" y="49" width="155.33333333333337" height="29.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="PureJoyRegular" family="Pure Joy" pointSize="28"/>
                                                 <color key="textColor" red="0.50319844479999998" green="0.1659435034" blue="0.74418896440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -2674,13 +2674,13 @@ when you ask questions to create a card!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Form screen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffG-fj-CMA">
-                                <rect key="frame" x="63.000000000000007" y="79" width="121.66666666666669" height="25.666666666666671"/>
+                                <rect key="frame" x="63.000000000000007" y="79" width="121.66666666666669" height="26.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElT-zp-Vhr">
-                                <rect key="frame" x="16" y="120.66666666666667" width="361" height="61.333333333333329"/>
+                                <rect key="frame" x="16" y="121.66666666666667" width="361" height="61.333333333333329"/>
                                 <string key="text">Select the questions from the card to know
  about yourself when other person open your link. you can edit your question...</string>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
@@ -2703,10 +2703,10 @@ when you ask questions to create a card!</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVS-nH-U8n">
-                                <rect key="frame" x="16" y="240" width="361" height="448"/>
+                                <rect key="frame" x="16" y="241" width="361" height="447"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ko8-8T-Yxd">
-                                        <rect key="frame" x="16" y="129" width="329" height="303"/>
+                                        <rect key="frame" x="16" y="131" width="329" height="300"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="u1Z-L4-wUD">
                                             <size key="itemSize" width="174" height="56"/>
@@ -2756,13 +2756,13 @@ when you ask questions to create a card!</string>
                                         </cells>
                                     </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a five question " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UJ-Ih-qi2">
-                                        <rect key="frame" x="67" y="94" width="227" height="27"/>
+                                        <rect key="frame" x="67" y="95" width="227" height="28"/>
                                         <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LyT-0M-TzZ">
-                                        <rect key="frame" x="124" y="53" width="113" height="27"/>
+                                        <rect key="frame" x="124" y="53" width="113" height="28"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Nick Name">
                                                 <attributes>
@@ -2803,7 +2803,7 @@ when you ask questions to create a card!</string>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ef-iC-jf0">
-                                <rect key="frame" x="146.66666666666666" y="192" width="100" height="100"/>
+                                <rect key="frame" x="146.66666666666666" y="193" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="LmJ-FM-riu"/>
                                     <constraint firstAttribute="width" constant="100" id="knQ-5m-gX3"/>
@@ -2943,7 +2943,7 @@ when you ask questions to create a card!</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPN-yq-8AE">
-                                                <rect key="frame" x="52.000000000000021" y="66" width="64.333333333333314" height="20.666666666666671"/>
+                                                <rect key="frame" x="52.000000000000028" y="66" width="64.333333333333314" height="20.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>

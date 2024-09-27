@@ -82,7 +82,6 @@ class PurchaseEditViewController: UIViewController {
         self.hideKeyboardTappedAround()
         self.formImageView.layer.cornerRadius = formImageView.layer.frame.height / 2
         self.saveCardButton.layer.cornerRadius = saveCardButton.frame.height / 2
-        self.saveCardButton.frame = CGRect(x: (view.frame.width - 408) / 2, y: view.center.y - 25, width: 408, height: 50)
         self.saveCardButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
         self.formCollectionView.delegate = self
         self.formCollectionView.dataSource = self

@@ -60,7 +60,6 @@ class ShareLinkViewController: UIViewController {
         self.textView.layer.masksToBounds = true
         self.ShareLinkPopup.layer.cornerRadius = 24
         self.nextButton.layer.cornerRadius = nextButton.frame.height / 2
-        self.nextButton.frame = CGRect(x: (view.frame.width - 159) / 2, y: view.center.y - 20, width: 159, height: 45)
         self.nextButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
         if traitCollection.userInterfaceStyle == .dark {
             self.cancelButton.layer.cornerRadius = cancelButton.frame.height / 2

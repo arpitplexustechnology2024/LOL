@@ -29,7 +29,6 @@ class ShareViewController: UIViewController {
         self.copyLinkview.layer.cornerRadius = 27
         self.shareLinkView.layer.cornerRadius = 27
         self.shareButton.layer.cornerRadius = self.shareButton.frame.height / 2
-        self.shareButton.frame = CGRect(x: (view.frame.width - 408) / 2, y: view.center.y - 20, width: 408, height: 50)
         self.shareButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
         self.copyLinkButton.layer.cornerRadius = self.copyLinkButton.frame.height / 2
         self.copyLinkButton.layer.borderWidth = 3

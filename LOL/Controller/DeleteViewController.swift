@@ -26,7 +26,6 @@ class DeleteViewController: UIViewController {
     func setupUI() {
         deleteView.layer.cornerRadius = 16
         deleteButton.layer.cornerRadius = deleteButton.frame.height / 2
-        deleteButton.frame = CGRect(x: (view.frame.width - 100) / 2, y: view.center.y - 20, width: 100, height: 40)
         deleteButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
         cancelButton.layer.cornerRadius = cancelButton.frame.height / 2
         cancelButton.layer.borderWidth = 1.5

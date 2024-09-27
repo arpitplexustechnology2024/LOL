@@ -58,7 +58,6 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
         adjustForDevice()
         fetchProductInfo()
         self.unlockButton.layer.cornerRadius = self.unlockButton.frame.height / 2
-        unlockButton.frame = CGRect(x: (view.frame.width - 336) / 2, y: view.center.y - 25, width: 336, height: 50)
         self.unlockButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
         restoreButton.text = NSLocalizedString("RestorePurchaseKey", comment: "")
         restoreButton.isUserInteractionEnabled = true

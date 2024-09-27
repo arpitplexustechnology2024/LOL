@@ -186,10 +186,18 @@ class InboxViewController: UIViewController, PreviewViewControllerDelegate {
     
     @IBAction func btnSenderTapped(_ sender: UIButton) {
         if let bottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "PremiumViewController") as? PremiumViewController {
-            if #available(iOS 15.0, *) {
-                if let sheet = bottomSheetVC.sheetPresentationController {
-                    sheet.detents = [.medium()]
-                    sheet.prefersGrabberVisible = true
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                bottomSheetVC.modalPresentationStyle = .formSheet
+                bottomSheetVC.preferredContentSize = CGSize(width: 540, height: 540)
+            } else {
+                if #available(iOS 15.0, *) {
+                    if let sheet = bottomSheetVC.sheetPresentationController {
+                        sheet.detents = [.medium()]
+                        sheet.prefersGrabberVisible = true
+                    }
+                } else {
+                    bottomSheetVC.modalPresentationStyle = .custom
+                    bottomSheetVC.transitioningDelegate = self
                 }
             }
             present(bottomSheetVC, animated: true, completion: nil)
@@ -276,5 +284,11 @@ extension InboxViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 16
+    }
+}
+
+extension InboxViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return CustomPresentationController(presentedViewController: presented, presenting: presenting)
     }
 }

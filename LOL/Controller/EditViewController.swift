@@ -83,7 +83,6 @@ class EditViewController: UIViewController {
         self.editQuestionButton.layer.cornerRadius = editQuestionButton.layer.frame.height / 2
         self.formImageView.layer.cornerRadius = formImageView.layer.frame.height / 2
         self.saveCardButton.layer.cornerRadius = saveCardButton.frame.height / 2
-        self.saveCardButton.frame = CGRect(x: (view.frame.width - 408) / 2, y: view.center.y - 25, width: 408, height: 50)
         self.saveCardButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
         self.formCollectionView.delegate = self
         self.formCollectionView.dataSource = self
@@ -214,10 +213,18 @@ class EditViewController: UIViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         } else {
             if let bottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "PremiumViewController") as? PremiumViewController {
-                if #available(iOS 15.0, *) {
-                    if let sheet = bottomSheetVC.sheetPresentationController {
-                        sheet.detents = [.medium()]
-                        sheet.prefersGrabberVisible = true
+                if UIDevice.current.userInterfaceIdiom == .pad {
+                    bottomSheetVC.modalPresentationStyle = .formSheet
+                    bottomSheetVC.preferredContentSize = CGSize(width: 540, height: 540)
+                } else {
+                    if #available(iOS 15.0, *) {
+                        if let sheet = bottomSheetVC.sheetPresentationController {
+                            sheet.detents = [.medium()]
+                            sheet.prefersGrabberVisible = true
+                        }
+                    } else {
+                        bottomSheetVC.modalPresentationStyle = .custom
+                        bottomSheetVC.transitioningDelegate = self
                     }
                 }
                 present(bottomSheetVC, animated: true, completion: nil)
@@ -344,5 +351,11 @@ extension EditViewController: FormCollectionViewCellDelegate {
                 cell.configureCell(isSelected: true)
             }
         }
+    }
+}
+
+extension EditViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return CustomPresentationController(presentedViewController: presented, presenting: presenting)
     }
 }

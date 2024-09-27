@@ -38,7 +38,6 @@ class ProfileViewController: UIViewController {
         self.AvtarImageview.addGestureRecognizer(tapGestureRecognizer)
         
         // Let's Go button Gradient Color
-        self.letsgoButton.frame = CGRect(x: (view.frame.width - 408) / 2, y: view.center.y - 25, width: 408, height: 50)
         self.letsgoButton.layer.cornerRadius = letsgoButton.frame.height / 2
         self.letsgoButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
         
@@ -96,10 +95,18 @@ class ProfileViewController: UIViewController {
             self?.AvtarImageview.sd_setImage(with: URL(string: avatarURL), placeholderImage: UIImage(named: "Anonyms"))
         }
         
-        if #available(iOS 15.0, *) {
-            if let sheet = bottomSheetVC.sheetPresentationController {
-                sheet.detents = [.medium()]
-                sheet.prefersGrabberVisible = true
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            bottomSheetVC.modalPresentationStyle = .formSheet
+            bottomSheetVC.preferredContentSize = CGSize(width: 540, height: 540)
+        } else {
+            if #available(iOS 15.0, *) {
+                if let sheet = bottomSheetVC.sheetPresentationController {
+                    sheet.detents = [.medium()]
+                    sheet.prefersGrabberVisible = true
+                }
+            } else {
+                bottomSheetVC.modalPresentationStyle = .custom
+                bottomSheetVC.transitioningDelegate = self
             }
         }
         present(bottomSheetVC, animated: true, completion: nil)
@@ -179,5 +186,11 @@ extension ProfileViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+}
+
+extension ProfileViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return CustomPresentationController(presentedViewController: presented, presenting: presenting)
     }
 }

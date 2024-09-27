@@ -1567,13 +1567,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LOL/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to allow you to take photos.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to provide personalized content and improve your experience.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "The app requires access to your location even when the app is in the background.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app needs your location to provide personalized experiences.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to allow you to select photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1604,13 +1604,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LOL/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to allow you to take photos.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to provide personalized content and improve your experience.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "The app requires access to your location even when the app is in the background.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app needs your location to provide personalized experiences.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to allow you to select photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

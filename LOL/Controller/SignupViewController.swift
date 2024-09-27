@@ -76,7 +76,6 @@ class SignupViewController: UIViewController {
         
         // Next button Gradient Color
         self.nextButton.layer.cornerRadius = nextButton.frame.height / 2
-        self.nextButton.frame = CGRect(x: (view.frame.width - 408) / 2, y: view.center.y - 25, width: 408, height: 50)
         self.nextButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
         
         // Error label
@@ -92,10 +91,6 @@ class SignupViewController: UIViewController {
         self.hideKeyboardTappedAround()
         self.privacyPolicyCheckBox.setImage(UIImage(named: "Checkbox"), for: .normal)
         
-        // Keyboad Setup
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification: )), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
         // Localize UI elements
         localizeUI()
     }
@@ -107,23 +102,6 @@ class SignupViewController: UIViewController {
         self.insta_SnapLabel.text = NSLocalizedString("SignupInstagramKey", comment: "")
         self.privacyPolicyLabel.text = NSLocalizedString("SignupPrivacyKey", comment: "")
         self.nextButton.setTitle(NSLocalizedString("SignupNextBtnKey", comment: ""), for: .normal)
-    }
-    
-    @objc private func keyboardWillShow(notification: NSNotification) {
-        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            let keyboardHight = keyboardFrame.cgRectValue.height
-            let bottomSpace = self.view.frame.height - (userNameTextFiled.frame.origin.y + userNameTextFiled.frame.height)
-            self.view.frame.origin.y -= keyboardHight - bottomSpace + 54
-        }
-    }
-    
-    @objc private func keyboardWillHide() {
-        self.view.frame.origin.y = 0
-    }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     private func setupCustomSwitch() {

@@ -102,18 +102,30 @@ extension UIButton {
     }
     
     func applyGradient(colors: [UIColor], startPoint: CGPoint = CGPoint(x: 0, y: 0.5), endPoint: CGPoint = CGPoint(x: 1, y: 0.5)) {
-        layer.sublayers?.filter { $0 is CAGradientLayer }.forEach { $0.removeFromSuperlayer() }
+        self.layoutIfNeeded() // Ensure the button's bounds are set
+        
+        // Remove any existing gradient layers
+        self.layer.sublayers?.filter { $0 is CAGradientLayer }.forEach { $0.removeFromSuperlayer() }
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = colors.map { $0.cgColor }
         gradientLayer.startPoint = startPoint
         gradientLayer.endPoint = endPoint
-        gradientLayer.frame = bounds
-        gradientLayer.cornerRadius = bounds.height / 2
+        gradientLayer.frame = self.bounds
+        gradientLayer.cornerRadius = self.layer.cornerRadius
         gradientLayer.masksToBounds = true
         
-        layer.insertSublayer(gradientLayer, at: 0)
-        layer.masksToBounds = true
+        // Ensure the gradient layer is inserted at the bottom
+        self.layer.masksToBounds = true
+        self.layer.insertSublayer(gradientLayer, at: 0)
+        
+        // Create a shape layer for the button's shape
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.layer.cornerRadius).cgPath
+        gradientLayer.mask = maskLayer
+        
+        // Set the background color of the button to clear
+        self.backgroundColor = .clear
     }
 }
 
@@ -127,7 +139,7 @@ extension Notification.Name {
 }
 
 extension UIImageView {
-
+    
     public func loadGif(name: String) {
         DispatchQueue.global().async {
             let image = UIImage.gif(name: name)
@@ -136,7 +148,7 @@ extension UIImageView {
             }
         }
     }
-
+    
     @available(iOS 9.0, *)
     public func loadGif(asset: String) {
         DispatchQueue.global().async {
@@ -146,67 +158,67 @@ extension UIImageView {
             }
         }
     }
-
+    
 }
 
 // MARK: - UIImage.GIF extension
 extension UIImage {
-
+    
     public class func gif(data: Data) -> UIImage? {
-
+        
         guard let source = CGImageSourceCreateWithData(data as CFData, nil) else {
             print("SwiftGif: Source for the image does not exist")
             return nil
         }
-
+        
         return UIImage.animatedImageWithSource(source)
     }
-
+    
     public class func gif(url: String) -> UIImage? {
-
+        
         guard let bundleURL = URL(string: url) else {
             print("SwiftGif: This image named \"\(url)\" does not exist")
             return nil
         }
-
+        
         guard let imageData = try? Data(contentsOf: bundleURL) else {
             print("SwiftGif: Cannot turn image named \"\(url)\" into NSData")
             return nil
         }
-
+        
         return gif(data: imageData)
     }
-
+    
     public class func gif(name: String) -> UIImage? {
-
+        
         guard let bundleURL = Bundle.main
-          .url(forResource: name, withExtension: "gif") else {
+            .url(forResource: name, withExtension: "gif") else {
             print("SwiftGif: This image named \"\(name)\" does not exist")
             return nil
         }
-
+        
         guard let imageData = try? Data(contentsOf: bundleURL) else {
             print("SwiftGif: Cannot turn image named \"\(name)\" into NSData")
             return nil
         }
-
+        
         return gif(data: imageData)
     }
-
+    
     @available(iOS 9.0, *)
     public class func gif(asset: String) -> UIImage? {
-
+        
         guard let dataAsset = NSDataAsset(name: asset) else {
             print("SwiftGif: Cannot turn image named \"\(asset)\" into NSDataAsset")
             return nil
         }
-
+        
         return gif(data: dataAsset.data)
     }
-
+    
     internal class func delayForImageAtIndex(_ index: Int, source: CGImageSource!) -> Double {
         var delay = 0.1
-
+        
         let cfProperties = CGImageSourceCopyPropertiesAtIndex(source, index, nil)
         let gifPropertiesPointer = UnsafeMutablePointer<UnsafeRawPointer?>.allocate(capacity: 0)
         defer {
@@ -216,31 +228,31 @@ extension UIImage {
         if CFDictionaryGetValueIfPresent(cfProperties, unsafePointer, gifPropertiesPointer) == false {
             return delay
         }
-
+        
         let gifProperties: CFDictionary = unsafeBitCast(gifPropertiesPointer.pointee, to: CFDictionary.self)
-
+        
         var delayObject: AnyObject = unsafeBitCast(
             CFDictionaryGetValue(gifProperties,
-                Unmanaged.passUnretained(kCGImagePropertyGIFUnclampedDelayTime).toOpaque()),
+                                 Unmanaged.passUnretained(kCGImagePropertyGIFUnclampedDelayTime).toOpaque()),
             to: AnyObject.self)
         if delayObject.doubleValue == 0 {
             delayObject = unsafeBitCast(CFDictionaryGetValue(gifProperties,
-                Unmanaged.passUnretained(kCGImagePropertyGIFDelayTime).toOpaque()), to: AnyObject.self)
+                                                             Unmanaged.passUnretained(kCGImagePropertyGIFDelayTime).toOpaque()), to: AnyObject.self)
         }
-
+        
         if let delayObject = delayObject as? Double, delayObject > 0 {
             delay = delayObject
         } else {
             delay = 0.1
         }
-
+        
         return delay
     }
-
+    
     internal class func gcdForPair(_ lhs: Int?, _ rhs: Int?) -> Int {
         var lhs = lhs
         var rhs = rhs
-
+        
         if rhs == nil || lhs == nil {
             if rhs != nil {
                 return rhs!
@@ -250,17 +262,17 @@ extension UIImage {
                 return 0
             }
         }
-
+        
         if lhs! < rhs! {
             let ctp = lhs
             lhs = rhs
             rhs = ctp
         }
-
+        
         var rest: Int
         while true {
             rest = lhs! % rhs!
-
+            
             if rest == 0 {
                 return rhs!
             } else {
@@ -269,67 +281,67 @@ extension UIImage {
             }
         }
     }
-
+    
     internal class func gcdForArray(_ array: [Int]) -> Int {
         if array.isEmpty {
             return 1
         }
-
+        
         var gcd = array[0]
-
+        
         for val in array {
             gcd = UIImage.gcdForPair(val, gcd)
         }
-
+        
         return gcd
     }
-
+    
     internal class func animatedImageWithSource(_ source: CGImageSource) -> UIImage? {
         let count = CGImageSourceGetCount(source)
         var images = [CGImage]()
         var delays = [Int]()
-
+        
         for index in 0..<count {
             // Add image
             if let image = CGImageSourceCreateImageAtIndex(source, index, nil) {
                 images.append(image)
             }
-
+            
             let delaySeconds = UIImage.delayForImageAtIndex(Int(index),
-                source: source)
+                                                            source: source)
             delays.append(Int(delaySeconds * 1000.0))
         }
-
+        
         let duration: Int = {
             var sum = 0
-
+            
             for val: Int in delays {
                 sum += val
             }
-
+            
             return sum
-            }()
-
+        }()
+        
         let gcd = gcdForArray(delays)
         var frames = [UIImage]()
-
+        
         var frame: UIImage
         var frameCount: Int
         for index in 0..<count {
             frame = UIImage(cgImage: images[Int(index)])
             frameCount = Int(delays[Int(index)] / gcd)
-
+            
             for _ in 0..<frameCount {
                 frames.append(frame)
             }
         }
-
+        
         let animation = UIImage.animatedImage(with: frames,
-            duration: Double(duration) / 1000.0)
-
+                                              duration: Double(duration) / 1000.0)
+        
         return animation
     }
-
+    
 }
 
 // MARK: - UIView extension

@@ -75,7 +75,6 @@ class CardQuestionViewController: UIViewController {
         
         // Share Button Gradient color
         self.shareButton.layer.cornerRadius = shareButton.frame.height / 2
-        self.shareButton.frame = CGRect(x: (view.frame.width - 408) / 2, y: view.center.y - 25, width: 408, height: 50)
         self.shareButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
     }
     
@@ -193,10 +192,18 @@ class CardQuestionViewController: UIViewController {
     
     @IBAction func btnShareTapped(_ sender: UIButton) {
         if let bottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "ShareViewController") as? ShareViewController {
-            if #available(iOS 15.0, *) {
-                if let sheet = bottomSheetVC.sheetPresentationController {
-                    sheet.detents = [.medium()]
-                    sheet.prefersGrabberVisible = true
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                bottomSheetVC.modalPresentationStyle = .formSheet
+                bottomSheetVC.preferredContentSize = CGSize(width: 540, height: 540)
+            } else {
+                if #available(iOS 15.0, *) {
+                    if let sheet = bottomSheetVC.sheetPresentationController {
+                        sheet.detents = [.medium()]
+                        sheet.prefersGrabberVisible = true
+                    }
+                } else {
+                    bottomSheetVC.modalPresentationStyle = .custom
+                    bottomSheetVC.transitioningDelegate = self
                 }
             }
             bottomSheetVC.selectedIndex = selectedIndex
@@ -234,3 +241,8 @@ extension CardQuestionViewController: UICollectionViewDelegate, UICollectionView
     }
 }
 
+extension CardQuestionViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return CustomPresentationController(presentedViewController: presented, presenting: presenting)
+    }
+}

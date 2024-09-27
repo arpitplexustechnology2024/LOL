@@ -76,6 +76,11 @@ class HomeViewController: UIViewController {
         actionSheet.addAction(avatarAction)
         actionSheet.addAction(cancelAction)
         
+        if let popoverController = actionSheet.popoverPresentationController {
+            popoverController.sourceView = sender
+            popoverController.sourceRect = sender.bounds
+        }
+        
         present(actionSheet, animated: true, completion: nil)
     }
     
