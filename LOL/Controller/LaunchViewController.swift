@@ -10,6 +10,9 @@ import Lottie
 import UserNotifications
 import FBSDKCoreKit
 import CoreLocation
+import AppTrackingTransparency
+import AdSupport
+import TTGSnackbar
 
 class LaunchViewController: UIViewController {
     
@@ -23,6 +26,7 @@ class LaunchViewController: UIViewController {
         setupUI()
         setupLoadingView()
         setupGradientBackground()
+        requestTrackingPermission()
     }
     
     func setupUI() {
@@ -129,4 +133,27 @@ class LaunchViewController: UIViewController {
             self.navigationController?.pushViewController(signupVC, animated: true)
         }
     }
-}
+    
+    func requestTrackingPermission() {
+            if #available(iOS 14.5, *) {
+                ATTrackingManager.requestTrackingAuthorization { status in
+                    switch status {
+                    case .authorized:
+                        print("Tracking authorized")
+                        
+                    case .denied:
+                        print("Tracking denied")
+                        
+                    case .notDetermined:
+                        print("Tracking not determined")
+                        
+                    case .restricted:
+                        print("Tracking restricted")
+                        
+                    @unknown default:
+                        fatalError("Unknown tracking status")
+                    }
+                }
+            }
+        }
+    }

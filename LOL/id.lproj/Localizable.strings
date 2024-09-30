@@ -53,8 +53,8 @@
 "QuestionsKey06" = "Bisakah Anda mengirimkan kartu 'Never Have I Ever' tanpa mengungkapkan identitas saya?";
 "QuestionsKey07" = "Seberapa banyak rahasia saya yang Anda tahu? Tolong beri tahu saya.";
 "SnackbarNoFaceDetected" = "Tidak ada wajah terdeteksi. Coba gambar lain.";
-"SnackbarCameraPermissionAccess" = "Harap berikan izin untuk mengakses kamera Anda.";
-"SnackbarGalleryPermissionAccess" = "Harap berikan izin untuk mengakses perpustakaan foto Anda.";
+"SnackbarCameraPermissionAccess" = "Harap izinkan akses ke kamera Anda karena akses kamera diperlukan untuk mengatur foto.";
+"SnackbarGalleryPermissionAccess" = "Harap izinkan akses ke perpustakaan foto Anda karena akses diperlukan untuk mengatur foto.";
 "Settings" = "Pengaturan";
 "EditProfilePictureKey" = "Ubah foto profil";
 "CameraKey" = "Kamera";

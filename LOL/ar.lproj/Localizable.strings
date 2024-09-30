@@ -53,8 +53,8 @@
 "QuestionsKey06" = "هل يمكنك إرسال بطاقة 'أبداً لم أفعل' دون الكشف عن هويتي؟";
 "QuestionsKey07" = "إلى أي مدى تعرف أسراري؟ من فضلك أخبرني.";
 "SnackbarNoFaceDetected" = "لم يتم اكتشاف أي وجوه. يرجى تجربة صورة أخرى.";
-"SnackbarCameraPermissionAccess" = "يرجى منح الإذن للوصول إلى الكاميرا.";
-"SnackbarGalleryPermissionAccess" = "يرجى منح الإذن للوصول إلى مكتبة الصور.";
+"SnackbarCameraPermissionAccess" = "يرجى منح الإذن للوصول إلى الكاميرا الخاصة بك لأن الوصول إلى الكاميرا مطلوب لضبط الصور.";
+"SnackbarGalleryPermissionAccess" = "يرجى منح الإذن للوصول إلى مكتبة الصور الخاصة بك لأن الوصول مطلوب لضبط الصور.";
 "Settings" = "الإعدادات";
 "EditProfilePictureKey" = "تعديل صورة الملف الشخصي";
 "CameraKey" = "الكاميرا";

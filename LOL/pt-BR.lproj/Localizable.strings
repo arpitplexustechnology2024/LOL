@@ -53,8 +53,8 @@
 "QuestionsKey06" = "Você pode me enviar um cartão de “Eu nunca” sem revelar minha identidade?";
 "QuestionsKey07" = "O quanto do meu segredo você conhece? Conte-me.";
 "SnackbarNoFaceDetected" = "Nenhum rosto detectado. Tente outra imagem.";
-"SnackbarCameraPermissionAccess" = "Por favor, conceda permissão para acessar sua câmera.";
-"SnackbarGalleryPermissionAccess" = "Por favor, conceda permissão para acessar sua biblioteca de fotos.";
+"SnackbarCameraPermissionAccess" = "Por favor, conceda permissão para acessar sua câmera, pois o acesso à câmera é necessário para definir fotos.";
+"SnackbarGalleryPermissionAccess" = "Por favor, conceda permissão para acessar sua biblioteca de fotos, pois o acesso é necessário para definir fotos.";
 "Settings" = "Configurações";
 "EditProfilePictureKey" = "Editar foto do perfil";
 "CameraKey" = "Câmera";
