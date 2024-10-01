@@ -132,7 +132,7 @@
 "PremiumTitleKey1" = "Revelar perfil del remitente";
 "PremiumTitleKey2" = "Consejos para los espectadores";
 "PremiumTitleKey3" = "Preguntas sobre la edición de tarjetas";
-"PremiumDescriptionKey1" = "Obtén pistas como su imagen, ubicación, dispositivo, identificación de LoL y más...";
+"PremiumDescriptionKey1" = "Obtén pistas como la ubicación del remitente, el ID del dispositivo, el país y más...";
 "PremiumDescriptionKey2" = "¿Obtienes alguna pista divertida de quién crea tu tarjeta divertida?";
 "PremiumDescriptionKey3" = "¡Puedes editar las preguntas de la tarjeta cuando hagas preguntas para crear una tarjeta!";
 "PremiumNoInternetMessage" = "Por favor, encienda la conexión a Internet.";

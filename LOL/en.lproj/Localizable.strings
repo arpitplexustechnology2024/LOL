@@ -132,7 +132,7 @@
 "PremiumTitleKey1" = "Reveal Sender Profile";
 "PremiumTitleKey2" = "Viewers Hints";
 "PremiumTitleKey3" = "Edit Card Questions";
-"PremiumDescriptionKey1" = "Get hints like their image, location, device, lol id and more...";
+"PremiumDescriptionKey1" = "Get hints like their sender location, device id, country and more...";
 "PremiumDescriptionKey2" = "Get some funny hint who creates your funny card?";
 "PremiumDescriptionKey3" = "You can edit the card's questions when you ask questions to create a card!";
 "PremiumNoInternetMessage" = "Please turn on Internet connection.";

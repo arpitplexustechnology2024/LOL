@@ -132,7 +132,7 @@
 "PremiumTitleKey1" = "Revelar Perfil do Remetente";
 "PremiumTitleKey2" = "Dicas dos Visualizadores";
 "PremiumTitleKey3" = "Editar Perguntas do Cartão";
-"PremiumDescriptionKey1" = "Obtenha dicas como a imagem, localização, dispositivo, ID do lol e mais...";
+"PremiumDescriptionKey1" = "Obtenha dicas como a localização do remetente, ID do dispositivo, país e muito mais...";
 "PremiumDescriptionKey2" = "Receba dicas engraçadas sobre quem criou seu cartão engraçado?";
 "PremiumDescriptionKey3" = "Você pode editar as perguntas do cartão ao fazer perguntas para criar um cartão!";
 "PremiumNoInternetMessage" = "Por favor, ative a conexão com a internet.";

@@ -132,7 +132,7 @@
 "PremiumTitleKey1" = "Révéler le profil de l'expéditeur";
 "PremiumTitleKey2" = "Conseils aux téléspectateurs";
 "PremiumTitleKey3" = "Modifier les questions de la carte";
-"PremiumDescriptionKey1" = "Obtenez des indices tels que leur image, leur emplacement, leur appareil, leur identifiant lol et plus encore...";
+"PremiumDescriptionKey1" = "Obtenez des indices comme l'emplacement de l'expéditeur, l'identifiant de l'appareil, le pays et plus encore...";
 "PremiumDescriptionKey2" = "Obtenez un indice amusant sur qui crée votre carte amusante ?";
 "PremiumDescriptionKey3" = "Vous pouvez modifier les questions de la carte lorsque vous posez des questions pour créer une carte !";
 "PremiumNoInternetMessage" = "Veuillez activer la connexion Internet.";
