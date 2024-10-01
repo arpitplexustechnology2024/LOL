@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSUserTrackingUsageDescription</key>
-	<string>We would like to track your activity within this app to deliver personalized content, offers, and improve your experience. </string>
+	<string>This allow lol to provide you with a better app  analysis experience</string>
 	<key>NSCameraUsageDescription</key>
 	<string>We need to access to your camera to use the set profile picture.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
