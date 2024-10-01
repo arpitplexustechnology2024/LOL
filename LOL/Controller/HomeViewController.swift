@@ -165,8 +165,14 @@ class HomeViewController: UIViewController {
         
         snackbar.actionText = NSLocalizedString("Settings", comment: "")
         snackbar.actionBlock = { (snackbar) in
-            if let appSettings = URL(string: UIApplication.openSettingsURLString) {
-                UIApplication.shared.open(appSettings)
+            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                return
+            }
+            
+            if UIApplication.shared.canOpenURL(settingsUrl) {
+                UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                    print("Settings opened: \(success)")
+                })
             }
         }
         
