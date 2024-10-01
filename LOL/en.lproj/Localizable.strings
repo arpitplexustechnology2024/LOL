@@ -53,8 +53,8 @@
 "QuestionsKey06" = "Can you send me a “Never Have i ever” card without revealing my identity?";
 "QuestionsKey07" = "How much of my secret do you know ? Please tell me.";
 "SnackbarNoFaceDetected" = "No faces detected. Please try another image.";
-"SnackbarCameraPermissionAccess" = "Please grant permission to access your camera because camera access is needed to set photos.";
-"SnackbarGalleryPermissionAccess" = "Please grant permission to access your photo library because access is needed to set photos.";
+"SnackbarCameraPermissionAccess" = "We need to access to your camera to use the set profile picture.";
+"SnackbarGalleryPermissionAccess" = "We need to access to your photo library to use the set profile picture.";
 "Settings" = "Settings";
 "EditProfilePictureKey" = "Edit profile picture";
 "CameraKey" = "Camera";

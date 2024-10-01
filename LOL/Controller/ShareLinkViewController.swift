@@ -288,13 +288,15 @@ class ShareLinkViewController: UIViewController {
                 UIGraphicsEndImageContext()
                 
                 if let imageData = image?.pngData() {
-                    let items: [String: Any] = [
-                        "com.instagram.sharedSticker.backgroundImage": imageData,
-                        "com.instagram.sharedSticker.contentURL": linkText
-                    ]
-                    
-                    UIPasteboard.general.setItems([items])
-                    UIApplication.shared.open(urlScheme, options: [:], completionHandler: nil)
+                    if let url = URL(string: linkText) {
+                        let items: [String: Any] = [
+                            "com.instagram.sharedSticker.backgroundImage": imageData,
+                            "com.instagram.sharedSticker.contentURL": url,
+                        ]
+                        
+                        UIPasteboard.general.setItems([items], options: [.expirationDate: Date().addingTimeInterval(60 * 5)])
+                        UIApplication.shared.open(urlScheme, options: [:], completionHandler: nil)
+                    }
                 }
                 self.dismiss(animated: true)
             } else {

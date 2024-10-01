@@ -53,8 +53,8 @@
 "QuestionsKey06" = "¿Pueden enviarme una tarjeta “Yo nunca he” sin revelar mi identidad?";
 "QuestionsKey07" = "¿Cuánto de mi secreto sabes? Por favor dígame.";
 "SnackbarNoFaceDetected" = "No se detectaron caras. Por favor, intente con otra imagen.";
-"SnackbarCameraPermissionAccess" = "Por favor, otorga permiso para acceder a tu cámara porque se necesita acceso a la cámara para configurar fotos.";
-"SnackbarGalleryPermissionAccess" = "Por favor, otorga permiso para acceder a tu biblioteca de fotos porque se necesita acceso para configurar fotos.";
+"SnackbarCameraPermissionAccess" = "Necesitamos acceder a tu cámara para usar la imagen de perfil.";
+"SnackbarGalleryPermissionAccess" = "Necesitamos acceder a tu biblioteca de fotos para usar la imagen de perfil.";
 "Settings" = "Ajustes";
 "EditProfilePictureKey" = "Editar foto de perfil";
 "CameraKey" = "Cámara";
