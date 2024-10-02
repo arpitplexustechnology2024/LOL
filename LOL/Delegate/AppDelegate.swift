@@ -21,35 +21,63 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
-        registerForPushNotifications()
         FirebaseApp.configure()
+        getAndStoreOneSignalPlayerId()
         OneSignal.Debug.setLogLevel(.LL_VERBOSE)
         OneSignal.initialize("69c53fa2-c84d-42a9-b377-1e4fff31fa18", withLaunchOptions: launchOptions)
-        OneSignal.Notifications.requestPermission({ accepted in
-            print("User accepted notifications: \(accepted)")
-        }, fallbackToSettings: true)
-        getAndStoreOneSignalPlayerId()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.requestTrackingPermissionIfNeeded()
-        }
+        checkNotificationAuthorization()
+        
         return true
     }
     
-    func requestTrackingPermissionIfNeeded() {
-        if #available(iOS 14.5, *) {
-            switch ATTrackingManager.trackingAuthorizationStatus {
+    // MARK: - Notification Authorization
+    func checkNotificationAuthorization() {
+        UNUserNotificationCenter.current().getNotificationSettings { settings in
+            switch settings.authorizationStatus {
             case .notDetermined:
-                self.requestTrackingPermission()
-            case .restricted, .denied:
-                print("Tracking denied and restricted")
+                self.requestNotificationPermission()
+            case .denied:
+                self.requestNotificationPermission()
             case .authorized:
-                print("Tracking is already authorized")
-            @unknown default:
+                print("Notifications already authorized")
+            default:
                 break
             }
         }
     }
     
+    func requestNotificationPermission() {
+        OneSignal.Notifications.requestPermission({ accepted in
+            print("User accepted notifications: \(accepted)")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
+                requestTrackingPermission()
+            }
+        }, fallbackToSettings: true)
+    }
+    
+    func promptUserToEnableNotifications() {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(
+                title: "Enable Notifications",
+                message: "Please enable notifications to receive important updates.",
+                preferredStyle: .alert
+            )
+            
+            alert.addAction(UIAlertAction(title: "Go to Settings", style: .default, handler: { _ in
+                if let url = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            
+            if let topController = UIApplication.shared.keyWindow?.rootViewController {
+                topController.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    // MARK: - Tracking Permission
     func requestTrackingPermission() {
         if #available(iOS 14.5, *) {
             ATTrackingManager.requestTrackingAuthorization { status in
@@ -69,6 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
     }
     
+    // MARK: - Core Functionality
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .portrait
@@ -78,16 +107,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         return ApplicationDelegate.shared.application(app, open: url, options: options)
-    }
-    
-    func registerForPushNotifications() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
-            print("Permission granted: \(granted)")
-            
-            DispatchQueue.main.async {
-                UIApplication.shared.registerForRemoteNotifications()
-            }
-        }
     }
     
     func getAndStoreOneSignalPlayerId() {
@@ -104,22 +123,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         getAndStoreOneSignalPlayerId()
     }
     
-    // MARK: UISceneSession Lifecycle
-    
+    // MARK: - UISceneSession Lifecycle
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
     
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-    
+    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {}
+
     // MARK: - Update Check
-    
     func fetchAppStoreVersion(completion: @escaping (String?) -> Void) {
         let appID = "6670788272"
         let urlString = "https://itunes.apple.com/lookup?id=\(appID)"
@@ -201,6 +212,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
+        checkNotificationAuthorization()
         checkForUpdate()
     }
 }

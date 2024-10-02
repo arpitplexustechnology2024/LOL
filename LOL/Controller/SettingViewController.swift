@@ -170,7 +170,7 @@ class SettingViewController: UIViewController {
     }
     
     @objc func btnFollowInstagramTapped(_ sender: UITapGestureRecognizer) {
-        let username = "lots_of_laugh2024"
+        let username = "lolfuncard"
         let appURL = URL(string: "instagram://user?username=\(username)")!
         let webURL = URL(string: "https://instagram.com/\(username)")!
         
@@ -187,7 +187,7 @@ class SettingViewController: UIViewController {
     }
     
     @objc func btnShareAppTapped(_ sender: UITapGestureRecognizer){
-        let appURL = URL(string: "https://apps.apple.com/us/app/6670788272")! // Replace with your app's URL
+        let appURL = URL(string: "https://apps.apple.com/us/app/6670788272")!
         
         let activityViewController = UIActivityViewController(activityItems: [appURL], applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
@@ -196,7 +196,7 @@ class SettingViewController: UIViewController {
     }
     
     @objc func btnWriteReviewTapped(_ sender: UITapGestureRecognizer){
-        let appID = "6670788272" // Replace with your app ID
+        let appID = "6670788272"
         if let url = URL(string: "https://apps.apple.com/app/id\(appID)?action=write-review") {
             if UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
