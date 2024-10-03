@@ -19,7 +19,7 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
     @IBOutlet weak var restoreButton: UILabel!
     @IBOutlet weak var proView: UIView!
     @IBOutlet weak var proLabel: UILabel!
-    
+    @IBOutlet weak var privacyPolicyButton: UILabel!
     
     let productID = "com.lol.anonymousfeatures"
     
@@ -38,6 +38,7 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
         
         view.layer.cornerRadius = 28
         view.layer.masksToBounds = true
+        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
     private var viewModel: PurchaseViewModel!
@@ -57,6 +58,9 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
         setupUI()
         adjustForDevice()
         fetchProductInfo()
+        privacyPolicyButton.isUserInteractionEnabled = true
+        let tapGestureRecognize = UITapGestureRecognizer(target: self, action: #selector(privacyPolicyTapped(_:)))
+        self.privacyPolicyButton.addGestureRecognizer(tapGestureRecognize)
         self.unlockButton.layer.cornerRadius = self.unlockButton.frame.height / 2
         self.unlockButton.applyGradient(colors: [UIColor(hex: "#FA4957"), UIColor(hex: "#FD7E41")])
         restoreButton.text = NSLocalizedString("RestorePurchaseKey", comment: "")
@@ -77,6 +81,12 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
         self.proView.layer.insertSublayer(gradientLayer, at: 0)
         unlockButton.setTitle(NSLocalizedString("UnlockBtnKey", comment: ""), for: .normal)
         SKPaymentQueue.default().add(self)
+    }
+    
+    @objc func privacyPolicyTapped(_ sender: UITapGestureRecognizer) {
+        if let url = URL(string: "https://lolcards.link/privacy-policy") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
     
     private func setupUI() {

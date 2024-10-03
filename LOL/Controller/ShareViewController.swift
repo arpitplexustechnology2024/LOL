@@ -51,6 +51,7 @@ class ShareViewController: UIViewController {
         
         view.layer.cornerRadius = 28
         view.layer.masksToBounds = true
+        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
     func adjustForDevice() {

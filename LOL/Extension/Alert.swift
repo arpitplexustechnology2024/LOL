@@ -47,7 +47,7 @@ class CustomAlertViewController: UIViewController {
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             containerView.widthAnchor.constraint(equalToConstant: 230),
-            containerView.heightAnchor.constraint(equalToConstant: 164)
+            containerView.heightAnchor.constraint(equalToConstant: 170)
         ])
     }
     
@@ -98,8 +98,8 @@ class CustomAlertViewController: UIViewController {
         NSLayoutConstraint.activate([
             linkLabel.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 5),
             linkLabel.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            linkLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 15),
-            linkLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -15)
+            linkLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 8),
+            linkLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -8)
         ])
     }
     

@@ -2158,7 +2158,7 @@ your Story</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jhm-DI-jPy">
-                                <rect key="frame" x="0.0" y="99" width="393" height="300"/>
+                                <rect key="frame" x="0.0" y="91" width="393" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Kyp-pR-6xz"/>
@@ -2189,12 +2189,12 @@ your Story</string>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvq-o5-PDY">
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvq-o5-PDY">
                                                             <rect key="frame" x="0.0" y="30.333333333333318" width="333" height="43.333333333333343"/>
                                                             <string key="text">You can edit the card's questions
 when you ask questions to create a card!</string>
                                                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.52941176470588236" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="highlightedColor" systemColor="systemBackgroundColor"/>
                                                         </label>
                                                     </subviews>
@@ -2225,18 +2225,18 @@ when you ask questions to create a card!</string>
                                 </connections>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="YaY-Ub-rfj">
-                                <rect key="frame" x="160" y="407" width="73" height="25.666666666666686"/>
+                                <rect key="frame" x="160" y="391" width="73" height="25.666666666666686"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.99215686270000003" green="0.4941176471" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUb-iT-JHH">
-                                <rect key="frame" x="30" y="498.66666666666669" width="333" height="0.0"/>
+                                <rect key="frame" x="30" y="474.66666666666669" width="333" height="0.0"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="hcG-Vh-7ax">
-                                <rect key="frame" x="52" y="440.66666666666669" width="289" height="50"/>
+                                <rect key="frame" x="52" y="416.66666666666669" width="289" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.14901960780000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="j8t-sr-3m0"/>
@@ -2284,30 +2284,39 @@ when you ask questions to create a card!</string>
                                     <constraint firstAttribute="height" constant="20" id="gKz-df-13N"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoh-SV-DNr">
+                                <rect key="frame" x="147" y="798.66666666666663" width="99" height="19.333333333333371"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                                <color key="textColor" name="restore"/>
+                                <color key="highlightedColor" systemColor="systemBackgroundColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q9J-tM-rcQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Q9J-tM-rcQ" firstAttribute="trailing" secondItem="PUb-iT-JHH" secondAttribute="trailing" constant="30" id="0FV-np-7hP"/>
-                            <constraint firstItem="jhm-DI-jPy" firstAttribute="top" secondItem="Q9J-tM-rcQ" secondAttribute="top" constant="40" id="1oZ-fp-93s"/>
+                            <constraint firstItem="jhm-DI-jPy" firstAttribute="top" secondItem="Q9J-tM-rcQ" secondAttribute="top" constant="32" id="1oZ-fp-93s"/>
                             <constraint firstItem="iTk-7V-tas" firstAttribute="top" secondItem="Q9J-tM-rcQ" secondAttribute="top" constant="19" id="6rG-Ud-gQB"/>
-                            <constraint firstItem="hcG-Vh-7ax" firstAttribute="top" secondItem="YaY-Ub-rfj" secondAttribute="bottom" constant="8" id="7f6-S0-whj"/>
+                            <constraint firstItem="hcG-Vh-7ax" firstAttribute="top" secondItem="YaY-Ub-rfj" secondAttribute="bottom" id="7f6-S0-whj"/>
                             <constraint firstItem="Q9J-tM-rcQ" firstAttribute="trailing" secondItem="iTk-7V-tas" secondAttribute="trailing" constant="30" id="7p0-Rh-Wi0"/>
                             <constraint firstItem="Q9J-tM-rcQ" firstAttribute="trailing" secondItem="hcG-Vh-7ax" secondAttribute="trailing" constant="52" id="LAG-qe-oTO"/>
                             <constraint firstItem="PUb-iT-JHH" firstAttribute="leading" secondItem="Q9J-tM-rcQ" secondAttribute="leading" constant="30" id="MX4-fX-xrs"/>
-                            <constraint firstItem="YaY-Ub-rfj" firstAttribute="top" secondItem="jhm-DI-jPy" secondAttribute="bottom" constant="8" id="QdL-7M-qxn"/>
+                            <constraint firstItem="YaY-Ub-rfj" firstAttribute="top" secondItem="jhm-DI-jPy" secondAttribute="bottom" id="QdL-7M-qxn"/>
                             <constraint firstItem="oxX-yx-OcI" firstAttribute="centerX" secondItem="WjY-52-S1G" secondAttribute="centerX" id="Rzb-yK-jxN"/>
                             <constraint firstItem="oxX-yx-OcI" firstAttribute="top" secondItem="Q9J-tM-rcQ" secondAttribute="top" constant="18" id="VFK-HL-aUj"/>
                             <constraint firstItem="jhm-DI-jPy" firstAttribute="trailing" secondItem="Q9J-tM-rcQ" secondAttribute="trailing" id="Wgz-eY-1nV"/>
                             <constraint firstItem="PUb-iT-JHH" firstAttribute="top" secondItem="hcG-Vh-7ax" secondAttribute="bottom" constant="8" id="fXC-jw-470"/>
                             <constraint firstItem="jhm-DI-jPy" firstAttribute="leading" secondItem="Q9J-tM-rcQ" secondAttribute="leading" id="kaR-Yg-VBg"/>
                             <constraint firstItem="YaY-Ub-rfj" firstAttribute="centerX" secondItem="WjY-52-S1G" secondAttribute="centerX" id="nG3-bF-vNM"/>
+                            <constraint firstItem="Q9J-tM-rcQ" firstAttribute="bottom" secondItem="xoh-SV-DNr" secondAttribute="bottom" id="rEC-sa-egD"/>
                             <constraint firstItem="hcG-Vh-7ax" firstAttribute="leading" secondItem="Q9J-tM-rcQ" secondAttribute="leading" constant="52" id="sB1-se-qed"/>
+                            <constraint firstItem="xoh-SV-DNr" firstAttribute="centerX" secondItem="WjY-52-S1G" secondAttribute="centerX" id="xCr-0c-Xyg"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="jhm-DI-jPy" id="5oQ-tX-YOE"/>
                         <outlet property="pageControl" destination="YaY-Ub-rfj" id="No4-xL-V66"/>
+                        <outlet property="privacyPolicyButton" destination="xoh-SV-DNr" id="yGF-hv-IAc"/>
                         <outlet property="proFeaturesLabel" destination="PUb-iT-JHH" id="CU9-cR-Qvr"/>
                         <outlet property="proLabel" destination="7cR-2P-X83" id="6RF-w3-ydG"/>
                         <outlet property="proView" destination="oxX-yx-OcI" id="nwj-Py-nfY"/>

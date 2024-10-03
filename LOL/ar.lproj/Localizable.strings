@@ -132,7 +132,7 @@
 "PremiumTitleKey1" = "كشف ملف المرسل";
 "PremiumTitleKey2" = "تلميحات المشاهدين";
 "PremiumTitleKey3" = "تعديل أسئلة البطاقة";
-"PremiumDescriptionKey1" = "احصل على تلميحات مثل موقع المرسل، معرف الجهاز، البلد، والمزيد...";
+"PremiumDescriptionKey1" = "احصل على تلميحات مثل الموقع، البلد والوقت...";
 "PremiumDescriptionKey2" = "احصل على تلميحات مضحكة حول من أنشأ بطاقتك المضحكة؟";
 "PremiumDescriptionKey3" = "يمكنك تعديل أسئلة البطاقة عندما تطلب إنشاء بطاقة!";
 "PremiumNoInternetMessage" = "يرجى تشغيل اتصال الإنترنت.";
