@@ -129,7 +129,7 @@
 // Premium View Controller
 "UnlockBtnKey" = "Descubrir";
 "PremiumFeaturesKey" = "👉Funciones profesionales por %@ de por vida👈";
-"PremiumTitleKey1" = "Revelar perfil del remitente";
+"PremiumTitleKey1" = "Revelar información del remitente";
 "PremiumTitleKey2" = "Consejos para los espectadores";
 "PremiumTitleKey3" = "Preguntas sobre la edición de tarjetas";
 "PremiumDescriptionKey1" = "Obtén pistas como su ubicación, país y hora...";

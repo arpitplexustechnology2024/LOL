@@ -129,7 +129,7 @@
 // Premium View Controller
 "UnlockBtnKey" = "Desbloquear";
 "PremiumFeaturesKey" = "👉recursos pro por %@ vitalício👈";
-"PremiumTitleKey1" = "Revelar Perfil do Remetente";
+"PremiumTitleKey1" = "Revelar informações do remetente";
 "PremiumTitleKey2" = "Dicas dos Visualizadores";
 "PremiumTitleKey3" = "Editar Perguntas do Cartão";
 "PremiumDescriptionKey1" = "Obtenha dicas como a localização, país e hora...";

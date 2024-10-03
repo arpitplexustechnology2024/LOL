@@ -129,7 +129,7 @@
 // Premium View Controller
 "UnlockBtnKey" = "Unlock";
 "PremiumFeaturesKey" = "👉pro features for %@ lifetime👈";
-"PremiumTitleKey1" = "Reveal Sender Profile";
+"PremiumTitleKey1" = "Reveal Sender Info";
 "PremiumTitleKey2" = "Viewers Hints";
 "PremiumTitleKey3" = "Edit Card Questions";
 "PremiumDescriptionKey1" = "Get hints like their location, country and time...";

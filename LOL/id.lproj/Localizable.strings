@@ -129,7 +129,7 @@
 // Premium View Controller
 "UnlockBtnKey" = "Buka";
 "PremiumFeaturesKey" = "👉fitur pro seharga %@ seumur hidup👈";
-"PremiumTitleKey1" = "Ungkap Profil Pengirim";
+"PremiumTitleKey1" = "Ungkap Info Pengirim";
 "PremiumTitleKey2" = "Petunjuk Penonton";
 "PremiumTitleKey3" = "Edit Pertanyaan Kartu";
 "PremiumDescriptionKey1" = "Dapatkan petunjuk seperti lokasi, negara, dan waktu mereka...";

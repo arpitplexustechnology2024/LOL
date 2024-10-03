@@ -129,7 +129,7 @@
 // Premium View Controller
 "UnlockBtnKey" = "Ouvrir";
 "PremiumFeaturesKey" = "👉Fonctionnalités pro pour %@ à vie👈";
-"PremiumTitleKey1" = "Révéler le profil de l'expéditeur";
+"PremiumTitleKey1" = "Révéler les informations de l'expéditeur";
 "PremiumTitleKey2" = "Conseils aux téléspectateurs";
 "PremiumTitleKey3" = "Modifier les questions de la carte";
 "PremiumDescriptionKey1" = "Obtenez des indices comme leur emplacement, pays et heure...";
