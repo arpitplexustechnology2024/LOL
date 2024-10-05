@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSContactsUsageDescription</key>
-	<string>We need to access to your contact to use for sender details.</string>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>This allow lol to provide you with a better app analysis experience</string>
 	<key>NSCameraUsageDescription</key>

@@ -70,15 +70,14 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
         self.proView.layer.masksToBounds = true
         self.proView.layer.cornerRadius = 4
         let gradientLayer = CAGradientLayer()
-        
         gradientLayer.colors = [
             UIColor(hex: "#FA4957").cgColor,
             UIColor(hex: "#FD7E41").cgColor
         ]
-        gradientLayer.locations = [0.0, 1.0]
-        gradientLayer.frame = self.view.bounds
-        gradientLayer.masksToBounds = true
-        self.proView.layer.insertSublayer(gradientLayer, at: 0)
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.frame = proView.bounds
+        proView.layer.insertSublayer(gradientLayer, at: 0)
         unlockButton.setTitle(NSLocalizedString("UnlockBtnKey", comment: ""), for: .normal)
         SKPaymentQueue.default().add(self)
     }
