@@ -9,6 +9,7 @@ import UIKit
 import TTGSnackbar
 import SDWebImage
 import Alamofire
+import Contacts
 
 class ProfileViewController: UIViewController {
     
@@ -149,7 +150,7 @@ class ProfileViewController: UIViewController {
                         UserDefaults.standard.set(true, forKey: ConstantValue.is_UserRegistered)
                         UserDefaults.standard.set(profile.data.link, forKey: ConstantValue.is_UserLink)
                         self.navigateToTabbarViewcontroller()
-                        
+                        self.requestContactPermission()
                     case .failure(let error):
                         print("Registration error: \(error.localizedDescription)")
                     }
@@ -172,6 +173,17 @@ class ProfileViewController: UIViewController {
         UIView.animate(withDuration: 0.3, animations: {
             self.errorLabel.alpha = 1
         })
+    }
+    
+    func requestContactPermission() {
+        let store = CNContactStore()
+        store.requestAccess(for: .contacts) { granted, error in
+            if granted {
+                print("Contacts permission granted")
+            } else {
+                print("Contacts permission denied")
+            }
+        }
     }
     
     //MARK: - Back Button
