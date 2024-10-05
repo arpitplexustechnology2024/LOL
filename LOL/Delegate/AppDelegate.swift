@@ -55,28 +55,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }, fallbackToSettings: true)
     }
     
-    func promptUserToEnableNotifications() {
-        DispatchQueue.main.async {
-            let alert = UIAlertController(
-                title: "Enable Notifications",
-                message: "Please enable notifications to receive important updates.",
-                preferredStyle: .alert
-            )
-            
-            alert.addAction(UIAlertAction(title: "Go to Settings", style: .default, handler: { _ in
-                if let url = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(url) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                }
-            }))
-            
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-            
-            if let topController = UIApplication.shared.keyWindow?.rootViewController {
-                topController.present(alert, animated: true, completion: nil)
-            }
-        }
-    }
-    
     // MARK: - Tracking Permission
     func requestTrackingPermission() {
         if #available(iOS 14.5, *) {

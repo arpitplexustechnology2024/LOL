@@ -83,16 +83,23 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
         SKPaymentQueue.default().add(self)
     }
     
+    // MARK: - Privacy Policy URL Open
     @objc func privacyPolicyTapped(_ sender: UITapGestureRecognizer) {
         if let url = URL(string: "https://lolcards.link/privacy-policy") {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            UIApplication.shared.open(url, options: [:]) { success in
+                if !success {
+                    print("Failed to open URL")
+                }
+            }
+        } else {
+            print("Invalid URL")
         }
     }
     
     private func setupUI() {
         premiumSlider = [
-            PremiumModel(id: 1, title: "Reveal Sender Profile",
-                         description: "Get hints like their image, location, device, lol id and more...",
+            PremiumModel(id: 1, title: "Reveal Sender Info",
+                         description: "Get hints like their location, country and time...",
                          image: UIImage(named: "Premium_first")!),
             PremiumModel(id: 2, title: "Viewers Hints",
                          description: "Get some funny hint who creates your funny card?",

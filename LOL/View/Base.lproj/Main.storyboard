@@ -2285,7 +2285,7 @@ when you ask questions to create a card!</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoh-SV-DNr">
-                                <rect key="frame" x="147" y="798.66666666666663" width="99" height="19.333333333333371"/>
+                                <rect key="frame" x="147" y="790.66666666666663" width="99" height="19.333333333333371"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
                                 <color key="textColor" name="restore"/>
                                 <color key="highlightedColor" systemColor="systemBackgroundColor"/>
@@ -2308,7 +2308,7 @@ when you ask questions to create a card!</string>
                             <constraint firstItem="PUb-iT-JHH" firstAttribute="top" secondItem="hcG-Vh-7ax" secondAttribute="bottom" constant="8" id="fXC-jw-470"/>
                             <constraint firstItem="jhm-DI-jPy" firstAttribute="leading" secondItem="Q9J-tM-rcQ" secondAttribute="leading" id="kaR-Yg-VBg"/>
                             <constraint firstItem="YaY-Ub-rfj" firstAttribute="centerX" secondItem="WjY-52-S1G" secondAttribute="centerX" id="nG3-bF-vNM"/>
-                            <constraint firstItem="Q9J-tM-rcQ" firstAttribute="bottom" secondItem="xoh-SV-DNr" secondAttribute="bottom" id="rEC-sa-egD"/>
+                            <constraint firstItem="Q9J-tM-rcQ" firstAttribute="bottom" secondItem="xoh-SV-DNr" secondAttribute="bottom" constant="8" id="rEC-sa-egD"/>
                             <constraint firstItem="hcG-Vh-7ax" firstAttribute="leading" secondItem="Q9J-tM-rcQ" secondAttribute="leading" constant="52" id="sB1-se-qed"/>
                             <constraint firstItem="xoh-SV-DNr" firstAttribute="centerX" secondItem="WjY-52-S1G" secondAttribute="centerX" id="xCr-0c-Xyg"/>
                         </constraints>

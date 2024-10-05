@@ -21,6 +21,7 @@ class PurchaseEditViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var selectQuestionLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
+    var selectedIndex: Int?
     var isLoading = true
     var isSuccess: Bool = false
     var isPurchaseSuccess: Bool = false
@@ -229,6 +230,7 @@ class PurchaseEditViewController: UIViewController {
                     let snackbar = TTGSnackbar(message: NSLocalizedString("SnackbarCardTitlesUpdated", comment: ""), duration: .middle)
                     snackbar.show()
                     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "CardQuestionViewController") as! CardQuestionViewController
+                    vc.selectedIndex = selectedIndex
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
             case .failure(let error):

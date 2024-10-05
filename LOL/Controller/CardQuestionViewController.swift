@@ -182,10 +182,12 @@ class CardQuestionViewController: UIViewController {
         if isPurchased {
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "PurchaseEditViewController") as! PurchaseEditViewController
             vc.isSuccess = false
+            vc.selectedIndex = selectedIndex
             self.navigationController?.pushViewController(vc, animated: true)
         } else {
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "EditViewController") as! EditViewController
             vc.isSuccess = false
+            vc.selectedIndex = selectedIndex
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

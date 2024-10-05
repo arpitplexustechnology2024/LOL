@@ -17,10 +17,15 @@ class CustomTabBar: UITabBar {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        guard let superview = self.superview else {
+            print("Superview is nil")
+            return
+        }
+
         var frame = self.frame
-        frame.origin.y = self.superview!.frame.height - frame.height - 33.5
-        frame.origin.x = 22
-        frame.size.width = self.superview!.frame.width - 43
+        frame.origin.y = superview.frame.height - frame.height - 33.5
+        frame.origin.x = 20
+        frame.size.width = superview.frame.width - 43
         self.frame = frame
         
         applyGradient(colors: [UIColor(hex: "#FA4957").cgColor, UIColor(hex: "#FD7E41").cgColor])
