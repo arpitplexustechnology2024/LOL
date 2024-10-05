@@ -212,9 +212,9 @@ class SignupViewController: UIViewController {
     }
     
     func setupPrivacyPolicyLabel() {
-        // Localized text
         let text = NSLocalizedString("SignupPrivacyKey", comment: "")
-        let privacyPolicyRange = (text as NSString).range(of: NSLocalizedString("SignupPrivacyKeyRange", comment: ""))
+        let privacyPolicyText = NSLocalizedString("SignupPrivacyKeyRange", comment: "")
+        let privacyPolicyRange = (text as NSString).range(of: privacyPolicyText)
         
         let attributedString = NSMutableAttributedString(string: text)
         attributedString.addAttribute(.foregroundColor, value: UIColor.red, range: privacyPolicyRange)
@@ -228,18 +228,9 @@ class SignupViewController: UIViewController {
     }
     
     @objc func tapLabel(gesture: UITapGestureRecognizer) {
-        let text = (privacyPolicyLabel.text ?? "") as NSString
-        let privacyPolicyRange = text.range(of: NSLocalizedString("SignupPrivacyKeyRange", comment: ""))
-        
-        if gesture.didTapAttributedTextInLabel(label: privacyPolicyLabel, inRange: privacyPolicyRange) {
-            self.navigateToPrivacyPolicy()
-        }
-    }
-    
-    
-    func navigateToPrivacyPolicy() {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "PrivacyPolicyViewController") as! PrivacyPolicyViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+        vc.modalPresentationStyle = .pageSheet
+        self.present(vc, animated: true, completion: nil)
     }
 }
 

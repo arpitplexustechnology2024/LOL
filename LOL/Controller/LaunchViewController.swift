@@ -15,6 +15,7 @@ class LaunchViewController: UIViewController {
     
     @IBOutlet weak var loadingView: LottieAnimationView!
     @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var logoHeightConstraint: NSLayoutConstraint!
     
     var passedActionKey: String?
     
@@ -28,6 +29,10 @@ class LaunchViewController: UIViewController {
     func setupUI() {
         let backgroundImageName = traitCollection.userInterfaceStyle == .dark ? "LaunchScreenBGDark" : "LaunchScreenBGLight"
         self.backgroundImageView.image = UIImage(named: backgroundImageName)
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            logoHeightConstraint.constant = 340
+        }
     }
     
     func setupGradientBackground() {

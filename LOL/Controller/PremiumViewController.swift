@@ -20,6 +20,7 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
     @IBOutlet weak var proView: UIView!
     @IBOutlet weak var proLabel: UILabel!
     @IBOutlet weak var privacyPolicyButton: UILabel!
+    @IBOutlet weak var privacyPolicyBottomConstraint: NSLayoutConstraint!
     
     let productID = "com.lol.anonymousfeatures"
     
@@ -80,19 +81,17 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
         proView.layer.insertSublayer(gradientLayer, at: 0)
         unlockButton.setTitle(NSLocalizedString("UnlockBtnKey", comment: ""), for: .normal)
         SKPaymentQueue.default().add(self)
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            privacyPolicyBottomConstraint.constant = 16
+        }
     }
     
     // MARK: - Privacy Policy URL Open
     @objc func privacyPolicyTapped(_ sender: UITapGestureRecognizer) {
-        if let url = URL(string: "https://lolcards.link/privacy-policy") {
-            UIApplication.shared.open(url, options: [:]) { success in
-                if !success {
-                    print("Failed to open URL")
-                }
-            }
-        } else {
-            print("Invalid URL")
-        }
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "PrivacyPolicyViewController") as! PrivacyPolicyViewController
+        vc.modalPresentationStyle = .pageSheet
+        self.present(vc, animated: true, completion: nil)
     }
     
     private func setupUI() {

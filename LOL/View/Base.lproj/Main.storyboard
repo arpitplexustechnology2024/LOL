@@ -44,6 +44,9 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreenLogo" translatesAutoresizingMaskIntoConstraints="NO" id="KEK-U0-KKs">
                                 <rect key="frame" x="40" y="119" width="328" height="196"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="196" id="NZU-Je-GXN"/>
+                                </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreenBGLight" translatesAutoresizingMaskIntoConstraints="NO" id="mvB-fH-Jya">
                                 <rect key="frame" x="0.0" y="378" width="393" height="479"/>
@@ -72,13 +75,13 @@
                             <constraint firstItem="mvB-fH-Jya" firstAttribute="trailing" secondItem="yuF-cU-QN1" secondAttribute="trailing" id="PDi-v8-VUA"/>
                             <constraint firstItem="yuF-cU-QN1" firstAttribute="bottom" secondItem="iTV-iQ-lJT" secondAttribute="bottom" constant="50" id="Ya0-kP-OuY"/>
                             <constraint firstItem="mvB-fH-Jya" firstAttribute="leading" secondItem="yuF-cU-QN1" secondAttribute="leading" id="Z6n-vo-tcL"/>
-                            <constraint firstItem="KEK-U0-KKs" firstAttribute="height" secondItem="gi1-0U-6BK" secondAttribute="height" multiplier="0.23" id="tsj-pW-7pi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uZ3-Ga-29g"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="mvB-fH-Jya" id="reY-cS-3pS"/>
                         <outlet property="loadingView" destination="iTV-iQ-lJT" id="4Fw-VL-KZ1"/>
+                        <outlet property="logoHeightConstraint" destination="NZU-Je-GXN" id="2Jd-fJ-Phx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QSV-77-9b3" sceneMemberID="firstResponder"/>
@@ -259,71 +262,26 @@ ZCB0aGUDAwMgUHJpdmFjeSBQb2xpY3k
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPx-az-mru">
-                                <rect key="frame" x="63" y="79" width="138" height="26"/>
-                                <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jza-DO-eAa">
-                                <rect key="frame" x="16" y="113" width="361" height="631"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E9M-2w-e5l">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhG-Xk-urj">
-                                <rect key="frame" x="71.666666666666686" y="752" width="250" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="WUg-DW-PCl"/>
-                                    <constraint firstAttribute="width" constant="250" id="xbD-bI-xZz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnDoneTapped:" destination="3pm-uq-tVl" eventType="touchUpInside" id="zn3-ND-k3V"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdq-us-GGV">
-                                <rect key="frame" x="5" y="83" width="50" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="diP-aG-u1Z"/>
-                                    <constraint firstAttribute="width" constant="50" id="evl-so-xLZ"/>
-                                </constraints>
-                                <color key="tintColor" name="settingIcon"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="arrow.backward" catalog="system">
-                                    <color key="titleColor" name="settingIcon"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnBackTapped:" destination="3pm-uq-tVl" eventType="touchUpInside" id="n5A-bG-fC4"/>
-                                </connections>
-                            </button>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hkA-72-G7X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TPx-az-mru" firstAttribute="leading" secondItem="Kdq-us-GGV" secondAttribute="trailing" constant="8" id="3fj-3a-MBd"/>
-                            <constraint firstItem="HhG-Xk-urj" firstAttribute="centerX" secondItem="zPD-ic-s2r" secondAttribute="centerX" id="6XI-sx-nUS"/>
-                            <constraint firstItem="hkA-72-G7X" firstAttribute="bottom" secondItem="HhG-Xk-urj" secondAttribute="bottom" constant="16" id="BtF-bF-BME"/>
-                            <constraint firstItem="Kdq-us-GGV" firstAttribute="leading" secondItem="hkA-72-G7X" secondAttribute="leading" constant="5" id="FDV-nf-Lwl"/>
-                            <constraint firstItem="Kdq-us-GGV" firstAttribute="top" secondItem="hkA-72-G7X" secondAttribute="top" constant="24" id="FL5-LY-h39"/>
-                            <constraint firstItem="TPx-az-mru" firstAttribute="top" secondItem="hkA-72-G7X" secondAttribute="top" constant="20" id="Iy2-hV-9aV"/>
-                            <constraint firstItem="jza-DO-eAa" firstAttribute="top" secondItem="TPx-az-mru" secondAttribute="bottom" constant="8" id="Ngh-s0-hma"/>
-                            <constraint firstItem="jza-DO-eAa" firstAttribute="leading" secondItem="hkA-72-G7X" secondAttribute="leading" constant="16" id="er6-SK-Jyx"/>
-                            <constraint firstItem="hkA-72-G7X" firstAttribute="trailing" secondItem="jza-DO-eAa" secondAttribute="trailing" constant="16" id="iea-xs-Zrk"/>
-                            <constraint firstItem="HhG-Xk-urj" firstAttribute="top" secondItem="jza-DO-eAa" secondAttribute="bottom" constant="8" id="kpR-cL-Tn9"/>
+                            <constraint firstItem="hkA-72-G7X" firstAttribute="bottom" secondItem="E9M-2w-e5l" secondAttribute="bottom" id="Rwc-bY-eL8"/>
+                            <constraint firstItem="E9M-2w-e5l" firstAttribute="top" secondItem="hkA-72-G7X" secondAttribute="top" id="cfn-QI-ttU"/>
+                            <constraint firstItem="hkA-72-G7X" firstAttribute="trailing" secondItem="E9M-2w-e5l" secondAttribute="trailing" id="rbQ-Zu-LR1"/>
+                            <constraint firstItem="E9M-2w-e5l" firstAttribute="leading" secondItem="hkA-72-G7X" secondAttribute="leading" id="vag-qs-RCF"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="Kdq-us-GGV" id="aFv-Ct-zn2"/>
-                        <outlet property="doneButton" destination="HhG-Xk-urj" id="fSX-ec-FNe"/>
-                        <outlet property="privacyPolicyLabel" destination="TPx-az-mru" id="Mt6-g6-noA"/>
-                        <outlet property="privacyPolicyTextView" destination="jza-DO-eAa" id="RwR-Hj-nBW"/>
+                        <outlet property="privacyPolicyWebView" destination="E9M-2w-e5l" id="mc4-T6-gRi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gba-Gd-orQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2316,6 +2274,7 @@ when you ask questions to create a card!</string>
                     <connections>
                         <outlet property="collectionView" destination="jhm-DI-jPy" id="5oQ-tX-YOE"/>
                         <outlet property="pageControl" destination="YaY-Ub-rfj" id="No4-xL-V66"/>
+                        <outlet property="privacyPolicyBottomConstraint" destination="rEC-sa-egD" id="olB-oE-WhX"/>
                         <outlet property="privacyPolicyButton" destination="xoh-SV-DNr" id="yGF-hv-IAc"/>
                         <outlet property="proFeaturesLabel" destination="PUb-iT-JHH" id="CU9-cR-Qvr"/>
                         <outlet property="proLabel" destination="7cR-2P-X83" id="6RF-w3-ydG"/>
@@ -3306,9 +3265,6 @@ when you ask questions to create a card!</string>
         <namedColor name="settingView">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

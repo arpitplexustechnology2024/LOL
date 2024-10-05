@@ -181,9 +181,10 @@ class SettingViewController: UIViewController {
         }
     }
     
-    @objc func btnPrivacyPolicyTapped(_ sender: UITapGestureRecognizer){
+    @objc func btnPrivacyPolicyTapped(_ sender: UITapGestureRecognizer) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "PrivacyPolicyViewController") as! PrivacyPolicyViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+        vc.modalPresentationStyle = .pageSheet
+        self.present(vc, animated: true, completion: nil)
     }
     
     @objc func btnShareAppTapped(_ sender: UITapGestureRecognizer){
