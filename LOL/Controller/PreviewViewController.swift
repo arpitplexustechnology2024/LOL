@@ -231,7 +231,7 @@ class PreviewViewController: UIViewController {
                 case .success(let blockUserResponse):
                     if isConnectedToInternet() {
                         print("User blocked successfully: \(blockUserResponse.message)")
-                        delegate?.didDeleteItem(at: indexPath)
+                        delegate?.didUpdateInbox()
                         self.navigationController?.popViewController(animated: true)
                         let snackbar = TTGSnackbar(message: "User blocked successfully!", duration: .middle)
                         snackbar.show()

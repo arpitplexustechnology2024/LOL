@@ -107,7 +107,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {}
-
+    
     // MARK: - Update Check
     func fetchAppStoreVersion(completion: @escaping (String?) -> Void) {
         let appID = "6670788272"

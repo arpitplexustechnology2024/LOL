@@ -7,6 +7,7 @@
 
 import UIKit
 import TTGSnackbar
+import Social
 
 class ShareLinkViewController: UIViewController {
     
