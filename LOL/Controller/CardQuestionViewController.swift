@@ -24,6 +24,7 @@ class CardQuestionViewController: UIViewController {
     private var noDataView: NoDataView!
     private var noInternetView: NoInternetView!
     var isLoading = true
+    var cardQuestion = ""
     
     init(viewModel: CardQuestionViewModel) {
         self.cardQuestionViewModel = viewModel
@@ -196,11 +197,12 @@ class CardQuestionViewController: UIViewController {
         if let bottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "ShareViewController") as? ShareViewController {
             if UIDevice.current.userInterfaceIdiom == .pad {
                 bottomSheetVC.modalPresentationStyle = .formSheet
-                bottomSheetVC.preferredContentSize = CGSize(width: 540, height: 540)
+                bottomSheetVC.preferredContentSize = CGSize(width: 540, height: 700)
             } else {
                 if #available(iOS 15.0, *) {
+                    
                     if let sheet = bottomSheetVC.sheetPresentationController {
-                        sheet.detents = [.medium()]
+                        sheet.detents = [.large() ]
                         sheet.prefersGrabberVisible = true
                     }
                 } else {
@@ -209,6 +211,7 @@ class CardQuestionViewController: UIViewController {
                 }
             }
             bottomSheetVC.selectedIndex = selectedIndex
+            bottomSheetVC.cardQuestion = cardQuestion
             present(bottomSheetVC, animated: true, completion: nil)
         }
     }

@@ -18,6 +18,10 @@
 "SignupPrivacyKeyRange" = "Privacy Policy";
 "SignupNextBtnKey" = "Next";
 
+//signup - new
+"SignupUsernameKey" = "Create your username";
+
+
 // Privacy Policy ViewController
 "PrivacyTitleKey" = "Privacy Policy";
 "PrivacyDoneBtnKey" = "Done";

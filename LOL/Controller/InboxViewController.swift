@@ -185,11 +185,15 @@ class InboxViewController: UIViewController, PreviewViewControllerDelegate {
     }
     
     @IBAction func btnSenderTapped(_ sender: UIButton) {
+        
         if let bottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "PremiumViewController") as? PremiumViewController {
+            
             if UIDevice.current.userInterfaceIdiom == .pad {
                 bottomSheetVC.modalPresentationStyle = .formSheet
                 bottomSheetVC.preferredContentSize = CGSize(width: 540, height: 540)
-            } else {
+            }
+            else
+            {
                 if #available(iOS 15.0, *) {
                     if let sheet = bottomSheetVC.sheetPresentationController {
                         sheet.detents = [.medium()]

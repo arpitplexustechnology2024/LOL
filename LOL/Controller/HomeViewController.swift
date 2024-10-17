@@ -341,6 +341,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "CardQuestionViewController") as! CardQuestionViewController
         vc.selectedIndex = indexPath.row
+        vc.cardQuestion = cardQuestionArr[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

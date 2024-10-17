@@ -99,7 +99,7 @@ class SignupViewController: UIViewController {
         self.signupLabel.text = NSLocalizedString("SignupTitleKey", comment: "")
         self.userNameTextFiled.placeholder = NSLocalizedString("SignupUsernameKey", comment: "")
         self.ExUsernameLabel.text = NSLocalizedString("SignupExKey", comment: "")
-        self.insta_SnapLabel.text = NSLocalizedString("SignupInstagramKey", comment: "")
+        self.insta_SnapLabel.text = NSLocalizedString("SignupUsernameKey", comment: "")
         self.privacyPolicyLabel.text = NSLocalizedString("SignupPrivacyKey", comment: "")
         self.nextButton.setTitle(NSLocalizedString("SignupNextBtnKey", comment: ""), for: .normal)
     }
