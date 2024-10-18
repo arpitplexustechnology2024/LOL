@@ -17,6 +17,7 @@
 "SignupPrivacyKey" = "En appuyant sur “Continuer”, vous reconnaissez avoir lu la Politique de Confidentialité";
 "SignupPrivacyKeyRange" = "Politique de Confidentialité";
 "SignupNextBtnKey" = "Suivant";
+"SignupUsernameKey" = "Créez votre nom d'utilisateur.";
 
 // Privacy Policy ViewController
 "PrivacyTitleKey" = "Politique de confidentialité";

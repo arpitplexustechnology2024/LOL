@@ -17,6 +17,7 @@
 "SignupPrivacyKey" = "Dengan mengetuk “Lanjutkan”, Anda mengakui bahwa Anda telah membaca Kebijakan Privasi";
 "SignupPrivacyKeyRange" = "Kebijakan Privasi";
 "SignupNextBtnKey" = "Berikutnya";
+"SignupUsernameKey" = "Buat nama pengguna Anda.";
 
 // Privacy Policy ViewController
 "PrivacyTitleKey" = "Kebijakan Privasi";

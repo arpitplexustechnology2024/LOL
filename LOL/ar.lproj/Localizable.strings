@@ -17,7 +17,7 @@
 "SignupPrivacyKey" = "بالنقر على 'متابعة'، فإنك تقر بأنك قد قرأت سياسة الخصوصية";
 "SignupPrivacyKeyRange" = "سياسة الخصوصية";
 "SignupNextBtnKey" = "التالي";
-
+"SignupUsernameKey" = "قم بإنشاء اسم المستخدم الخاص بك.";
 // Privacy Policy ViewController
 "PrivacyTitleKey" = "سياسة الخصوصية";
 "PrivacyDoneBtnKey" = "تم";
