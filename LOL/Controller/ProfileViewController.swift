@@ -9,7 +9,6 @@ import UIKit
 import TTGSnackbar
 import SDWebImage
 import Alamofire
-import Contacts
 
 class ProfileViewController: UIViewController {
     
