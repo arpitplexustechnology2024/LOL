@@ -10,8 +10,7 @@ import CoreData
 import FirebaseCore
 import UserNotifications
 import OneSignalFramework
-import FBSDKCoreKit
-//import AppTrackingTransparency
+
 import AdSupport
 
 @main
@@ -20,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+     
         FirebaseApp.configure()
         getAndStoreOneSignalPlayerId()
         OneSignal.Debug.setLogLevel(.LL_VERBOSE)
@@ -55,25 +54,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }, fallbackToSettings: true)
     }
     
-    // MARK: - Tracking Permission
-//    func requestTrackingPermission() {
-//        if #available(iOS 14.5, *) {
-//            ATTrackingManager.requestTrackingAuthorization { status in
-//                DispatchQueue.main.async {
-//                    switch status {
-//                    case .authorized:
-//                        print("Tracking authorized")
-//                    case .denied, .restricted:
-//                        print("Tracking denied and restricted")
-//                    case .notDetermined:
-//                        print("Tracking not determined")
-//                    @unknown default:
-//                        break
-//                    }
-//                }
-//            }
-//        }
-//    }
     
     // MARK: - Core Functionality
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
@@ -81,10 +61,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             return .portrait
         }
         return .all
-    }
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        return ApplicationDelegate.shared.application(app, open: url, options: options)
     }
     
     func getAndStoreOneSignalPlayerId() {

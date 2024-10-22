@@ -1,15 +1,5 @@
 PODS:
   - Alamofire (5.9.1)
-  - FBAEMKit (17.1.0):
-    - FBSDKCoreKit_Basics (= 17.1.0)
-  - FBSDKCoreKit (17.1.0):
-    - FBAEMKit (= 17.1.0)
-    - FBSDKCoreKit_Basics (= 17.1.0)
-  - FBSDKCoreKit_Basics (17.1.0)
-  - FBSDKLoginKit (17.1.0):
-    - FBSDKCoreKit (= 17.1.0)
-  - FBSDKShareKit (17.1.0):
-    - FBSDKCoreKit (= 17.1.0)
   - Firebase/Core (10.29.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (~> 10.29.0)
@@ -233,9 +223,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - FBSDKCoreKit (~> 17.1.0)
-  - FBSDKLoginKit (~> 17.1.0)
-  - FBSDKShareKit (~> 17.1.0)
   - Firebase/Core
   - Firebase/Crashlytics
   - Firebase/InAppMessaging
@@ -249,11 +236,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
-    - FBAEMKit
-    - FBSDKCoreKit
-    - FBSDKCoreKit_Basics
-    - FBSDKLoginKit
-    - FBSDKShareKit
     - Firebase
     - FirebaseABTesting
     - FirebaseAnalytics
@@ -289,11 +271,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
-  FBAEMKit: cb719c53575a3be86ea873279f30d6a2c4e15881
-  FBSDKCoreKit: ecdb980a24633ccb012700299ceb16d0235e14d2
-  FBSDKCoreKit_Basics: 045101c4a9ef10c845347424d73a29aae02c3e43
-  FBSDKLoginKit: 69eb59b2f839aba635616df6e422acd0ca88030a
-  FBSDKShareKit: be9db7d121cbc3d6700c1b712a61183cac407f64
   Firebase: cec914dab6fd7b1bd8ab56ea07ce4e03dd251c2d
   FirebaseABTesting: d87f56707159bae64e269757a6e963d490f2eebe
   FirebaseAnalytics: 23717de130b779aa506e757edb9713d24b6ffeda
@@ -327,6 +304,6 @@ SPEC CHECKSUMS:
   SDWebImage: 8a6b7b160b4d710e2a22b6900e25301075c34cb3
   TTGSnackbar: 8e7650b9b1f5f44e40228473455986f5c12213c7
 
-PODFILE CHECKSUM: edc7431a9cc997c6159575f7a1b79e65fbe7f2f7
+PODFILE CHECKSUM: 78c882a2f0a6e732c5ef719b9a23f3642f6d85d1
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.14.3

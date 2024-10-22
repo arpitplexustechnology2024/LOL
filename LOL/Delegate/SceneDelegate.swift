@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FBSDKCoreKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
@@ -26,12 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         guard let _ = (scene as? UIWindowScene) else { return }
     }
-    
-    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        for urlContext in URLContexts {
-            ApplicationDelegate.shared.application(UIApplication.shared, open: urlContext.url, options: [:])
-        }
-    }
+   
     
     func sceneDidBecomeActive(_ scene: UIScene) {
         if savedShortCutItem != nil {
