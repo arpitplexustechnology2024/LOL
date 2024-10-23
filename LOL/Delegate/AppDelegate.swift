@@ -10,7 +10,7 @@ import CoreData
 import FirebaseCore
 import UserNotifications
 import OneSignalFramework
-
+import Firebase
 import AdSupport
 
 @main
