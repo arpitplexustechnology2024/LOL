@@ -57,7 +57,7 @@ class ShareViewController: UIViewController {
     
     func adjustForDevice() {
         var height: CGFloat = 190
-        var shareViewHeight: CGFloat = 190
+        var shareViewHeight: CGFloat = 272
         var fontSize: CGFloat = 16
         var fontTitleSize: CGFloat = 22
         if UIDevice.current.userInterfaceIdiom == .phone {
@@ -66,15 +66,15 @@ class ShareViewController: UIViewController {
                 fontSize = 16
                 fontTitleSize = 19
                 height = 140
-                shareViewHeight = 230
+                shareViewHeight = 272
             case 2436, 2688, 1792, 2556, 2796, 2778, 2532:
                 fontSize = 20
                 height = 180
-                shareViewHeight = 270
+                shareViewHeight = 272
             default:
                 fontSize = 16
                 height = 170
-                shareViewHeight = 260
+                shareViewHeight = 272
             }
             
             linkLabel.font = UIFont(name: "Lato-Bold", size: fontSize)
