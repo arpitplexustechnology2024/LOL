@@ -23,11 +23,15 @@ class ProfileViewController: UIViewController {
     private var activityIndicator: UIActivityIndicatorView!
     private let viewModel = RegisterViewModel()
     
+    private let defaultAvatarURL = "https://lolcards.link/api/public/images/AvatarDefault.png"
+    private var hasSelectedAvatar: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         localizeUI()
         setupKeyboardObservers()
+        
     }
     
     func setupUI() {
@@ -90,10 +94,10 @@ class ProfileViewController: UIViewController {
         let bottomSheetVC = storyboard.instantiateViewController(withIdentifier: "AvtarBottomViewController") as! AvtarBottomViewController
         
         bottomSheetVC.onAvatarSelected = { [weak self] avatarURL in
+            guard let self = self else { return }
+            self.hasSelectedAvatar = true
             UserDefaults.standard.set(avatarURL, forKey: ConstantValue.avatar_URL)
-            print(avatarURL)
-            
-            self?.AvtarImageview.sd_setImage(with: URL(string: avatarURL), placeholderImage: UIImage(named: "Anonyms"))
+            self.AvtarImageview.sd_setImage(with: URL(string: avatarURL), placeholderImage: UIImage(named: "Anonyms"))
         }
         
         if UIDevice.current.userInterfaceIdiom == .pad {
@@ -124,23 +128,30 @@ class ProfileViewController: UIViewController {
             letsgoButton.setTitle("", for: .normal)
             activityIndicator.startAnimating()
             self.errorLabel.isHidden = true
+            
             guard let name = nameTextfiled.text, !name.isEmpty else {
                 showError(message: NSLocalizedString("ProfileErrorKey", comment: ""))
                 self.activityIndicator.stopAnimating()
                 self.letsgoButton.setTitle(NSLocalizedString("ProfileLetsgoBtnKey", comment: ""), for: .normal)
                 return
             }
+            
             UserDefaults.standard.set(name, forKey: ConstantValue.name)
             let username = UserDefaults.standard.string(forKey: ConstantValue.user_name)
-            let defaultAvatar = "https://lolcards.link/api/public/images/AvatarDefault.png"
-            let avatar = UserDefaults.standard.string(forKey: ConstantValue.avatar_URL) ?? defaultAvatar
+            let avatar: String
+            if hasSelectedAvatar {
+                avatar = UserDefaults.standard.string(forKey: ConstantValue.avatar_URL) ?? defaultAvatarURL
+            } else {
+                avatar = defaultAvatarURL
+                UserDefaults.standard.set(defaultAvatarURL, forKey: ConstantValue.avatar_URL)
+            }
+            
             let deviceToken = UserDefaults.standard.string(forKey: "SubscriptionID")
             
-            
-            viewModel.registerUser(name: nameTextfiled.text!, avatar: avatar, username: username!, deviceToken: deviceToken!) { [weak self] result in
+            viewModel.registerUser(name: name, avatar: avatar, username: username!, deviceToken: deviceToken!) { [weak self] result in
                 guard let self = self else { return }
                 
-                DispatchQueue.main.async { [self] in
+                DispatchQueue.main.async {
                     self.activityIndicator.stopAnimating()
                     self.letsgoButton.setTitle(NSLocalizedString("ProfileLetsgoBtnKey", comment: ""), for: .normal)
                     
@@ -152,6 +163,7 @@ class ProfileViewController: UIViewController {
                         self.navigateToTabbarViewcontroller()
                     case .failure(let error):
                         print("Registration error: \(error.localizedDescription)")
+                        self.showError(message: NSLocalizedString("RegistrationErrorKey", comment: ""))
                     }
                 }
             }

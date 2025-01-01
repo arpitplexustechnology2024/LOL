@@ -16,8 +16,10 @@ class ShareViewController: UIViewController {
     @IBOutlet weak var copyLinkLabel: UILabel!
     @IBOutlet weak var linkLabel: UILabel!
     @IBOutlet weak var shareLabel: UILabel!
+    @IBOutlet weak var shareLinkViewHeightsConstraints: NSLayoutConstraint!
+    @IBOutlet weak var copyLinkViewHeightsContsrints: NSLayoutConstraint!
+    
     var selectedIndex: Int?
-    var cardQuestion = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,8 +58,6 @@ class ShareViewController: UIViewController {
     }
     
     func adjustForDevice() {
-        var height: CGFloat = 190
-        var shareViewHeight: CGFloat = 272
         var fontSize: CGFloat = 16
         var fontTitleSize: CGFloat = 22
         if UIDevice.current.userInterfaceIdiom == .phone {
@@ -65,29 +65,22 @@ class ShareViewController: UIViewController {
             case 1136, 1334, 1920, 2208:
                 fontSize = 16
                 fontTitleSize = 19
-                height = 140
-                shareViewHeight = 272
+                copyLinkViewHeightsContsrints.constant = 140
+                shareLinkViewHeightsConstraints.constant = 155
             case 2436, 2688, 1792, 2556, 2796, 2778, 2532:
                 fontSize = 20
-                height = 180
-                shareViewHeight = 272
+                copyLinkViewHeightsContsrints.constant = 180
+                shareLinkViewHeightsConstraints.constant = 165
             default:
                 fontSize = 16
-                height = 170
-                shareViewHeight = 272
+                copyLinkViewHeightsContsrints.constant = 170
+                shareLinkViewHeightsConstraints.constant = 165
             }
             
             linkLabel.font = UIFont(name: "Lato-Bold", size: fontSize)
             copyLinkLabel.font = UIFont(name: "Lato-ExtraBold", size: fontTitleSize)
             shareLabel.font = UIFont(name: "Lato-ExtraBold", size: fontTitleSize)
         }
-        
-        copyLinkview.translatesAutoresizingMaskIntoConstraints = false
-        shareLinkView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            copyLinkview.heightAnchor.constraint(equalToConstant: height),
-            shareLinkView.heightAnchor.constraint(equalToConstant: shareViewHeight)
-        ])
     }
     
     @IBAction func btnCopyLinkTapped(_ sender: UIButton) {
@@ -127,24 +120,6 @@ class ShareViewController: UIViewController {
                     }
                 }
             }
-        }
-    }
-    
-    @IBAction func btnOtherShareTapped(_ sender: UIButton) {
-        
-        if let link = linkLabel.text {
-            
-            let newLink = "https://\(link)"
-            let sharingTxt = "Hey there! 😄 Are you ready for a challenge? Create an anonymous card for me by answering this question! 🎉 \(NSLocalizedString(cardQuestion, comment: ""))! 🤔\n Tap the link below and show off your creativity! \n👉 \(newLink)"
-            
-            let activityVC = UIActivityViewController(activityItems: [sharingTxt], applicationActivities: nil)
-            
-            if let popoverController = activityVC.popoverPresentationController {
-                popoverController.sourceView = self.view
-                popoverController.sourceRect = sender.frame
-            }
-            
-            self.present(activityVC, animated: true)
         }
     }
 }

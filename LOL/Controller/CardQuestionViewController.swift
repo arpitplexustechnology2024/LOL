@@ -24,7 +24,6 @@ class CardQuestionViewController: UIViewController {
     private var noDataView: NoDataView!
     private var noInternetView: NoInternetView!
     var isLoading = true
-    var cardQuestion = ""
     
     init(viewModel: CardQuestionViewModel) {
         self.cardQuestionViewModel = viewModel
@@ -202,7 +201,7 @@ class CardQuestionViewController: UIViewController {
                 if #available(iOS 15.0, *) {
                     
                     if let sheet = bottomSheetVC.sheetPresentationController {
-                        sheet.detents = [.large() ]
+                        sheet.detents = [.medium() ]
                         sheet.prefersGrabberVisible = true
                     }
                 } else {
@@ -211,7 +210,6 @@ class CardQuestionViewController: UIViewController {
                 }
             }
             bottomSheetVC.selectedIndex = selectedIndex
-            bottomSheetVC.cardQuestion = cardQuestion
             present(bottomSheetVC, animated: true, completion: nil)
         }
     }

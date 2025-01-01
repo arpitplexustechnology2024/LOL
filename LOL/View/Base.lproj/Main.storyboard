@@ -861,22 +861,25 @@ ZCB0aGUDAwMgUHJpdmFjeSBQb2xpY3k
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUO-c2-Gdn">
-                                <rect key="frame" x="16" y="89.000000000000014" width="361" height="138.33333333333337"/>
+                                <rect key="frame" x="16" y="89" width="361" height="135"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1 : Copy your link" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRo-HM-fRG">
                                         <rect key="frame" x="70.666666666666686" y="12.000000000000002" width="220" height="25.666666666666671"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25.670000000000002" id="Rnn-fu-3hj"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="22"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOL.LINK/abc.sh12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z30-d7-N6Z">
-                                        <rect key="frame" x="110.66666666666667" y="49.666666666666657" width="139.66666666666663" height="19"/>
+                                        <rect key="frame" x="110.66666666666667" y="49.666666666666657" width="139.66666666666663" height="15.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITT-fh-L4J">
-                                        <rect key="frame" x="120.66666666666666" y="78.333333333333343" width="119.66666666666666" height="40"/>
+                                        <rect key="frame" x="120.66666666666666" y="75" width="119.66666666666666" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="NyV-Ay-q2e"/>
                                         </constraints>
@@ -894,6 +897,7 @@ ZCB0aGUDAwMgUHJpdmFjeSBQb2xpY3k
                                 <constraints>
                                     <constraint firstItem="ITT-fh-L4J" firstAttribute="centerX" secondItem="XUO-c2-Gdn" secondAttribute="centerX" id="5AA-p5-SMm"/>
                                     <constraint firstItem="ITT-fh-L4J" firstAttribute="top" secondItem="Z30-d7-N6Z" secondAttribute="bottom" constant="9.6699999999999999" id="9LO-0E-AuM"/>
+                                    <constraint firstAttribute="height" constant="135" id="EeY-AW-hub"/>
                                     <constraint firstItem="Z30-d7-N6Z" firstAttribute="top" secondItem="wRo-HM-fRG" secondAttribute="bottom" constant="12" id="cr0-B2-0w2"/>
                                     <constraint firstItem="wRo-HM-fRG" firstAttribute="top" secondItem="XUO-c2-Gdn" secondAttribute="top" constant="12" id="jgk-CD-QS7"/>
                                     <constraint firstAttribute="bottom" secondItem="ITT-fh-L4J" secondAttribute="bottom" constant="20" id="vFw-hc-pkb"/>
@@ -902,13 +906,12 @@ ZCB0aGUDAwMgUHJpdmFjeSBQb2xpY3k
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pIg-j6-JE0">
-                                <rect key="frame" x="16" y="242.33333333333337" width="361" height="272"/>
+                                <rect key="frame" x="16" y="239" width="361" height="155"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFp-6B-yCQ">
-                                        <rect key="frame" x="47" y="12" width="267" height="55"/>
+                                        <rect key="frame" x="47" y="12" width="267" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="266.67000000000002" id="CWi-Jy-fDH"/>
-                                            <constraint firstAttribute="height" constant="55" id="Ert-9p-wG2"/>
                                         </constraints>
                                         <string key="text">Step 2 : Share Link on your 
 insagram story</string>
@@ -917,7 +920,7 @@ insagram story</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCE-p5-a7B">
-                                        <rect key="frame" x="16" y="82.999999999999972" width="329" height="50"/>
+                                        <rect key="frame" x="16" y="81" width="329" height="50"/>
                                         <color key="backgroundColor" red="1" green="0.027450980392156862" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="aeI-yf-9e4"/>
@@ -931,76 +934,15 @@ insagram story</string>
                                             <action selector="btnShareTapped:" destination="Pld-6C-7Rz" eventType="touchUpInside" id="f8n-pB-8Z3"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tn7-zR-W9j">
-                                        <rect key="frame" x="12" y="161.33333333333334" width="140.33333333333334" height="0.33333333333334281"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="0.5" id="gPI-o6-hOV"/>
-                                        </constraints>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtJ-BC-Jck">
-                                        <rect key="frame" x="164.33333333333334" y="147.99999999999997" width="32.666666666666657" height="27"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="27" id="OFH-0f-PgU"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="22"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ded-7d-W0S">
-                                        <rect key="frame" x="209" y="161.33333333333334" width="140" height="0.33333333333334281"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="0.5" id="WDX-4V-VTO"/>
-                                        </constraints>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share Link to any other platform" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZD-Wi-MvG">
-                                        <rect key="frame" x="20" y="189.99999999999997" width="200" height="70.000000000000028"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="bF6-li-Z7Z"/>
-                                            <constraint firstAttribute="width" constant="200" id="gkM-gs-7ye"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Lato-ExtraBold" family="Lato" pointSize="22"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaP-R2-WCb">
-                                        <rect key="frame" x="266" y="189.99999999999997" width="70" height="70.000000000000028"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="pWg-H7-33u"/>
-                                            <constraint firstAttribute="width" constant="70" id="vBB-k3-s5l"/>
-                                        </constraints>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="ic_share">
-                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <buttonConfiguration key="configuration" style="plain" image="ic_share">
-                                            <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="btnOtherShareTapped:" destination="Pld-6C-7Rz" eventType="touchUpInside" id="Eqf-Ze-5dL"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Ded-7d-W0S" firstAttribute="leading" secondItem="TtJ-BC-Jck" secondAttribute="trailing" constant="12" id="08S-1C-jLh"/>
-                                    <constraint firstItem="TtJ-BC-Jck" firstAttribute="top" secondItem="ZCE-p5-a7B" secondAttribute="bottom" constant="15" id="6Vm-aB-OeT"/>
-                                    <constraint firstItem="kZD-Wi-MvG" firstAttribute="leading" secondItem="pIg-j6-JE0" secondAttribute="leading" constant="20" id="CeB-Ce-bge"/>
-                                    <constraint firstItem="TtJ-BC-Jck" firstAttribute="centerX" secondItem="pIg-j6-JE0" secondAttribute="centerX" id="J0k-dt-7pZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZCE-p5-a7B" secondAttribute="bottom" constant="24" id="3hk-ay-tgt"/>
                                     <constraint firstItem="ZCE-p5-a7B" firstAttribute="top" secondItem="bFp-6B-yCQ" secondAttribute="bottom" constant="16" id="KGJ-ko-Cvu"/>
                                     <constraint firstItem="bFp-6B-yCQ" firstAttribute="centerX" secondItem="pIg-j6-JE0" secondAttribute="centerX" id="Lt5-GH-SHi"/>
                                     <constraint firstItem="bFp-6B-yCQ" firstAttribute="top" secondItem="pIg-j6-JE0" secondAttribute="top" constant="12" id="Lzb-ZV-10F"/>
                                     <constraint firstAttribute="trailing" secondItem="ZCE-p5-a7B" secondAttribute="trailing" constant="16" id="M11-0I-4Uu"/>
-                                    <constraint firstAttribute="bottom" secondItem="kZD-Wi-MvG" secondAttribute="bottom" constant="12" id="MQu-2J-MRx"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ded-7d-W0S" secondAttribute="trailing" constant="12" id="PLO-Xf-dE5"/>
-                                    <constraint firstItem="PaP-R2-WCb" firstAttribute="centerY" secondItem="kZD-Wi-MvG" secondAttribute="centerY" id="RkA-ns-2so"/>
-                                    <constraint firstItem="Tn7-zR-W9j" firstAttribute="centerY" secondItem="TtJ-BC-Jck" secondAttribute="centerY" id="T5e-Ew-Fww"/>
-                                    <constraint firstAttribute="trailing" secondItem="PaP-R2-WCb" secondAttribute="trailing" constant="25" id="UZv-Nc-mGZ"/>
-                                    <constraint firstItem="Tn7-zR-W9j" firstAttribute="leading" secondItem="pIg-j6-JE0" secondAttribute="leading" constant="12" id="eFp-mv-RuB"/>
-                                    <constraint firstItem="Ded-7d-W0S" firstAttribute="centerY" secondItem="TtJ-BC-Jck" secondAttribute="centerY" id="ji2-ve-Kao"/>
-                                    <constraint firstItem="kZD-Wi-MvG" firstAttribute="top" secondItem="TtJ-BC-Jck" secondAttribute="bottom" constant="15" id="jpP-dd-TZb"/>
-                                    <constraint firstItem="TtJ-BC-Jck" firstAttribute="leading" secondItem="Tn7-zR-W9j" secondAttribute="trailing" constant="12" id="osx-ie-uZh"/>
+                                    <constraint firstAttribute="height" constant="155" id="Rr9-Cu-av9"/>
                                     <constraint firstItem="ZCE-p5-a7B" firstAttribute="leading" secondItem="pIg-j6-JE0" secondAttribute="leading" constant="16" id="uiX-Ug-3Ra"/>
                                 </constraints>
                             </view>
@@ -1019,11 +961,13 @@ insagram story</string>
                     <connections>
                         <outlet property="copyLinkButton" destination="ITT-fh-L4J" id="rf9-5V-6t6"/>
                         <outlet property="copyLinkLabel" destination="wRo-HM-fRG" id="tyj-Cc-0j3"/>
+                        <outlet property="copyLinkViewHeightsContsrints" destination="EeY-AW-hub" id="W2d-ba-q9l"/>
                         <outlet property="copyLinkview" destination="XUO-c2-Gdn" id="j2v-Yr-SXR"/>
                         <outlet property="linkLabel" destination="Z30-d7-N6Z" id="BdF-6W-QNs"/>
                         <outlet property="shareButton" destination="ZCE-p5-a7B" id="pTl-4o-pbc"/>
                         <outlet property="shareLabel" destination="bFp-6B-yCQ" id="W21-GY-lpr"/>
                         <outlet property="shareLinkView" destination="pIg-j6-JE0" id="guS-Tb-dSg"/>
+                        <outlet property="shareLinkViewHeightsConstraints" destination="Rr9-Cu-av9" id="De1-mh-GMJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ja4-E5-uJL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2245,7 +2189,7 @@ when you ask questions to create a card!</string>
                                     <outlet property="delegate" destination="BrO-hS-hwh" id="J5G-K3-xLA"/>
                                 </connections>
                             </collectionView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="YaY-Ub-rfj">
+                            <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="YaY-Ub-rfj">
                                 <rect key="frame" x="160" y="391" width="73" height="25.666666666666686"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.99215686270000003" green="0.4941176471" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3305,7 +3249,6 @@ when you ask questions to create a card!</string>
         <image name="TimeIcon" width="42" height="43"/>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
-        <image name="ic_share" width="50" height="50"/>
         <image name="link" width="17" height="17"/>
         <image name="watermark" width="1300" height="1679"/>
         <namedColor name="ImageBoader">
