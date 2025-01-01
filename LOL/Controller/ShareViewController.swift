@@ -120,7 +120,7 @@ class ShareViewController: UIViewController {
                     if let rootViewController = window.rootViewController as? UINavigationController {
                         let signupVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ShareLinkViewController") as! ShareLinkViewController
                         signupVC.selectedIndex = selectedIndex
-                        signupVC.linkLabel = "lolcards.link/arpit"
+                        signupVC.linkLabel = link
                         signupVC.modalTransitionStyle = .crossDissolve
                         signupVC.modalPresentationStyle = .overCurrentContext
                         rootViewController.present(signupVC, animated: true)

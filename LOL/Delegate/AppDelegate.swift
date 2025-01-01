@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-     
+        
         FirebaseApp.configure()
         getAndStoreOneSignalPlayerId()
         OneSignal.Debug.setLogLevel(.LL_VERBOSE)
@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         OneSignal.Notifications.requestPermission({ accepted in
             print("User accepted notifications: \(accepted)")
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
-//                requestTrackingPermission()
+                //                requestTrackingPermission()
             }
         }, fallbackToSettings: true)
     }

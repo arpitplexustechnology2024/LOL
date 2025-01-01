@@ -23,7 +23,6 @@
 		BDA0B5292C9B9201001FAFFF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA0B5282C9B9201001FAFFF /* NetworkManager.swift */; };
 		BDA0B52B2C9B921F001FAFFF /* PrivacyPolicyText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA0B52A2C9B921F001FAFFF /* PrivacyPolicyText.swift */; };
 		BDA0B52D2C9B9230001FAFFF /* Skeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA0B52C2C9B9230001FAFFF /* Skeleton.swift */; };
-		BDA0B52F2C9B9257001FAFFF /* Auto-Update.json in Sources */ = {isa = PBXBuildFile; fileRef = BDA0B52E2C9B9257001FAFFF /* Auto-Update.json */; };
 		BDA0B5322C9B92AF001FAFFF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA0B5312C9B92AF001FAFFF /* Model.swift */; };
 		BDA0B53F2C9B9344001FAFFF /* Attach_Snap.gif in Resources */ = {isa = PBXBuildFile; fileRef = BDA0B5332C9B9344001FAFFF /* Attach_Snap.gif */; };
 		BDA0B5402C9B9344001FAFFF /* Link_Snap.gif in Resources */ = {isa = PBXBuildFile; fileRef = BDA0B5342C9B9344001FAFFF /* Link_Snap.gif */; };
@@ -226,7 +225,6 @@
 		BDA0B5282C9B9201001FAFFF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BDA0B52A2C9B921F001FAFFF /* PrivacyPolicyText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyText.swift; sourceTree = "<group>"; };
 		BDA0B52C2C9B9230001FAFFF /* Skeleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skeleton.swift; sourceTree = "<group>"; };
-		BDA0B52E2C9B9257001FAFFF /* Auto-Update.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Auto-Update.json"; sourceTree = "<group>"; };
 		BDA0B5312C9B92AF001FAFFF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		BDA0B5332C9B9344001FAFFF /* Attach_Snap.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Attach_Snap.gif; sourceTree = "<group>"; };
 		BDA0B5342C9B9344001FAFFF /* Link_Snap.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Link_Snap.gif; sourceTree = "<group>"; };
@@ -496,7 +494,6 @@
 				BDA0B5282C9B9201001FAFFF /* NetworkManager.swift */,
 				BDA0B52A2C9B921F001FAFFF /* PrivacyPolicyText.swift */,
 				BDA0B52C2C9B9230001FAFFF /* Skeleton.swift */,
-				BDA0B52E2C9B9257001FAFFF /* Auto-Update.json */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1271,7 +1268,6 @@
 				BDA0B5212C9B91AD001FAFFF /* Switch.swift in Sources */,
 				BDD62A8B2C9DDDA8004369CC /* Instagram_02.swift in Sources */,
 				BDA0B5922C9B95E1001FAFFF /* CardQuestionAPI.swift in Sources */,
-				BDA0B52F2C9B9257001FAFFF /* Auto-Update.json in Sources */,
 				BDD62A9D2C9DDDA8004369CC /* ShareView_07.swift in Sources */,
 				BDA0B59F2C9B95E1001FAFFF /* DeleteInboxViewModel.swift in Sources */,
 				BDA0B5952C9B95E1001FAFFF /* EditTitleAPI.swift in Sources */,
