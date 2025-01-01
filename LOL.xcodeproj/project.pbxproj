@@ -675,8 +675,8 @@
 			children = (
 				BDD62A4F2C9DDDA8004369CC /* BottombarXIB */,
 				BDD62A582C9DDDA8004369CC /* Instagram */,
-				BDD62A672C9DDDA8004369CC /* ShareView */,
 				BDD62A722C9DDDA8004369CC /* Snapchat */,
+				BDD62A672C9DDDA8004369CC /* ShareView */,
 				BDD62A732C9DDDA8004369CC /* ComingSoonView.swift */,
 				BDD62A742C9DDDA8004369CC /* ComingSoonView.xib */,
 				BDD62A752C9DDDA8004369CC /* InboxView.swift */,

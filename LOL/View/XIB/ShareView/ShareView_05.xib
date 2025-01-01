@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -55,8 +55,8 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeFive" translatesAutoresizingMaskIntoConstraints="NO" id="IXd-Vg-QO2">
                             <rect key="frame" x="0.0" y="0.0" width="353" height="208"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlM-9E-iYa">
-                            <rect key="frame" x="138" y="83" width="77" height="42"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlM-9E-iYa">
+                            <rect key="frame" x="16" y="83" width="321" height="42"/>
                             <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="35"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -92,6 +92,7 @@
                     <constraints>
                         <constraint firstItem="IXd-Vg-QO2" firstAttribute="leading" secondItem="cSg-qx-iOb" secondAttribute="leading" id="9U3-mU-0y0"/>
                         <constraint firstAttribute="trailing" secondItem="Aho-nL-B4J" secondAttribute="trailing" id="ABJ-7Q-pbG"/>
+                        <constraint firstAttribute="trailing" secondItem="rlM-9E-iYa" secondAttribute="trailing" constant="16" id="F8d-Lq-5HT"/>
                         <constraint firstItem="g8A-1K-Liq" firstAttribute="top" secondItem="cSg-qx-iOb" secondAttribute="top" constant="14" id="LOZ-gM-h9P"/>
                         <constraint firstItem="rlM-9E-iYa" firstAttribute="centerX" secondItem="cSg-qx-iOb" secondAttribute="centerX" id="d9X-An-GJe"/>
                         <constraint firstItem="IXd-Vg-QO2" firstAttribute="top" secondItem="cSg-qx-iOb" secondAttribute="top" id="eDk-FE-bFO"/>
@@ -102,6 +103,7 @@
                         <constraint firstAttribute="trailing" secondItem="IXd-Vg-QO2" secondAttribute="trailing" id="pAc-vl-wUw"/>
                         <constraint firstAttribute="bottom" secondItem="Aho-nL-B4J" secondAttribute="bottom" id="vYD-MY-Alm"/>
                         <constraint firstItem="Aho-nL-B4J" firstAttribute="leading" secondItem="cSg-qx-iOb" secondAttribute="leading" id="w8Y-oh-9Cc"/>
+                        <constraint firstItem="rlM-9E-iYa" firstAttribute="leading" secondItem="cSg-qx-iOb" secondAttribute="leading" constant="16" id="wou-pZ-vDw"/>
                     </constraints>
                 </view>
             </subviews>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -55,8 +55,8 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeSeven" translatesAutoresizingMaskIntoConstraints="NO" id="p0T-pU-l75">
                             <rect key="frame" x="0.0" y="0.0" width="353" height="208"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVc-zA-RMJ">
-                            <rect key="frame" x="138" y="83" width="77" height="42"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVc-zA-RMJ">
+                            <rect key="frame" x="16" y="83" width="321" height="42"/>
                             <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="35"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -92,7 +92,9 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="208" id="1nk-n0-O3k"/>
                         <constraint firstAttribute="bottom" secondItem="p0T-pU-l75" secondAttribute="bottom" id="4Fc-YX-MTI"/>
+                        <constraint firstAttribute="trailing" secondItem="eVc-zA-RMJ" secondAttribute="trailing" constant="16" id="DZo-fg-h2K"/>
                         <constraint firstItem="eVc-zA-RMJ" firstAttribute="centerX" secondItem="Uk1-2n-YXZ" secondAttribute="centerX" id="KQK-WY-yo2"/>
+                        <constraint firstItem="eVc-zA-RMJ" firstAttribute="leading" secondItem="Uk1-2n-YXZ" secondAttribute="leading" constant="16" id="OsP-z6-fu9"/>
                         <constraint firstItem="oVi-HF-1cE" firstAttribute="top" secondItem="Uk1-2n-YXZ" secondAttribute="top" constant="14" id="PbM-2q-IPd"/>
                         <constraint firstItem="I1Z-6U-OF9" firstAttribute="leading" secondItem="Uk1-2n-YXZ" secondAttribute="leading" id="RvM-oT-zkb"/>
                         <constraint firstItem="p0T-pU-l75" firstAttribute="leading" secondItem="Uk1-2n-YXZ" secondAttribute="leading" id="UpZ-74-h16"/>

@@ -35,6 +35,7 @@ class SignupViewController: UIViewController {
         setupUI()
         usernameAPI()
         setupCustomSwitch()
+        setupKeyboardObservers()
         setupPrivacyPolicyLabel()
     }
     
@@ -99,7 +100,7 @@ class SignupViewController: UIViewController {
         self.signupLabel.text = NSLocalizedString("SignupTitleKey", comment: "")
         self.userNameTextFiled.placeholder = NSLocalizedString("SignupUsernameKey", comment: "")
         self.ExUsernameLabel.text = NSLocalizedString("SignupExKey", comment: "")
-        self.insta_SnapLabel.text = NSLocalizedString("SignupUsernameKey", comment: "")
+        self.insta_SnapLabel.text = NSLocalizedString("SignupInstagramKey", comment: "") // SignupUsernameKey
         self.privacyPolicyLabel.text = NSLocalizedString("SignupPrivacyKey", comment: "")
         self.nextButton.setTitle(NSLocalizedString("SignupNextBtnKey", comment: ""), for: .normal)
     }
@@ -231,6 +232,40 @@ class SignupViewController: UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "PrivacyPolicyViewController") as! PrivacyPolicyViewController
         vc.modalPresentationStyle = .pageSheet
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    // MARK: - Keyboard Handling
+    private func setupKeyboardObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc private func keyboardWillShow(_ notification: Notification) {
+        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
+            return
+        }
+        
+        let keyboardHeight = keyboardFrame.height
+        let textViewBottomY = userNameTextFiled.convert(userNameTextFiled.bounds, to: view).maxY
+        let overlap = textViewBottomY - (view.frame.height - keyboardHeight)
+        
+        let additionalSpace: CGFloat = 50
+        
+        if overlap > 0 {
+            UIView.animate(withDuration: 0.3) {
+                self.view.frame.origin.y = -(overlap + additionalSpace)
+            }
+        }
+    }
+    
+    @objc private func keyboardWillHide(_ notification: Notification) {
+        UIView.animate(withDuration: 0.3) {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
 

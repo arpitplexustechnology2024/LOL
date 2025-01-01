@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -81,8 +81,8 @@
                                 <constraint firstAttribute="width" constant="60" id="IxI-h1-wFs"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHN-vV-xAW">
-                            <rect key="frame" x="138" y="83" width="77" height="42"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHN-vV-xAW">
+                            <rect key="frame" x="16" y="83" width="321" height="42"/>
                             <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="35"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -90,6 +90,7 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="rHN-vV-xAW" secondAttribute="trailing" constant="16" id="0D9-OH-7IW"/>
                         <constraint firstItem="sKf-Bc-O8g" firstAttribute="top" secondItem="wge-5u-3aq" secondAttribute="top" constant="14" id="4a8-sH-vAi"/>
                         <constraint firstAttribute="trailing" secondItem="zJ1-ty-OjC" secondAttribute="trailing" id="9SN-Mr-dHd"/>
                         <constraint firstItem="X2b-BU-IOz" firstAttribute="leading" secondItem="wge-5u-3aq" secondAttribute="leading" id="AL0-PR-G6e"/>
@@ -99,6 +100,7 @@
                         <constraint firstAttribute="trailing" secondItem="X2b-BU-IOz" secondAttribute="trailing" id="eO7-ob-ceL"/>
                         <constraint firstAttribute="bottom" secondItem="X2b-BU-IOz" secondAttribute="bottom" id="egS-AZ-TRd"/>
                         <constraint firstItem="zJ1-ty-OjC" firstAttribute="leading" secondItem="wge-5u-3aq" secondAttribute="leading" id="fjO-6K-PaJ"/>
+                        <constraint firstItem="rHN-vV-xAW" firstAttribute="leading" secondItem="wge-5u-3aq" secondAttribute="leading" constant="16" id="jPH-sa-uq2"/>
                         <constraint firstItem="sKf-Bc-O8g" firstAttribute="centerX" secondItem="wge-5u-3aq" secondAttribute="centerX" id="r2U-aa-4X8"/>
                         <constraint firstAttribute="bottom" secondItem="zJ1-ty-OjC" secondAttribute="bottom" id="tZ1-va-U1i"/>
                         <constraint firstAttribute="height" constant="208" id="uKu-eE-EhF"/>

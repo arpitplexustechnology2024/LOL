@@ -17,7 +17,11 @@
 "SignupPrivacyKey" = "“جاری رکھیں” پر ٹیپ کرکے، آپ تسلیم کرتے ہیں کہ آپ نے پرائیویسی پالیسی پڑھ لی ہے";
 "SignupPrivacyKeyRange" = "پرائیویسی پالیسی";
 "SignupNextBtnKey" = "اگلا";
-"Signup Username Key" = "اپنا صارف نام بنائیں۔";
+
+//signup - new
+// "Signup Username Key" = "اپنا صارف نام بنائیں۔";
+
+
 // Privacy Policy ViewController
 "PrivacyTitleKey" = "رازداری کی پالیسی";
 "PrivacyDoneBtnKey" = "مکمل";

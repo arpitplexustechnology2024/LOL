@@ -25,11 +25,11 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
     let productID = "com.lol.anonymousfeatures"
     
     private var premiumSlider: [PremiumModel] = []
-//    private var currentPage = 0 {
-//        didSet {
-//            updateCurrentPage()
-//        }
-//    }
+    private var currentPage = 0 {
+        didSet {
+            updateCurrentPage()
+        }
+    }
     
     private var product: SKProduct?
     private var isRestoringPurchases = false
@@ -96,23 +96,23 @@ class PremiumViewController: UIViewController, SKPaymentTransactionObserver, SKP
     
     private func setupUI() {
         premiumSlider = [
-//            PremiumModel(id: 1, title: "Reveal Sender Info",
-//                         description: "Get hints like their location, country and time...",
-//                         image: UIImage(named: "Premium_first")!),
-//            PremiumModel(id: 2, title: "Viewers Hints",
-//                         description: "Get some funny hint who creates your funny card?",
-//                         image: UIImage(named: "Premium_Third")!),
+            PremiumModel(id: 1, title: "Reveal Sender Info",
+                         description: "Get hints like their location, country and time...",
+                         image: UIImage(named: "Premium_first")!),
+            PremiumModel(id: 2, title: "Viewers Hints",
+                         description: "Get some funny hint who creates your funny card?",
+                         image: UIImage(named: "Premium_Third")!),
             PremiumModel(id: 3, title: "Edit Card Questions",
                          description: "You can edit the card's questions when you ask questions to create a card!",
                          image: UIImage(named: "Premium_Second")!)
         ]
         
-     //   pageControl.numberOfPages = premiumSlider.count
+        pageControl.numberOfPages = premiumSlider.count
     }
     
-//    private func updateCurrentPage() {
-//        pageControl.currentPage = currentPage
-//    }
+    private func updateCurrentPage() {
+        pageControl.currentPage = currentPage
+    }
     
     private func isConnectedToInternet() -> Bool {
         let networkManager = NetworkReachabilityManager()

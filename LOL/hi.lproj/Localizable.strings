@@ -17,7 +17,9 @@
 "SignupPrivacyKey" = "“जारी रखें” पर टैप करके, आप मानते हैं कि आपने \n गोपनीयता नीति पढ़ ली है";
 "SignupPrivacyKeyRange" = "गोपनीयता नीति";
 "SignupNextBtnKey" = "अगला";
-"SignupUsernameKey" = "अपना उपयोगकर्ता नाम बनाएँ";
+
+//signup - new
+// "SignupUsernameKey" = "अपना उपयोगकर्ता नाम बनाएँ";
 
 // Privacy Policy ViewController
 "PrivacyTitleKey" = "गोपनीयता नीति";

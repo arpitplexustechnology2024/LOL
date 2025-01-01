@@ -41,6 +41,14 @@ class ShareLinkViewController: UIViewController {
         setupGradientBackground()
         
         updateSelectedPage(0)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
+    }
+    
+    @objc func appMovedToBackground() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
+            UIPasteboard.general.string = self.linkLabel
+        }
     }
     
     private func setupBlurEffect() {
@@ -246,8 +254,6 @@ class ShareLinkViewController: UIViewController {
         if let urlScheme = URL(string: "instagram-stories://share?source_application=com.fun.lol.card") {
             if UIApplication.shared.canOpenURL(urlScheme) {
                 
-                UIPasteboard.general.string = linkText
-                
                 let screenSize = UIScreen.main.bounds.size
                 let targetAspectRatio: CGFloat = 9.0 / 16.0
                 let screenAspectRatio = screenSize.width / screenSize.height
@@ -314,27 +320,43 @@ class ShareLinkViewController: UIViewController {
         let snapchatURL = URL(string: "snapchat://")
         if let url = snapchatURL, UIApplication.shared.canOpenURL(url) {
             
+            let screenSize = UIScreen.main.bounds.size
+            let targetAspectRatio: CGFloat = 9.0 / 16.0
+            let screenAspectRatio = screenSize.width / screenSize.height
+            
+            var targetSize: CGSize
+            
+            if screenAspectRatio > targetAspectRatio {
+                targetSize = CGSize(width: screenSize.height * targetAspectRatio, height: screenSize.height)
+            } else {
+                targetSize = CGSize(width: screenSize.width, height: screenSize.width / targetAspectRatio)
+            }
+            
             let shareView: UIView
             switch selectedIndex {
             case 0:
-                shareView = ShareView01(frame: view.bounds)
+                shareView = ShareView01(frame: CGRect(origin: .zero, size: targetSize))
             case 1:
-                shareView = ShareView02(frame: view.bounds)
+                shareView = ShareView02(frame: CGRect(origin: .zero, size: targetSize))
             case 2:
-                shareView = ShareView03(frame: view.bounds)
+                shareView = ShareView03(frame: CGRect(origin: .zero, size: targetSize))
             case 3:
-                shareView = ShareView04(frame: view.bounds)
+                shareView = ShareView04(frame: CGRect(origin: .zero, size: targetSize))
             case 4:
-                shareView = ShareView05(frame: view.bounds)
+                shareView = ShareView05(frame: CGRect(origin: .zero, size: targetSize))
             case 5:
-                shareView = ShareView06(frame: view.bounds)
+                shareView = ShareView06(frame: CGRect(origin: .zero, size: targetSize))
             case 6:
-                shareView = ShareView07(frame: view.bounds)
+                shareView = ShareView07(frame: CGRect(origin: .zero, size: targetSize))
             default:
-                shareView = ShareView01(frame: view.bounds)
+                shareView = ShareView01(frame: CGRect(origin: .zero, size: targetSize))
             }
-            UIGraphicsBeginImageContextWithOptions(shareView.bounds.size, false, 0)
-            shareView.layer.render(in: UIGraphicsGetCurrentContext()!)
+            
+            shareView.center = CGPoint(x: screenSize.width / 2, y: screenSize.height / 2)
+            shareView.layoutIfNeeded()
+            UIGraphicsBeginImageContextWithOptions(targetSize, false, UIScreen.main.scale)
+            guard let context = UIGraphicsGetCurrentContext() else { return }
+            shareView.layer.render(in: context)
             let image = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             
@@ -373,4 +395,3 @@ class ShareLinkViewController: UIViewController {
         self.dismiss(animated: true)
     }
 }
-
